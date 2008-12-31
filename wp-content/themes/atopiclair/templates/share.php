@@ -41,7 +41,6 @@ get_header();
                                                 <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
                                             </div>
                                             <div class="list-children__name">
-                                                <span>Bé</span>
                                                 <span><?php the_title(); ?></span>
                                             </div>
                                             <div class="list-children__ders">

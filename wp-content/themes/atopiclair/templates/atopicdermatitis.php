@@ -241,7 +241,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <p class="bold text-doc-foo">
-                        Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
+                        Nguồn: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
                         NXB Y Học 2016
                     </p>
                 </div>

@@ -163,7 +163,6 @@ get_header();
                                                     ?>
                                                 </div>
                                                 <div class="list-children__name">
-                                                    <span>Bé</span>
                                                     <span><?php the_title(); ?></span>
                                                 </div>
                                             </li>
