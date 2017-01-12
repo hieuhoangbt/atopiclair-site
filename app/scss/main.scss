@@ -2,6 +2,8 @@
 @import 'mixin';
 @import 'home';
 
+$font-utmavo: 'UTMAvo';
+$font-utmavo_bold: 'UTMAvoBold';
 
 html {
   font-size: 62.5%;
@@ -11,7 +13,7 @@ html {
 
 body {
   @include rem(font-size, 1.6rem);
-  font-family: 'UTMAvo';
+  font-family: $font-utmavo;
 }
 
 a {
