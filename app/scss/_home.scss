@@ -1,8 +1,220 @@
-@import "variables/home";
-.print {
-  width: percentage(3/6);
-  color: red;
-  background: blue;
-  @include border-radius(50%);
+.blog {
+  &__ders {
+    width: 100%;
+    position: relative;
+    z-index: 9;
 
+    &__title {
+      color: #00659f;
+      font-size: 4.7rem;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.3em;
+      float: left;
+      width: 80%;
+      margin: 0rem 0rem 9rem 0rem;
+    }
+  }
+}
+
+.blog {
+  position: relative;
+  overflow: hidden;
+  padding: 9rem 0rem;
+  &.blog--intro {
+    background: url("../images/home_bg-intro.jpg") no-repeat top center;
+    background-size: cover;
+
+    .blog__thumb {
+      right: 0rem;
+      bottom: 0rem;
+
+    }
+    .blog__ders {
+      width: 72%;
+    }
+  }
+  &.blog--nguyennhan {
+    background: url("../images/home_bg-nguyennhan.jpg") no-repeat top center;
+    .blog__thumb {
+      left: 0rem;
+      bottom: 0rem;
+      width: 67%;
+    }
+    .blog__ders {
+      width: 100%;
+    }
+  }
+  &.blog--dieutri {
+    background: url("../images/home_bg-dieutri.jpg") no-repeat top center;
+    background-size: cover;
+    .blog__thumb {
+      right: 0rem;
+      bottom: 0rem;
+      width: 87%;
+    }
+    .quote-info {
+      float: left;
+      width: 53rem;
+      .btn-link {
+        float: left;
+      }
+    }
+  }
+  &.blog--about {
+    background: url("../images/home_bg-about.jpg") no-repeat top center;
+    background-size: cover;
+    .blog__thumb {
+      left: 5rem;
+      bottom: 0rem;
+      width: 87%;
+    }
+    .quote-info {
+      float: right;
+      width: 53rem;
+      .btn-link {
+        float: left;
+      }
+      .btn-link {
+        float: right;
+      }
+    }
+  }
+  &.blog--share {
+    background: url("../images/home_bg-share.png") no-repeat top center;
+    background-size: cover;
+    .blog__ders {
+      width: 70rem;
+      margin: 0 auto;
+      &__title {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+      .quote-info {
+        width: 100%;
+      }
+      .btn-link {
+        border-radius: 4px;
+        background-color: rgb(133, 225, 252);
+        width: 15.2rem;
+        height: 4.6rem;
+        line-height: 4.6rem;
+        display: block;
+        font-size: 2.8rem;
+        color: #fff;
+        clear: both;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        float: right;
+        margin-bottom: 3rem;
+      }
+    }
+
+  }
+  .list-children {
+    margin: 0rem;
+    width: 100%;
+    .item {
+      margin: 0rem 1rem;
+      .list-children__thumb {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 100%;
+        overflow: hidden;
+        border: solid 1rem #79dffc;
+      }
+      .list-children__name {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        //width: 23.7rem;
+        height: 10.43rem;
+        line-height: 10.43rem;
+        background: url("../images/home_bg-cloud.png") no-repeat center;
+        background-size: 100% 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__thumb {
+    position: absolute;
+    width: 47%;
+  }
+  .quote-info {
+    float: right;
+    width: 43rem;
+    .title-info {
+      font-size: 3rem;
+      color: #00659f;
+      margin: 0rem 0rem 3rem 0rem;
+      text-align: left;
+    }
+    .box {
+      clear: both;
+      position: relative;
+      text-align: justify;
+      p {
+        margin-bottom: 3rem;
+        font-size: 2.2rem;
+        color: #00659f;
+      }
+      .quote-icon {
+        position: absolute;
+        display: block;
+        &.quote-icon--left {
+          left: -4rem;
+          top: -1rem;
+        }
+        &.quote-icon--right {
+          right: 0rem;
+          bottom: -1rem;
+        }
+      }
+    }
+    .btn-link {
+      display: block;
+      clear: both;
+      float: right;
+      border-radius: 0.9rem;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 1px 3.88px 0.12px rgba(0, 2, 99, 0.44);
+      width: 19.7rem;
+      height: 5.7rem;
+      line-height: 5.7rem;
+      text-align: center;
+      font-size: 2.2rem;
+      color: #00659f;
+      margin-top: 4rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.inline-link {
+  float: left;
+  width: 100%;
+  .inline-link__btn {
+    border-radius: 13px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5.82px 0.18px rgba(0, 2, 99, 0.44);
+    display: block;
+    width: 32%;
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    color: #00659f;
+    font-size: 2rem;
+    text-decoration: none;
+    float: left;
+    margin: 2%;
+
+    &:hover {
+      text-decoration: none;
+
+    }
+  }
 }

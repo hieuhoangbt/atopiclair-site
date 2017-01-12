@@ -2,27 +2,231 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <!--build:css css/screen.min.css-->
-  <link rel="stylesheet" href="css/main.css">
-  <!--endbuild-->
+    <meta charset="UTF-8">
+    <title></title>
+    <!--build:css css/screen.min.css-->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
 </head>
 
 <body>
-  <div id="page">
+<div id="page">
     <div class="header">
-      This is a gulp starter!
-      <div class="print">branch </div>
+        <div class="header__top">
+            <div class="container-fluid">
+                <h1 class="header__top__logo">
+                    <a href="#"><img src="images/main_logo.png" alt=""></a>
+                </h1>
+                <div class="header__top__face">
+                    <a href="#"><img src="images/main_face.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu header__menu">
+            <div class="container-fluid">
+                <ul class="list-inline">
+                    <li class="item">
+                        <a href="#">bệnh viêm da cơ địa</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">hướng dẫn điều trị</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            atopiclair
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">bác sĩ tư vấn</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">chia sẽ</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">liên hệ & phân phối</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="content"></div>
-    <div class="footer"></div>
-  </div>
-  <!--build:js js/start.min.js -->
-  <script src="js/lib/a-library.js"></script>
-  <script src="js/lib/another-library.js"></script>
-  <script src="js/start.js"></script>
-  <!-- endbuild -->
+    <div class="content">
+        <div class="home">
+            <div class="blog blog--intro">
+                <div class="container-fluid">
+                    <div class="blog__ders">
+                        <h2 class="title-info title-info--big blog__ders__title">với atopiclai rtm <br> bé hết ngứa - Mẹ hết
+                            lo</h2>
+                        <div class="list-inline inline-link">
+                            <a class="btn-link inline-link__btn" href="#">Bệnh Viêm Da Cơ Địa</a>
+                            <a class="btn-link inline-link__btn" href="#">hướng dẫn điều trị</a>
+                            <a class="btn-link inline-link__btn" href="#">Về Atopiclair</a>
+                            <a class="btn-link inline-link__btn" href="#">Chia sẻ</a>
+                        </div>
+                    </div>
+                    <div class="blog__thumb">
+                        <img src="images/home_gau.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="blog blog--nguyennhan">
+                <div class="container-fluid">
+                    <div class="blog__ders">
+                        <div class="quote-info blog__ders__quote">
+                            <h2 class="title-info title-info--big blog__ders__title">bệnh viêm da cơ địa</h2>
+                            <div class="box">
+                                <span class="quote-icon quote-icon--left"><img src="images/home_quote-left.png" alt=""></span>
+                                <p>
+                                    Còn gọi là chàm cơ địa, chàm thể tạng.
+
+                                </p>
+                                <p>
+                                    Là bệnh da mạn tính xen kẽ với những giai đoạn bùng phát và rất dễ tái phát. Bệnh
+                                    khó
+                                    điều trị dứt hẳn nhưng có thể phòng ngừa. Khoảng 50% trẻ em viêm da cơ địa vẫn còn
+                                    bệnh
+                                    khi đã trưởng thành.
+
+                                </p>
+                                <p>
+                                    Phổ biến ở trẻ em, chiếm 26.6% trẻ nhũ nhi và 16% ở trẻ dưới 5 tuổi.
+
+                                </p>
+                                <span class="quote-icon quote-icon--right"><img src="images/home_quote-right.png" alt=""></span>
+                            </div>
+                            <a href="#" class="btn-link">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="blog__thumb">
+                        <img src="images/home_hand.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="blog blog--dieutri">
+                <div class="container-fluid">
+                    <div class="blog__ders">
+                        <div class="quote-info blog__ders__quote">
+                            <h2 class="title-info title-info--big blog__ders__title">hướng dẫn điều trị</h2>
+                            <div class="box">
+                                <span class="quote-icon quote-icon--left"><img src="images/home_quote-left.png" alt=""></span>
+                                <p>
+                                    Bệnh VDCĐ khởi phát từ sự suy yếu hang rào bảo vệ da, dẫn đến da khô, ngứa và sự xâm
+                                    nhập của các dị nguyên và vi khuẩn, gây nhiễm trùng da. Do vậy, điều trị viêm da cơ
+                                    địa
+                                    bằng chất dưỡng ẩm da là một điều trị nền tảng trong các giai đoạn của bệnh.
+
+                                </p>
+                                <p>
+                                    Bác sĩ sẽ có thêm các điều trị khác tùy vào tình trạng của mỗi bệnh nhân như thay
+                                    đổi
+                                    lối sống, dùng thuốc để chống đỏ, sung (chống viêm), giảm ngứa (kháng histamine),
+                                    giảm
+                                    stress tâm lý và điều trị nhiễm trùng (nếu có) để ngăn ngừa hình thành tổn thương
+                                    mới.
+
+                                </p>
+                                <span class="quote-icon quote-icon--right"><img src="images/home_quote-right.png" alt=""></span>
+                            </div>
+                            <a href="#" class="btn-link">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="blog__thumb">
+                        <img src="images/home_chan.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="blog blog--about">
+                <div class="container-fluid">
+                    <div class="blog__ders">
+                        <div class="quote-info blog__ders__quote">
+                            <h2 class="title-info title-info--big blog__ders__title">Về Atopiclairtm</h2>
+                            <div class="box">
+                                <span class="quote-icon quote-icon--left"><img src="images/home_quote-left.png" alt=""></span>
+                                <p>
+                                    Tái tạo hàng rào bảo vệ da qua việc cung cấp các lipid thiết yếu và tăng mạnh khả
+                                    năng giữ nước cho da
+                                </p>
+                                <p>
+                                    Giảm ngứa, bảo vệ hàng rào da nhờ tác động chống oxy hóa mạnh, ức chế các enzyme,
+                                    protein bất lợi
+                                </p>
+                                <p>
+                                    Làm giảm cơn ngứa và rát da qua tác động chống ngứa và kháng viêm hiệu quả
+                                </p>
+                                <span class="quote-icon quote-icon--right"><img src="images/home_quote-right.png" alt=""></span>
+                            </div>
+                            <a href="#" class="btn-link">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="blog__thumb">
+                        <img src="images/home_about.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="blog blog--share">
+                <div class="container-fluid">
+                    <div class="blog__ders">
+                        <h2 class="title-info title-info--big blog__ders__title">bé hết ngứa - Mẹ hết lo</h2>
+                        <a href="#" class="btn-link">chia sẻ</a>
+                        <div class="quote-info blog__ders__quote">
+                            <ul class="list-inline list-children">
+                                <li class="item">
+                                    <div class="list-children__thumb">
+                                        <img src="images/home_be-anh.png" alt="">
+                                    </div>
+                                    <div class="list-children__name">bé suti</div>
+                                </li>
+                                <li class="item">
+                                    <div class="list-children__thumb">
+                                        <img src="images/home_be-hieu.png" alt="">
+                                    </div>
+                                    <div class="list-children__name">bé hugo</div>
+                                </li>
+                                <li class="item">
+                                    <div class="list-children__thumb">
+                                        <img src="images/home_be-tuan.png" alt="">
+                                    </div>
+                                    <div class="list-children__name">bé gia phúc</div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="footer__left">
+                <div class="footer__left__logo">
+                    <img src="images/main_traidat.png" alt="">
+                </div>
+                <div class="footer__left__info">
+                    <p>Đơn vị chịu trách nhiệm đưa sản phẩm ra thị trường</p>
+                    <p class="bold">công ty tnhh thương mại và dược phẩm sang</p>
+                <p>77 Trần Khánh Dư, P.Tân Định, Quận 1, Hồ Chí minh | (08) 3910 1913</p>
+                    <p><a href="#">Thông tin pháp nhân</a> | <a href="#">Thỏa thuận và Quy định</a></p>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__right_logo">
+                    <img src="images/main_logo-footer.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--build:js js/start.min.js -->
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/jquery.matchHeight-min.js"></script>
+<script src="js/lib/loadImg.js"></script>
+<script src="js/start.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>
