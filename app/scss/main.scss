@@ -1,2 +1,31 @@
-@import 'styles';
-@import 'print';
+@import 'fonts';
+@import 'mixin';
+@import 'home';
+
+$font-utmavo: 'UTMAvo';
+$font-utmavo_bold: 'UTMAvoBold';
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body {
+  @include rem(font-size, 1.6rem);
+  font-family: $font-utmavo;
+}
+
+a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
