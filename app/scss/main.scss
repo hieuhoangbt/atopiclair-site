@@ -1,9 +1,10 @@
+@import "variables/home";
 @import 'fonts';
+@import "master";
 @import 'mixin/_mixin';
 @import 'home';
 
-$font-utmavo: 'UTMAvo';
-$font-utmavo_bold: 'UTMAvoBold';
+
 
 html {
   font-size: 62.5%;
@@ -22,6 +23,13 @@ a {
     text-decoration: none;
     outline: none;
   }
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+#page {
+  overflow: hidden;
 }
 
 button {
