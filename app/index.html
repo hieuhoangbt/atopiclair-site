@@ -4,19 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/print.css">
+  <!--build:css css/screen.min.css-->
+  <link rel="stylesheet" href="css/main.css">
   <!--endbuild-->
 </head>
 
 <body>
-  This is a gulp starter!
-  <div class="print">branch </div>
-  <!--build:js js/main.min.js -->
+  <div id="page">
+    <div class="header">
+      This is a gulp starter!
+      <div class="print">branch </div>
+    </div>
+    <div class="content"></div>
+    <div class="footer"></div>
+  </div>
+  <!--build:js js/start.min.js -->
   <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/start.js"></script>
   <!-- endbuild -->
 </body>
 
