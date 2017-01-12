@@ -1,0 +1,29 @@
+@import 'rem';
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin translateXY($left, $top) {
+  -webkit-transform: translate($left, $top);
+  -moz-transform: translate($left, $top);
+  -ms-transform: translate($left, $top);
+  -o-transform: translate($left, $top);
+  transform: translate($left, $top);
+}
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+  -moz-transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+  transform: translateX($x);
+}
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+  -moz-transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+  transform: translateY($y);
+}
+
