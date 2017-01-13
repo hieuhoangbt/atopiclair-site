@@ -3,6 +3,7 @@
 @import "master";
 @import 'mixin/_mixin';
 @import 'home';
+@import 'about';
 
 
 
@@ -36,4 +37,10 @@ button {
   &:focus {
     outline: none !important;
   }
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0rem 0rem 0rem 0rem;
+}
+.bold {
+  font-family: $font-utmavo_bold;
 }
