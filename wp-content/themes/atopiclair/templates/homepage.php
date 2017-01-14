@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/*
+ Template Name: Homepage
+ */
+get_header(); ?>
     <div class="content">
         <div class="home">
             <div class="blog blog--intro">
