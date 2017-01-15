@@ -1,0 +1,130 @@
+.info--agency {
+  background: url("../images/share_bg-cloud.jpg");
+  color: #0064a1;
+
+  .info__title {
+    margin-bottom: 6rem;
+  }
+  .left-form {
+    form {
+      .item {
+        float: left;
+        width: 100%;
+        margin: 0rem 0rem 3rem 0rem;
+      }
+      label {
+        width: 27%;
+        float: left;
+        font-size: 1.6rem;
+        text-align: left;
+        font-weight: normal;
+      }
+      .change-option {
+        float: left;
+        width: 50%;
+      }
+      .selectBox-dropdown {
+        min-width: auto;
+        width: 100% !important;
+        border-radius: 0.1rem;
+        border: none;
+        color: #0064a1;
+        background: #fff;
+        padding-top: 0.4rem;
+        font-size: 1.5rem;
+        &:before {
+          background-image: -moz-linear-gradient(90deg, rgb(4, 5, 5) 0%, rgb(255, 255, 255) 100%);
+          background-image: -webkit-linear-gradient(90deg, rgb(4, 5, 5) 0%, rgb(255, 255, 255) 100%);
+          background-image: -ms-linear-gradient(90deg, rgb(4, 5, 5) 0%, rgb(255, 255, 255) 100%);
+          box-shadow: 0px 0px 0px 1px rgba(4, 5, 5, 0.2);
+          opacity: 0.1;
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+        }
+        &:focus {
+          border: none;
+        }
+
+      }
+      .selectBox-dropdown .selectBox-arrow {
+        background-color: #0064a1;
+      }
+    }
+  }
+}
+
+.list-angency-content {
+  .title-list {
+    display: table;
+    width: 100%;
+    background-image: -moz-linear-gradient(90deg, rgba(36, 137, 197, 0) 0%, rgb(36, 137, 197) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(36, 137, 197, 0) 0%, rgb(36, 137, 197) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(36, 137, 197, 0) 0%, rgb(36, 137, 197) 100%);
+    box-shadow: 0px 4px 0px 0px rgba(0, 110, 166, 0.004), inset -1px 0px 0px 0px rgba(255, 255, 255, 0.5);
+    background-color: #036fb0;
+    color: #fff;
+    text-align: center;
+
+    .cell {
+      display: table-cell;
+      text-align: center;
+      vertical-align: top;
+      text-transform: uppercase;
+      width: 33.3%;
+      padding: 1rem 1rem;
+    }
+  }
+  .scroll-pane {
+    height: 300px;
+    overflow: auto;
+    background-color: #fff;
+
+    &:focus {
+      outline: none !important;
+    }
+    .jspPane {
+      //width: 100% !important;
+      outline: none !important;
+    }
+    .table {
+      border-spacing: 10px 10px;
+      border-collapse: separate;
+      background: #fff;
+      td {
+        width: 33.33%;
+        text-align: center;
+        background: #eaeaea;
+      }
+    }
+    .jspVerticalBar {
+      background: #eaeaea !important;
+      height: 90% !important;
+      .jspTrack {
+        background: #eaeaea !important;
+
+      }
+      .jspDrag {
+        border-radius: 7px;
+        background-color: rgb(6, 124, 196);
+        box-shadow: inset 0px 1px 4.85px 0.15px rgba(0, 0, 0, 0.29);
+
+      }
+
+    }
+    .jspVerticalBar .jspArrow {
+      background-color: transparent;
+      &.jspArrowUp {
+        background: #eaeaea url("../images/arr-left.png") no-repeat center;
+      }
+      &.jspArrowDown {
+        background: #eaeaea url("../images/arr-right.png") no-repeat center;
+      }
+
+    }
+  }
+}
