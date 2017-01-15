@@ -1,0 +1,119 @@
+.guide .info {
+  color: #0064a1;
+  &__guide-text-small {
+    font-size: 1.6rem;
+    margin: 4.5rem 0rem;
+    width: 62%;
+  }
+  &__title.left {
+    text-align: left;
+  }
+  &__guide {
+    .info__title {
+      margin: 0rem 0rem 5rem 0rem;
+      text-align: left;
+    }
+    .item {
+      float: left;
+      width: 85%;
+      margin-bottom: 5rem;
+      clear: both;
+      .thumb {
+        display: table-cell;
+        vertical-align: top;
+        width: 5rem;
+      }
+      .text {
+        font-size: 1.6rem;
+        text-align: justify;
+        display: table-cell;
+        vertical-align: top;
+        padding: 0rem 8rem 0rem 1rem;
+      }
+      &:last-child {
+        padding: 0rem 3rem 0rem 5rem;
+      }
+    }
+    .thumb-book {
+      img {
+        margin-top: -4rem;
+        margin-left: -6rem;
+      }
+    }
+  }
+  &__list_reason {
+    margin-bottom: 10rem;
+    position: relative;
+    background: url("../images/gui_bg_prd.png") no-repeat;
+    background-position: 100% 0%;
+    background-size: contain;
+    .reason_bg {
+      position: absolute;
+      right: 0rem;
+      top: 0rem;
+      z-index: 0;
+    }
+    .info__title {
+      width: 83%;
+      margin: 3rem auto 5rem auto;
+    }
+    p {
+      background-position: 0% 5px;
+      margin-bottom: 3rem;
+      width: 80%;
+      margin: 0rem auto 3rem auto;
+      text-align: center;
+    }
+  }
+  &__guide-ders {
+    font-size: 1.6rem;
+    text-align: justify;
+    .info__title {
+      margin-bottom: 2rem;
+    }
+    .bold.text-uppercase {
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+    .text-default {
+      margin-bottom: 2rem;
+    }
+    .thumb-prd {
+      img {
+        width: 80%;
+        margin-top: 12rem;
+      }
+    }
+  }
+  &__guide-example {
+    .info__title {
+      margin: 6rem 0rem;
+    }
+    .list-blockslt {
+      position: relative;
+      .item {
+        font-size: 1.6rem;
+        margin-bottom: 5rem;
+        .item_img {
+          -webkit-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
+          -moz-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
+          box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
+          img {
+            width: 100%;
+          }
+        }
+        .item_ders {
+          .text-title {
+            text-transform: uppercase;
+            font-family: $font-utmavo_bold;
+            text-align: center;
+            margin: 2rem 0rem;
+          }
+          .text-ders {
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
