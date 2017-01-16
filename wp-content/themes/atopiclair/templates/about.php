@@ -14,7 +14,7 @@
                         Đáp ứng tiêu chuẩn lựa chọn chất dưỡng ẩm điều trị vdcđ của Hội Da Liễu & Hội Nhi Khoa Việt Nam
                     </div>
                     <div class="info__thumb-intro">
-                        <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/about_img.png'); ?>
+                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/about_img.png" alt="No Photo"/>
                     </div>
                     <div class="line-white info__product-guide">
                         <h3 class="info__title line-white__title">cách sử dụng</h3>
@@ -51,7 +51,7 @@
                                 </p>
                             </div>
                             <div class="thumb-block__img">
-                                <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/about_product1.png'); ?>
+                                <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/about_product1.png" alt="No Photo"/>
                             </div>
                         </div>
                         <div class="item">
@@ -62,7 +62,7 @@
                                 </p>
                             </div>
                             <div class="thumb-block__img">
-                                <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/about_product2.png'); ?>
+                                <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/about_product2.png" alt="No Photo"/>
                             </div>
                         </div>
                     </div>

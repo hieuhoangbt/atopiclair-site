@@ -18,7 +18,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="blog__thumb">
-                        <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_gau.png'); ?>
+                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_gau.png" alt="Atopiclair">
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ get_header(); ?>
                             <h2 class="title-info title-info--big blog__ders__title">bệnh viêm da cơ địa</h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-left.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="bệnh viêm da cơ địa">
                                 </span>
                                 <p>
                                     Còn gọi là chàm cơ địa, chàm thể tạng.
@@ -48,14 +48,14 @@ get_header(); ?>
 
                                 </p>
                                 <span class="quote-icon quote-icon--right">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-right.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="bệnh viêm da cơ địa">
                                 </span>
                             </div>
                             <a href="#" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
-                        <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_hand.png'); ?>
+                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_hand.png" alt="bệnh viêm da cơ địa">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@ get_header(); ?>
                             <h2 class="title-info title-info--big blog__ders__title">hướng dẫn điều trị</h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-left.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="Atopiclair hướng dẫn điều trị">
                                 </span>
                                 <p>
                                     Bệnh VDCĐ khởi phát từ sự suy yếu hang rào bảo vệ da, dẫn đến da khô, ngứa và sự xâm
@@ -85,14 +85,14 @@ get_header(); ?>
 
                                 </p>
                                 <span class="quote-icon quote-icon--right">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-right.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="Atopiclair hướng dẫn điều trị">
                                 </span>
                             </div>
                             <a href="#" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
-                        <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_chan.png'); ?>
+                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_chan.png" alt="Atopiclair hướng dẫn điều trị">
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@ get_header(); ?>
                             <h2 class="title-info title-info--big blog__ders__title">Về Atopiclairtm</h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-left.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="Về Atopiclair">
                                 </span>
                                 <p>
                                     Tái tạo hàng rào bảo vệ da qua việc cung cấp các lipid thiết yếu và tăng mạnh khả
@@ -117,14 +117,14 @@ get_header(); ?>
                                     Làm giảm cơn ngứa và rát da qua tác động chống ngứa và kháng viêm hiệu quả
                                 </p>
                                 <span class="quote-icon quote-icon--right">
-                                    <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_quote-right.png'); ?>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="Về Atopiclair">
                                 </span>
                             </div>
                             <a href="#" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
-                        <?php printf('<img src="%s" alt="No Photo"/>',ATOPICLAIR_THEME_URL. '/images/home_about.png'); ?>
+                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_about.png" alt="Về Atopiclair">
                     </div>
                 </div>
             </div>
@@ -135,13 +135,35 @@ get_header(); ?>
                         <a href="#" class="btn-link">chia sẻ</a>
                         <div class="quote-info blog__ders__quote">
                             <ul class="list-inline list-children">
+                            <?php
+                            $post_params = array(
+                                'post_type' => 'story',
+                                'post_status' => 'publish',
+                                'highlight' =>1,
+                                'orderby' => 'date',
+                                'order' => 'DESC',
+                            );
+                            $liststory = new WP_Query($post_params);
+                            if ($liststory->have_posts()) {
+                                while ($liststory->have_posts()) {
+                                    $liststory->the_post();
+                                    ?>
                                 <li class="item">
                                     <div class="list-children__thumb">
-                                        <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="">
+                                        <?php
+                                        if (has_post_thumbnail()) {
+                                            echo get_the_post_thumbnail(get_the_ID(), 'thumbnail');
+                                        } else {
+                                            printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
+                                        }
+                                        ?>
+                                        <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="<?php the_title(); ?>">
                                     </div>
-                                    <div class="list-children__name">bé suti</div>
+                                    <div class="list-children__name"><?php the_title(); ?></div>
                                 </li>
-
+                            <?php }
+                                wp_reset_query();
+                            } ?>
 
 
                             </ul>
