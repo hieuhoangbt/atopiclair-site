@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title></title>
     <link rel="stylesheet" href="css/screen.min.css">
 </head>
@@ -60,31 +63,34 @@
                                 <p>Yêu cầu về phân phối, xin liên hệ: 1800555558</p>
                             </div>
                             <div class="info__lienhe__right">
-                                <form action="" method="">
+                                <form class="contact_form" action="" method="">
                                     <div class="group-form">
                                         <label for="">Họ và tên</label>
-                                        <input type="text" placeholder="Họ và tên" />
+                                        <input type="text" name="c_name" placeholder="Họ và tên" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Địa chỉ</label>
-                                        <input type="text" placeholder="Địa chỉ" />
+                                        <input type="text" name="c_adress" placeholder="Địa chỉ" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Email</label>
-                                        <input type="text" placeholder="Email" />
+                                        <input type="text" name="c_email" placeholder="Email" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Số điện thoại</label>
-                                        <input type="text" placeholder="Số điện thoại" />
+                                        <input type="text" name="c_phone" placeholder="Số điện thoại" required/>
                                     </div>
                                     <div class="group-form">
                                         <label class="label-info" for="">Nội dung</label>
-                                        <textarea name="" id="" placeholder="Nội dung"></textarea>
+                                        <textarea name="c_ders" placeholder="Nội dung" required></textarea>
                                     </div>
                                     <div class="group-form">
-                                        <button class="btn-send">Gửi</button>
+                                        <button type="submit" class="btn-send">Gửi</button>
                                     </div>
                                 </form>
+                            </div>
+                            <div class="img-lienhe">
+                                <img src="images/gau_lienhe.png" alt="">
                             </div>
                         </div>
                     </div>
