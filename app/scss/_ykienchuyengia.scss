@@ -1,0 +1,79 @@
+.blog.blog--ykien {
+  .blog__ders {
+    width: 100rem;
+    .list-inline {
+      text-align: center;
+      .item {
+        margin: 0 4rem;
+        .list-doctor__thumb {
+          width: 22rem;
+          height: 28rem;
+          overflow: hidden;
+          box-shadow: 0px 3px 10px #ccc;
+        }
+        .list-doctor__name {
+          font-size: 2rem;
+          color: #0064a1;
+          margin-top: 2rem;
+        }
+        .list-doctor__ders {
+          width: 22rem;
+          clear: both;
+          font-size: 1.3rem;
+          color: #0064a1;
+          margin: 2rem auto;
+        }
+      }
+    }
+    .livestream-video {
+      width: 100%;
+      float: left;
+      .video-comment {
+        width: 100%;
+        float: left;
+        background-color: rgba(255,255,255,0.5);
+        margin-bottom: 50px;
+        .video {
+          width: 60%;
+          float: left;
+        }
+        .comment {
+          width: 40%;
+          float: left;
+          .btnFB {
+            width: 178px;
+            height: 51px;
+            background: url("../images/btnFB.png");
+            margin: 10px auto 15px;
+            display: block;
+          }
+        }
+      }
+    }
+    .post-doctor {
+      .post-item {
+        width: 100%;
+        float: left;
+        color: #0064a1;
+        h3 {
+          font-size: 3rem;
+          font-weight: bold;
+          text-transform: capitalize;
+          line-height: 3rem;
+          margin: 20px 0 10px;
+        }
+        p {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}
+.title-livestream,.title-post {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #0064a1;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
