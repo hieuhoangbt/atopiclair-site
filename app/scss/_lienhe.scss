@@ -1,0 +1,74 @@
+.lienhe__bg {
+  background: url("../images/lienhe_bg.jpg");
+  background-size: 100% 100%;
+}
+.info__lienhe {
+  width: 100%;
+  float: left;
+  padding: 5rem 0;
+  position: relative;
+  min-height: 1008px;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 697px;
+    height: 824px;
+    background: url("../images/gau_lienhe.png");
+    z-index: 0;
+  }
+  &__left {
+    width: 50%;
+    padding: 0 5px;
+    float: left;
+    p {
+      text-align: center;
+      color: #0064a2;
+      font-size: 2.3rem;
+      padding-bottom: 1rem;
+    }
+  }
+  &__right {
+    width: 50%;
+    padding: 0 0 0 20px;
+    float: left;
+    .group-form {
+      padding-bottom: 20px;
+      label {
+        color: #0064a2;
+        font-size: 2.3rem;
+        font-weight: 300;
+        max-width: 160px;
+        width: 100%;
+      }
+      .label-info {
+        vertical-align: top;
+        background-color: transparent;
+      }
+      input,textarea {
+        color: #000;
+        font-size: 2.3rem;
+        font-weight: 300;
+        padding: 5px 10px;
+        width: calc(100% - 180px);
+      }
+      textarea {
+        height: 200px;
+        resize: none;
+      }
+      button {
+        background-color: #fff;
+        border-radius: 20px;
+        float: right;
+        margin-right: 15px;
+        padding: 5px 50px;
+        color: #0064a2;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 1px #ccc;
+      }
+    }
+
+  }
+}
