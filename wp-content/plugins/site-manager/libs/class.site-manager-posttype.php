@@ -47,11 +47,13 @@ class SiteManagerPosttype {
         add_filter('manage_story_posts_columns', array($instance, 'register_columns'));
         add_filter('manage_expert_posts_columns', array($instance, 'register_columns_expert'));
         add_filter('manage_medicaladvice_posts_columns', array($instance, 'register_columns_medicaladvice'));
+        add_filter('manage_doctor_posts_columns', array($instance, 'register_columns_doctor'));
 
         //Display list product
         add_action('manage_story_posts_custom_column', array($instance, 'list_story'), 10, 2);
         add_action('manage_expert_posts_custom_column', array($instance, 'list_expert'), 10, 2);
         add_action('manage_medicaladvice_posts_custom_column', array($instance, 'list_medicaladvice'), 10, 2);
+        add_action('manage_doctor_posts_custom_column', array($instance, 'list_doctor'), 10, 2);
 
         //Open post thumbnail
         add_action('after_setup_theme', function() {
@@ -158,13 +160,13 @@ class SiteManagerPosttype {
             'label' => __('Medical Advice', 'vuonxa'),
             'description' => __('Medical Advice', 'vuonxa'),
             'labels' => $labels,
-            'supports' => array('title','editor', 'thumbnail',),
+            'supports' => array('editor'),
             'hierarchical' => false,
             'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-businessman',
+            'menu_icon' => 'dashicons-phone',
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
@@ -232,6 +234,63 @@ class SiteManagerPosttype {
             'capability_type' => 'page',
         );
         register_post_type('expert', $args);
+
+        $labels = array(
+            'name' => _x('Doctor', 'Post Type General Name', 'vuonxa'),
+            'singular_name' => _x('Doctor', 'Post Type Singular Name', 'vuonxa'),
+            'menu_name' => __('Doctors', 'vuonxa'),
+            'name_admin_bar' => __('Doctor', 'vuonxa'),
+            'archives' => __('Item Archives', 'vuonxa'),
+            'parent_item_colon' => __('Parent Item:', 'vuonxa'),
+            'all_items' => __('All Items', 'vuonxa'),
+            'add_new_item' => __('Add New Item', 'vuonxa'),
+            'add_new' => __('Add New', 'vuonxa'),
+            'new_item' => __('New Item', 'vuonxa'),
+            'edit_item' => __('Edit Item', 'vuonxa'),
+            'update_item' => __('Update Item', 'vuonxa'),
+            'view_item' => __('View Item', 'vuonxa'),
+            'search_items' => __('Search Item', 'vuonxa'),
+            'not_found' => __('Not found', 'vuonxa'),
+            'not_found_in_trash' => __('Not found in Trash', 'vuonxa'),
+            'featured_image' => __('Featured Image', 'vuonxa'),
+            'set_featured_image' => __('Set featured image', 'vuonxa'),
+            'remove_featured_image' => __('Remove featured image', 'vuonxa'),
+            'use_featured_image' => __('Use as featured image', 'vuonxa'),
+            'insert_into_item' => __('Insert into item', 'vuonxa'),
+            'uploaded_to_this_item' => __('Uploaded to this item', 'vuonxa'),
+            'items_list' => __('Items list', 'vuonxa'),
+            'items_list_navigation' => __('Items list navigation', 'vuonxa'),
+            'filter_items_list' => __('Filter items list', 'vuonxa'),
+        );
+        $rewrite = array(
+            'slug' => 'doctor',
+            'with_front' => true,
+            'pages' => true,
+            'feeds' => true,
+        );
+        $args = array(
+            'label' => __('Doctor', 'vuonxa'),
+            'description' => __('Doctor manager', 'vuonxa'),
+            'labels' => $labels,
+            'supports' => array('title', 'thumbnail', 'slug'),
+            'hierarchical' => false,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-businessman',
+            'show_in_admin_bar' => true,
+            'show_in_nav_menus' => true,
+            'can_export' => true,
+            'has_archive' => true,
+            'exclude_from_search' => false,
+            'publicly_queryable' => true,
+            'rewrite' => $rewrite,
+            'capability_type' => 'page',
+        );
+
+        register_post_type('doctor', $args);
+
         flush_rewrite_rules();
         return $instance;
     }
@@ -246,6 +305,10 @@ class SiteManagerPosttype {
             $data = get_post_meta($post->ID, 'expert')[0];
             require_once PLG_PLUGIN_DIR . '/views/backend/question.php';
         }, 'expert', 'normal', 'core');
+        add_meta_box('medicaladvice', __('Custom Info', 'vuonxa'), function($post) {
+            $data = get_post_meta($post->ID, 'medicaladvice')[0];
+            require_once PLG_PLUGIN_DIR . '/views/backend/medicaladvice.php';
+        }, 'medicaladvice', 'normal', 'core');
 
         return $instance;
     }
@@ -274,8 +337,16 @@ class SiteManagerPosttype {
     public static function register_columns_medicaladvice($columns) {
         $columns = array(
             'cb' => $columns['cb'],
-            'title' => $columns['title'],
+            'doctor' => 'Doctor',
             'content' => 'Content',
+            'date' => $columns['date'],
+        );
+        return $columns;
+    }
+    public static function register_columns_doctor($columns) {
+        $columns = array(
+            'cb' => $columns['cb'],
+            'title' => $columns['title'],
             'post_thumb' => 'Thumbnail',
             'date' => $columns['date'],
         );
@@ -326,10 +397,22 @@ class SiteManagerPosttype {
                 break;
         }
     }
+    public static function list_doctor($columns, $post_id) {
+        switch ($columns) {
+            case 'post_thumb':
+                if (has_post_thumbnail($post_id)) {
+                    echo get_the_post_thumbnail($post_id, 'thumbnail');
+                }
+                break;
+        }
+    }
 
     public static function list_medicaladvice($columns, $post_id) {
         $data = get_post_meta($post_id, 'medicaladvice')[0];
         switch ($columns) {
+            case 'doctor':
+                echo $data['doctor'];
+                break;
             case 'content':
                 echo get_the_content($post_id,'content');
                 break;

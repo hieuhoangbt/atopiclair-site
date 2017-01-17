@@ -168,7 +168,7 @@ get_header(); ?>
                         <div class="list-blockslt">
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp1.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp1.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">tắm</p>
@@ -185,7 +185,7 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp2.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp2.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">vệ sinh cá nhân</p>
@@ -197,7 +197,7 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp3.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp3.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">quần áo</p>
@@ -211,7 +211,7 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp4.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp4.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">ăn kiêng</p>
@@ -230,7 +230,7 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp5.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp5.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">tránh với các yếu tố dị nguyên</p>
@@ -243,7 +243,7 @@ get_header(); ?>
                             </div>
                             <div class="item">
                                 <div class="item_img">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp6.png" alt="No Photo"/>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_exp6.jpg" alt="No Photo"/>
                                 </div>
                                 <div class="item_ders">
                                     <p class="text-title">phòng ngủ</p>

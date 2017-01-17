@@ -152,7 +152,7 @@ get_header(); ?>
                                     <div class="list-children__thumb">
                                         <?php
                                         if (has_post_thumbnail()) {
-                                            echo get_the_post_thumbnail(get_the_ID(), 'thumbnail');
+                                            echo get_the_post_thumbnail(get_the_ID(), 'full');
                                         } else {
                                             printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
                                         }

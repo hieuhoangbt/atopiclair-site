@@ -36,7 +36,7 @@ if (isset($_POST) && !empty($_POST)) {
         }
     }
 }
-?>
+
 get_header(); ?>
     <div class="content">
         <div class="lienhe">
