@@ -31,7 +31,7 @@ get_header(); ?>
                             if ($stories->have_posts()) {
                                 while ($stories->have_posts()) {
                                     $stories->the_post();
-                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "thumbnail");
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
                                     ?>
                                 <li class="item">
                                     <div class="list-children__thumb">

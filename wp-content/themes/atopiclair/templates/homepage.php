@@ -11,10 +11,10 @@ get_header(); ?>
                         <h2 class="title-info title-info--big blog__ders__title">với atopiclai rtm <br> bé hết ngứa - Mẹ hết
                             lo</h2>
                         <div class="list-inline inline-link">
-                            <a class="btn-link inline-link__btn" href="#">Bệnh Viêm Da Cơ Địa</a>
-                            <a class="btn-link inline-link__btn" href="#">hướng dẫn điều trị</a>
-                            <a class="btn-link inline-link__btn" href="#">Về Atopiclair</a>
-                            <a class="btn-link inline-link__btn" href="#">Chia sẻ</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">hướng dẫn điều trị</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
@@ -51,7 +51,7 @@ get_header(); ?>
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="bệnh viêm da cơ địa">
                                 </span>
                             </div>
-                            <a href="#" class="btn-link">Xem thêm</a>
+                            <a href="<?php echo get_page_link(58); ?>" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
@@ -88,7 +88,7 @@ get_header(); ?>
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="Atopiclair hướng dẫn điều trị">
                                 </span>
                             </div>
-                            <a href="#" class="btn-link">Xem thêm</a>
+                            <a href="<?php echo get_page_link(61); ?>" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
@@ -120,7 +120,7 @@ get_header(); ?>
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-right.png" alt="Về Atopiclair">
                                 </span>
                             </div>
-                            <a href="#" class="btn-link">Xem thêm</a>
+                            <a href="<?php echo get_page_link(9); ?>" class="btn-link">Xem thêm</a>
                         </div>
                     </div>
                     <div class="blog__thumb">
@@ -132,11 +132,12 @@ get_header(); ?>
                 <div class="container-fluid">
                     <div class="blog__ders">
                         <h2 class="title-info title-info--big blog__ders__title">bé hết ngứa - Mẹ hết lo</h2>
-                        <a href="#" class="btn-link">chia sẻ</a>
+                        <a href="<?php echo get_page_link(66); ?>" class="btn-link">chia sẻ</a>
                         <div class="quote-info blog__ders__quote">
                             <ul class="list-inline list-children">
                             <?php
                             $post_params = array(
+                                'posts_per_page'=>3,
                                 'post_type' => 'story',
                                 'post_status' => 'publish',
                                 'highlight' =>1,
@@ -147,13 +148,14 @@ get_header(); ?>
                             if ($liststory->have_posts()) {
                                 while ($liststory->have_posts()) {
                                     $liststory->the_post();
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
                                     ?>
                                 <li class="item">
                                     <div class="list-children__thumb">
                                         <?php
-                                        if (has_post_thumbnail()) {
-                                            echo get_the_post_thumbnail(get_the_ID(), 'full');
-                                        } else {
+                                        if ($image) {?>
+                                            <img src="<?php echo $image[0]; ?>"/>
+                                        <?php } else {
                                             printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
                                         }
                                         ?>
