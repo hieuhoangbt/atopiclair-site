@@ -31,7 +31,7 @@
       .video-comment {
         width: 100%;
         float: left;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         margin-bottom: 50px;
         .video {
           width: 60%;
@@ -51,16 +51,19 @@
       }
     }
     .post-doctor {
+      .title-post {
+        margin-bottom: 3rem;
+      }
       .post-item {
         width: 100%;
         float: left;
         color: #0064a1;
+        text-align: justify;
         h3 {
           font-size: 3rem;
-          font-weight: bold;
+          font-family: $font-utmavo_bold;
           text-transform: capitalize;
-          line-height: 3rem;
-          margin: 20px 0 10px;
+          margin: 0rem 0rem 2rem 0rem;
         }
         p {
           font-size: 1.8rem;
@@ -70,10 +73,12 @@
     }
   }
 }
-.title-livestream,.title-post {
-  font-size: 1.8rem;
-  line-height: 2rem;
+
+.title-livestream, .title-post {
+  font-size: 1.6rem;
   color: #0064a1;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
+  text-align: left;
+  text-align: justify;
 }
