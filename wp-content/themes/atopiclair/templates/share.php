@@ -59,7 +59,7 @@ get_header(); ?>
                                     $pre = $paged - 1;
 
                                     if ($paged > 1) {
-                                        echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="'.ATOPICLAIR_THEME_URL.'images/pagi_left.png" alt=""></a></li>';
+                                        echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="'.ATOPICLAIR_THEME_URL.'/images/pagi_left.png" alt=""></a></li>';
                                     }
 
                                     for ($i = 1; $i <= $total; $i++) {
@@ -70,7 +70,7 @@ get_header(); ?>
                                         }
                                     }
                                     if ($paged < $total) {
-                                        echo '<li><a href="' . get_permalink() . '?page=' . $next . '" aria-label="Next"><img src="'.ATOPICLAIR_THEME_URL.'images/pagi_right.png" alt=""></a></li>';
+                                        echo '<li><a href="' . get_permalink() . '?page=' . $next . '" aria-label="Next"><img src="'.ATOPICLAIR_THEME_URL.'/images/pagi_right.png" alt=""></a></li>';
                                     }
                                     ?>
                                 </ul>

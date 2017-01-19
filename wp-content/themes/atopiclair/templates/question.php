@@ -49,12 +49,12 @@ $question = new WP_Query($params_filter);
                     </div>
                 </div>
                 <div class="right-form-question">
-                    <form action="" class="form-horizontal form-qs">
+                    <form action="<?php echo site_url('wp-question.php'); ?>" method="post" class="form-horizontal form-qs">
                         <label class="control-label">
                             Chia sẻ những thắc mắc của bạn để nhận được sự tư vấn của các chuyên gia AtopiclairTM
                             nhé!
                         </label>
-                        <textarea class="form-control" placeholder="Thắc mắc của bạn" required></textarea>
+                        <textarea name="question" class="form-control" placeholder="Thắc mắc của bạn" required></textarea>
                         <button type="submit" class="btn">Gửi</button>
                     </form>
                 </div>
