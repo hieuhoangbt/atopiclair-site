@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Homepage
+ Template Name: Trang Chủ
  */
 get_header(); ?>
     <div class="content">

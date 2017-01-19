@@ -1,11 +1,11 @@
 <?php
 /*
- Template Name: ý kiến chuyên gia
+ Template Name: Ý kiến bác sĩ
  */
 if(get_query_var('doctor')) {
     $doctor_id=get_query_var('doctor');
     $params_filter = array(
-        'post_type' => 'doctor',
+        'post_type' => 'doctorpost',
         'post_status' => 'publish',
         'ID' =>$doctor_id,
         'orderby' => 'post_date',

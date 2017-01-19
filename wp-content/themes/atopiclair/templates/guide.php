@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: HuongDanDieuTri
+ Template Name: Hướng dẫn điều trị
  */
 get_header(); ?>
     <div class="content">

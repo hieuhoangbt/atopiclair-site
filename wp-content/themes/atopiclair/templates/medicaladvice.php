@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Chia sẻ
+ Template Name: Bác sĩ tư vấn
  */
 if (get_query_var('paged')) {
     $paged = get_query_var('paged');
@@ -11,34 +11,34 @@ if (get_query_var('paged')) {
 }
 $params_filter = array(
     'posts_per_page' => 3,
-    'post_type' => 'story',
+    'post_type' => 'doctor',
     'post_status' => 'publish',
     'orderby' => 'post_date',
     'order' => 'DESC',
     'paged' => $paged
 );
-$stories = new WP_Query($params_filter);
-get_header(); ?>
+$doctor = new WP_Query($params_filter);
+get_header();?>
     <div class="content">
         <div class="share">
-            <div class="blog blog--share">
+            <div class="blog blog--share blog--ykien">
                 <div class="container-fluid">
                     <div class="blog__ders">
-                        <h2 class="title-info title-info--big blog__ders__title">chia sẻ</h2>
+                        <h2 class="title-info title-info--big blog__ders__title">ý kiến bác sĩ</h2>
                         <div class="quote-info blog__ders__quote">
-                            <ul class="list-inline list-children">
+                            <ul class="list-inline list-doctor">
                             <?php
-                            if ($stories->have_posts()) {
-                                while ($stories->have_posts()) {
-                                    $stories->the_post();
+                            if ($doctor->have_posts()) {
+                                while ($doctor->have_posts()) {
+                                    $doctor->the_post();
                                     $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
                                     ?>
                                 <li class="item">
-                                    <div class="list-children__thumb">
-                                        <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+                                    <div class="list-doctor__thumb">
+                                        <a href="<?php  ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>"></a>
                                     </div>
-                                    <div class="list-children__name"><?php the_title(); ?></div>
-                                    <div class="list-children__ders">
+                                    <div class="list-doctor__name"><?php the_title(); ?></div>
+                                    <div class="list-doctor__ders">
                                         <p>
                                             <?php the_content(); ?>
                                         </p>
@@ -54,7 +54,7 @@ get_header(); ?>
                             <nav class="pagi-list right" aria-label="Page navigation">
                                 <ul class="pagination">
                                     <?php
-                                    $total = $stories->max_num_pages;
+                                    $total = $doctor->max_num_pages;
                                     $next = $paged + 1;
                                     $pre = $paged - 1;
 

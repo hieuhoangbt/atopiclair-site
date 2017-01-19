@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: About
+ Template Name: Về Atopiclair
  */
  get_header(); ?>
 <div class="content">

@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: BenhViemDaCoDia
+ Template Name: Bệnh viêm da cơ địa
  */
 get_header(); ?>
     <div class="content">
