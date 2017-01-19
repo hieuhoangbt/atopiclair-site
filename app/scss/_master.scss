@@ -27,8 +27,7 @@
     clear: both;
     float: left;
     width: 100%;
-    border-bottom: solid 0.3rem #1db0e3;
-    ;
+    border-bottom: solid 0.3rem #1db0e3;;
 
     .list-inline {
       text-align: center;
@@ -41,17 +40,65 @@
           color: #fff;
           text-transform: uppercase;
           display: block;
+          cursor: pointer;
           padding: 1rem 1rem;
           -webkit-transition: all 0.25s linear;
-          -moz-transition: all 0.25s linear ;
-          -ms-transition: all 0.25s linear ;
-          -o-transition: all 0.25s linear ;
-          transition: all 0.25s linear ;
+          -moz-transition: all 0.25s linear;
+          -ms-transition: all 0.25s linear;
+          -o-transition: all 0.25s linear;
+          transition: all 0.25s linear;
           &:hover, &.active {
             color: #0d659f;
             background: #fff;
           }
 
+        }
+        .drop-menu {
+          display: none;
+          position: absolute;
+          width: 100%;
+          list-style: none;
+          right: 2rem;
+
+          min-width: 20rem;
+          padding: 0rem;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          padding-top: 1rem;
+          &:before {
+            content: '';
+            //display: block;
+            position: absolute;
+            top: 0.2rem;
+            right: 1rem;
+            color: #fff;
+            border-bottom: 8px dashed;
+            border-bottom: 8px solid\9;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+          }
+          li {
+            border-bottom: solid 1px #448dba;
+            background-color: #0d659f;
+
+            a {
+              font-family: $font-utmavo;
+              font-size: 1.7rem;
+              color: #fff;
+              cursor: pointer;
+            }
+            &:hover {
+              a {
+                background: #fff;
+                color: #0d659f;
+              }
+
+            }
+            a.active {
+              background: #fff;
+              color: #0d659f;
+            }
+          }
         }
       }
     }
@@ -100,6 +147,11 @@
     float: right;
   }
 }
+
+* {
+  outline: none !important;;
+}
+
 @media(max-width: 1366px) {
   .container-fluid {
     max-width: 1260px;

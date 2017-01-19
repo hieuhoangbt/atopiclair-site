@@ -1,9 +1,19 @@
 window.onload = function () {
-    $('.scroll-pane').jScrollPane({
+    $('.list-angency-content .scroll-pane').jScrollPane({
         showArrows: true,
         width: '100%',
         height: 227
     });
+    var settings = {
+        showArrows: true,
+        'max-width': '100%',
+        'max-height': 227
+    };
+    var pane = $('.left-question .scroll-pane');
+    pane.jScrollPane(settings);
+    var api = pane.data('jsp');
+
+
 
     $('.thumnail-reason .item').matchHeight({property: 'min-height', byRow: true});
     $(window).on("orientationchange", function () {
@@ -26,41 +36,79 @@ window.onload = function () {
     });
 
     /*validate form contact*/
-    if($(".contact_form").length) {
+    if ($(".contact_form").length) {
         $(".contact_form").validate({
-        rules: {
+            rules: {
 
-            c_phone: {
-                number: true,
-                minlength: 10,
-                maxlength: 12,
+                c_phone: {
+                    number: true,
+                    minlength: 10,
+                    maxlength: 12,
+                },
+                c_email: {
+                    email: true
+                }
+
             },
-            c_email: {
-                email: true
+            messages: {
+                c_name: "Bạn vui lòng nhập họ tên ",
+                c_adress: "Bạn vui lòng nhập địa chỉ ",
+                c_email: {
+                    required: "Bạn vui lòng nhập Email",
+                    email: "Email không hợp lệ name@domain.com"
+                },
+                c_phone: {
+                    required: "Bạn vui lòng nhập số điện thoại",
+                    minlength: "số điện thoại từ 10 tới 12 số",
+                    maxlength: "số điện thoại từ 10 tới 12 số"
+                },
+                c_ders: {
+                    required: "Bạn vui lòng nhập số thông tin liên hệ ",
+
+                }
+
+
             }
-
-        },
-        messages: {
-            c_name: "Bạn vui lòng nhập họ tên ",
-            c_adress: "Bạn vui lòng nhập địa chỉ ",
-            c_email: {
-                required: "Bạn vui lòng nhập Email",
-                email: "Email không hợp lệ name@domain.com"
-            },
-            c_phone: {
-                required: "Bạn vui lòng nhập số điện thoại",
-                minlength: "số điện thoại từ 10 tới 12 số",
-                maxlength: "số điện thoại từ 10 tới 12 số"
-            },
-            c_ders: {
-                required: "Bạn vui lòng nhập số thông tin liên hệ ",
-
-            }
-
-
-
-        }
-    });
+        });
     }
+
+    /*list-question*/
+    if ($('.list-text-qs li').length > 0) {
+        $('.list-text-qs li .qs-title').on('click', function (e) {
+            $(e.target).parent('li.item').toggleClass('open');
+            api.reinitialise();
+            api.scrollToElement(e.target, 10, 200);
+        })
+        $('.list-text-qs li').each(function (idx, item) {
+
+        })
+    }
+    /*jplayer*/
+    /*$("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                title: "Big Buck Bunny",
+                m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+                poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+            });
+        },
+        swfPath: "../../dist/jplayer",
+        supplied: "m4v",
+        size: {
+            width: "640px",
+            height: "360px",
+            cssClass: "jp-video-360p"
+        },
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
+        keyEnabled: true,
+        remainingDuration: true,
+        toggleDuration: true
+    });*/
+    var jp = $('#jquery_jplayer_1'),
+        jpData = jp.data('jPlayer');
+
+    
 }
 
