@@ -24,11 +24,12 @@ get_header();?>
                             <h5 class="title-livestream">livestream về viêm da cơ địa</h5>
                             <div class="video-comment">
                                 <div class="video">
-                                    <img src="images/video1.jpg" alt="">
+                                    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
                                 </div>
                                 <div class="comment">
-                                    <a href="#" class="btnFB"></a>
-                                    <img src="images/pluginFB.jpg" alt="">
+                                    <a href="#" class="btnFB" id="loginfb"></a>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/pluginFB.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -36,11 +37,11 @@ get_header();?>
                             <h5 class="title-livestream">livestream về cách điều trị</h5>
                             <div class="video-comment">
                                 <div class="video">
-                                    <img src="images/video2.jpg" alt="">
+                                    <!--<div id="jquery_jplayer_1" class="jp-jplayer"></div>-->
                                 </div>
                                 <div class="comment">
-                                    <a href="#" class="btnFB"></a>
-                                    <img src="images/pluginFB.jpg" alt="">
+                                    <a href="#" class="btnFB" id="loginfb"></a>
+                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/pluginFB.jpg" alt="">
                                 </div>
                             </div>
                         </div>
