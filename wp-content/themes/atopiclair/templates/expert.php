@@ -28,8 +28,9 @@ get_header();?>
 
                                 </div>
                                 <div class="comment">
-                                    <a href="#" class="btnFB" id="loginfb"></a>
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/pluginFB.jpg" alt="">
+                                    <a href="javascript:;" class="btnFB" onclick="login()"></a>
+                                    <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="20"
+                                         width="100%" data-colorscheme="light" data-version="v2.3"></div>
                                 </div>
                             </div>
                         </div>
@@ -40,8 +41,9 @@ get_header();?>
                                     <!--<div id="jquery_jplayer_1" class="jp-jplayer"></div>-->
                                 </div>
                                 <div class="comment">
-                                    <a href="#" class="btnFB" id="loginfb"></a>
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/pluginFB.jpg" alt="">
+                                    <a href="javascript:;" class="btnFB" onclick="login()"></a>
+                                    <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="20"
+                                         width="100%" data-colorscheme="light" data-version="v2.3"></div>
                                 </div>
                             </div>
                         </div>
@@ -70,4 +72,25 @@ get_header();?>
             </div>
         </div>
     </div>
+<script>
+    function login() {
+        jQuery(this).attr("disabled", "disabled").addClass("disable");
+        if (res_status.status === 'connected' && res_status.authResponse) {
+            //do something
+        } else {
+            loginFB();
+        }
+    }
+
+    //Login FB
+    function loginFB() {
+        FB.login(function (response) {
+            if (response.authResponse != null) {
+                saveInfoLoginFB();
+            } else {
+                jQuery(".btnFB").removeAttr("disabled").removeClass("disable");
+            }
+        }, {scope: 'email'});
+    }
+</script>
 <?php get_footer(); ?>
