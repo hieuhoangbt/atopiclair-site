@@ -47,7 +47,6 @@ class Atopiclair_theme{
             'container_class' => 'container-fluid',
             'menu_class' => 'list-inline',
             'menu_id' => '',
-            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
             'walker' => new wp_bootstrap_navwalker(),
             'echo' => false,
         ));

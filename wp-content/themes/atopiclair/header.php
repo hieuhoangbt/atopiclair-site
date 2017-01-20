@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta property="fb:app_id" content="332282227165487" />
     <title><?php get_bloginfo('name'); ?></title>
     <?php wp_head(); ?>
