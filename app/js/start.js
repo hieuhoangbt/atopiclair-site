@@ -14,7 +14,6 @@ window.onload = function () {
     var api = pane.data('jsp');
 
 
-
     $('.thumnail-reason .item').matchHeight({property: 'min-height', byRow: true});
     $(window).on("orientationchange", function () {
         $.fn.matchHeight._update();
@@ -60,7 +59,8 @@ window.onload = function () {
                 c_phone: {
                     required: "Bạn vui lòng nhập số điện thoại",
                     minlength: "số điện thoại từ 10 tới 12 số",
-                    maxlength: "số điện thoại từ 10 tới 12 số"
+                    maxlength: "số điện thoại từ 10 tới 12 số",
+                    number: "Bạn vui lòng nhập số"
                 },
                 c_ders: {
                     required: "Bạn vui lòng nhập số thông tin liên hệ ",
@@ -83,32 +83,15 @@ window.onload = function () {
 
         })
     }
-    /*jplayer*/
-    /*$("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-            $(this).jPlayer("setMedia", {
-                title: "Big Buck Bunny",
-                m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-                poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-            });
-        },
-        swfPath: "../../dist/jplayer",
-        supplied: "m4v",
-        size: {
-            width: "640px",
-            height: "360px",
-            cssClass: "jp-video-360p"
-        },
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-        keyEnabled: true,
-        remainingDuration: true,
-        toggleDuration: true
-    });*/
-    var jp = $('#jquery_jplayer_1'),
-        jpData = jp.data('jPlayer');
+    if($('.ders-more').length > 0) {
+        $('.ders-more').shorten({
+            more: 'XEM THÊM',
+            less: 'Rút gọn',
+            chars: 600,
+        });
+    }
 
-    
+
+
 }
 
