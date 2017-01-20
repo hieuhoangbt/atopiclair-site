@@ -49,6 +49,7 @@ class SiteManagerPosttype {
         add_filter('manage_medicaladvice_posts_columns', array($instance, 'register_columns_medicaladvice'));
         add_filter('manage_doctor_posts_columns', array($instance, 'register_columns_doctor'));
         add_filter('manage_doctorpost_posts_columns', array($instance, 'register_columns_doctorpost'));
+        add_filter('manage_video_posts_columns', array($instance, 'register_columns_video'));
 
         //Display list product
         add_action('manage_story_posts_custom_column', array($instance, 'list_story'), 10, 2);
@@ -56,6 +57,7 @@ class SiteManagerPosttype {
         add_action('manage_medicaladvice_posts_custom_column', array($instance, 'list_medicaladvice'), 10, 2);
         add_action('manage_doctor_posts_custom_column', array($instance, 'list_doctor'), 10, 2);
         add_action('manage_doctorpost_posts_custom_column', array($instance, 'list_doctorpost'), 10, 2);
+        add_action('manage_video_posts_custom_column', array($instance, 'list_video'), 10, 2);
 
         //Open post thumbnail
         add_action('after_setup_theme', function() {
@@ -349,6 +351,63 @@ class SiteManagerPosttype {
 
         register_post_type('doctorpost', $args);
 
+        //Video
+        $labels = array(
+            'name' => _x('Video', 'Post Type General Name', 'vuonxa'),
+            'singular_name' => _x('Video', 'Post Type Singular Name', 'vuonxa'),
+            'menu_name' => __('Videos', 'vuonxa'),
+            'name_admin_bar' => __('Video', 'vuonxa'),
+            'archives' => __('Item Archives', 'vuonxa'),
+            'parent_item_colon' => __('Parent Item:', 'vuonxa'),
+            'all_items' => __('All Items', 'vuonxa'),
+            'add_new_item' => __('Add New Item', 'vuonxa'),
+            'add_new' => __('Add New', 'vuonxa'),
+            'new_item' => __('New Item', 'vuonxa'),
+            'edit_item' => __('Edit Item', 'vuonxa'),
+            'update_item' => __('Update Item', 'vuonxa'),
+            'view_item' => __('View Item', 'vuonxa'),
+            'search_items' => __('Search Item', 'vuonxa'),
+            'not_found' => __('Not found', 'vuonxa'),
+            'not_found_in_trash' => __('Not found in Trash', 'vuonxa'),
+            'featured_image' => __('Featured Image', 'vuonxa'),
+            'set_featured_image' => __('Set featured image', 'vuonxa'),
+            'remove_featured_image' => __('Remove featured image', 'vuonxa'),
+            'use_featured_image' => __('Use as featured image', 'vuonxa'),
+            'insert_into_item' => __('Insert into item', 'vuonxa'),
+            'uploaded_to_this_item' => __('Uploaded to this item', 'vuonxa'),
+            'items_list' => __('Items list', 'vuonxa'),
+            'items_list_navigation' => __('Items list navigation', 'vuonxa'),
+            'filter_items_list' => __('Filter items list', 'vuonxa'),
+        );
+        $rewrite = array(
+            'slug' => 'Video',
+            'with_front' => true,
+            'pages' => true,
+            'feeds' => true,
+        );
+        $args = array(
+            'label' => __('Video', 'vuonxa'),
+            'description' => __('Video', 'vuonxa'),
+            'labels' => $labels,
+            'supports' => array('editor'),
+            'hierarchical' => false,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-video-alt3',
+            'show_in_admin_bar' => true,
+            'show_in_nav_menus' => true,
+            'can_export' => true,
+            'has_archive' => true,
+            'exclude_from_search' => false,
+            'publicly_queryable' => true,
+            'rewrite' => $rewrite,
+            'capability_type' => 'page',
+        );
+
+        register_post_type('video', $args);
+
         flush_rewrite_rules();
         return $instance;
     }
@@ -421,6 +480,14 @@ class SiteManagerPosttype {
             'doctor' => 'Doctor',
             'title' => $columns['title'],
             'content' => 'Content',
+            'date' => $columns['date'],
+        );
+        return $columns;
+    }
+    public static function register_columns_video($columns) {
+        $columns = array(
+            'cb' => $columns['cb'],
+            'video' => 'Video',
             'date' => $columns['date'],
         );
         return $columns;
@@ -511,6 +578,14 @@ class SiteManagerPosttype {
                 echo $data_doctor[0]->post_title;
                 break;
             case 'content':
+                echo get_the_content($post_id,'content');
+                break;
+        }
+    }
+    public static function list_video($columns, $post_id) {
+        $data = get_post_meta($post_id, 'video')[0];
+        switch ($columns) {
+            case 'video':
                 echo get_the_content($post_id,'content');
                 break;
         }

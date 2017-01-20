@@ -13,6 +13,13 @@ if (get_query_var('doctor')) {
     );
     $data_doctor = new WP_Query($params_filter);
 }
+$params_filter = array(
+    'post_type' => 'video',
+    'post_status' => 'publish',
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+);
+$data_video = new WP_Query($params_filter);
 get_header(); ?>
     <div class="content">
         <div class="share">
@@ -23,14 +30,19 @@ get_header(); ?>
 
                         <div class="livestream-video">
                             <h5 class="title-livestream">livestream về viêm da cơ địa</h5>
-
+                            <?php
+                            if (!empty($data_video)) {
+                            if ($data_video->have_posts()) {
+                            while ($data_video->have_posts()) {
+                                $data_video->the_post();
+                            ?>
                             <div class="video-comment">
                                 <div class="video">
                                     <!-- 4:3 aspect ratio -->
                                     <!--<div class="embed-responsive embed-responsive-4by3">-->
                                     <video id="video_doctor1" controls>
-                                        <source src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/big_buck_bunny.mp4" type="video/mp4">
-                                        <source src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/big_buck_bunny.ogg" type="video/ogg">
+                                        <source src="<?php the_content(); ?>" type="video/mp4">
+                                        <source src="<?php the_content(); ?>" type="video/ogg">
                                     </video>
                                     <!--</div>-->
 
@@ -45,30 +57,12 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="livestream-video">
-                            <h5 class="title-livestream">livestream về cách điều trị</h5>
-
-                            <div class="video-comment">
-                                <div class="video">
-                                    <!-- 4:3 aspect ratio -->
-                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
-                                    <video id="video_doctor2" controls>
-                                        <source src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/big_buck_bunny.mp4" type="video/mp4">
-                                        <source src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/big_buck_bunny.ogg" type="video/ogg">
-                                    </video>
-                                    <!--</div>-->
-                                </div>
-                                <div class="comment">
-                                    <a href="javascript:;" class="btnFB" onclick="login()"></a>
-
-                                    <div class="box-cmt">
-                                        <div class="fb-comments" data-href="<?php the_permalink(); ?>"
-                                             data-numposts="20"
-                                             width="100%" data-colorscheme="light" data-version="v2.3"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            }
+                                wp_reset_query();
+                            }
+                            }
+                            ?>
                         </div>
                         <div class="post-doctor">
                             <h5 class="title-post">các bài viết của bác sĩ</h5>
