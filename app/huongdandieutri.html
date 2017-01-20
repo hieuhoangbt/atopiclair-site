@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/jquery.selectBox.css">
     <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/mediaelementplayer.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!--endbuild-->
 </head>
@@ -32,24 +34,29 @@
             <div class="container-fluid">
                 <ul class="list-inline">
                     <li class="item">
-                        <a href="benhviemda.html">bệnh viêm da cơ địa</a>
+                        <a class="menu-parent" href="benhviemda.html">bệnh viêm da cơ địa</a>
                     </li>
                     <li class="item">
-                        <a class="active" href="huongdandieutri.html">hướng dẫn điều trị</a>
+                        <a class="menu-parent active" href="huongdandieutri.html">hướng dẫn điều trị</a>
                     </li>
                     <li class="item">
-                        <a href="about.html">
+                        <a class="menu-parent" href="about.html">
                             atopiclair
                         </a>
                     </li>
                     <li class="item">
-                        <a href="bacsituvan.html">bác sĩ tư vấn</a>
+                        <a class="menu-parent">bác sĩ tư vấn</a>
+                        <ul class="drop-menu">
+                            <li><a href="bacsituvan.html">ý kiến bác sĩ</a></li>
+                            <li><a href="ykienchuyengia1.html">những câu hỏi thường gặp 1</a></li>
+                            <li><a href="ykienchuyengia2.html">những câu hỏi thường gặp 2</a></li>
+                        </ul>
                     </li>
                     <li class="item">
-                        <a href="chiase.html">chia sẽ</a>
+                        <a class="menu-parent" href="chiase.html">chia sẽ</a>
                     </li>
                     <li class="item">
-                        <a href="lienhe.html">liên hệ & phân phối</a>
+                        <a class="menu-parent" href="lienhe.html">liên hệ & phân phối</a>
                     </li>
                 </ul>
             </div>
@@ -313,7 +320,7 @@
                 <div class="bold text-doc-foo">
                     <div class="container-fluid">
                         <p>
-                            Tài liệu tham khảo: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
+                            Nguồn liệu tham khảo: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
                             NXB Y Học 2016
                         </p>
                     </div>
@@ -345,6 +352,7 @@
 </div>
 <!--build:js js/start.min.js -->
 <script src="js/lib/jquery.js"></script>
+<script src="js/lib/mediaelementplayer.min.js"></script>
 <script src="js/lib/jquery.mousewheel.js"></script>
 <script src="js/lib/jquery.validate.min.js"></script>
 <script src="js/lib/jquery.selectBox.js"></script>
@@ -353,6 +361,7 @@
 <script src="js/lib/jquery.matchHeight-min.js"></script>
 <script src="js/lib/loadImg.js"></script>
 <script src="js/lib/jquery.jscrollpane.min.js"></script>
+<script src="js/lib/jquery-shorten.min.js"></script>
 <script src="js/start.js"></script>
 <!-- endbuild -->
 </body>

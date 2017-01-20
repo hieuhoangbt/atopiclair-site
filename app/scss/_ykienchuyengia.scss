@@ -38,20 +38,30 @@
         width: 100%;
         float: left;
         background-color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 50px;
+        margin-bottom: 5rem;
         .video {
-          width: 60%;
+          width: 40%;
           float: left;
+          video {
+            //width: 100%;
+            height: 36.3rem;
+            display: block;
+          }
         }
         .comment {
           width: 40%;
-          float: left;
+          float: right;
+
           .btnFB {
             width: 178px;
             height: 51px;
             background: url("../images/btnFB.png");
-            margin: 10px auto 15px;
+            margin: 2rem auto;
             display: block;
+          }
+          .box-cmt {
+            max-height: 34.3rem;
+            overflow: auto;
           }
         }
       }
@@ -66,14 +76,14 @@
         color: #0064a1;
         text-align: justify;
         h3 {
-          font-size: 3rem;
+          font-size: 2rem;
           font-family: $font-utmavo_bold;
           text-transform: capitalize;
-          margin: 0rem 0rem 2rem 0rem;
+          margin: 0rem 0rem 1.4rem 0rem;
         }
         p {
-          font-size: 1.8rem;
-          line-height: 1.3;
+          font-size: 2rem;
+          line-height: 1.3em;
         }
       }
     }
@@ -85,6 +95,43 @@
   color: #0064a1;
   text-transform: uppercase;
   margin-bottom: 2rem;
-  text-align: left;
   text-align: justify;
+}
+.ders-more {
+  margin-bottom: 4rem;
+.shortcontent {
+  display: inline;
+  *, p, div, a, span, strong {
+    display: inline;
+  }
+}
+  .shorten-toggle {
+    font-family: $font-utmavo_bold;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+  }
+}
+/**
+* jQuery shorten v0.3.1
+* https://github.com/amazingSurge/jquery-shorten
+*
+* Copyright (c) amazingSurge
+* Released under the LGPL-3.0 license
+*/
+*{
+  -webkit-transition: all 0s linear;
+  -moz-transition: all 0s linear ;
+  -o-transition: all 0s linear ;
+  transition: all 0s linear ;
+}
+.shorten-detail {
+  display: none;
+}
+
+.shorten_expand .shorten-ellipses {
+  display: none;
+}
+
+.shorten_expand .shorten-detail {
+  display: inline;
 }

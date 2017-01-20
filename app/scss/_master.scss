@@ -2,6 +2,8 @@
   //border: solid red 1px;
   float: left;
   width: 100%;
+  position: relative;
+  z-index: 9;
   .container-fluid {
     position: relative;
   }
@@ -110,6 +112,8 @@
   //border: solid red 1px;
   float: left;
   width: 100%;
+  position: relative;
+  z-index: 8;
 }
 
 .footer {
@@ -124,6 +128,7 @@
     line-height: 1.3em;
     .bold {
       font-family: $font-utmavo_bold;
+      text-transform: uppercase;
     }
     a {
       text-decoration: underline;
