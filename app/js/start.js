@@ -14,19 +14,60 @@ window.onload = function () {
     var api = pane.data('jsp');
 
 
-    $('.thumnail-reason .item').matchHeight({property: 'min-height', byRow: true});
+    $('.thumnail-reason .item').matchHeight({property: 'height', byRow: true});
     $(window).on("orientationchange", function () {
         $.fn.matchHeight._update();
 
     });
 
-    //    blocksit
-    $('.list-blockslt').BlocksIt({
-        numOfCol: 3,
-        offsetX: 15,
-        offsetY: 15,
-        blockElement: '.item'
-    });
+    //    blocksit block
+    if($('.list-blockslt').length > 0) {
+        var col = 3;
+        var winWidth = $(window).width();
+        winWidth = $(window).width();
+        if(winWidth <= 767) {
+            col = 2
+        }
+        if(winWidth <= 480) {
+            col = 1
+        }
+        $('.list-blockslt').width(winWidth);
+        if(isMobile.any()) {
+            $('.list-blockslt').BlocksIt({
+                numOfCol: col,
+                offsetX: 15,
+                offsetY: 15,
+                blockElement: '.item'
+            });
+            $(window).on("orientationchange resize", function () {
+                winWidth = $(window).width();
+                if(winWidth <= 767) {
+                    col = 2
+                }
+                if(winWidth <= 480) {
+                    col = 1
+                }
+                $('.list-blockslt').width(winWidth);
+                $('.list-blockslt').BlocksIt({
+                    numOfCol: col,
+                    offsetX: 15,
+                    offsetY: 15,
+                    blockElement: '.item'
+                });
+            });
+
+        }else {
+            $('.list-blockslt').width(winWidth);
+            $('.list-blockslt').BlocksIt({
+                numOfCol: col,
+                offsetX: 15,
+                offsetY: 15,
+                blockElement: '.item'
+            });
+        }
+        
+    }
+    
     /*select*/
     $('.select-province, .select-township').selectBox({
         mobile: true,
@@ -95,3 +136,23 @@ window.onload = function () {
 
 }
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};

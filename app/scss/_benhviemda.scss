@@ -97,7 +97,7 @@
       }
     }
     &__content {
-      padding: 6rem 0rem 0rem 0rem;
+      padding-top: 6rem;
       text-align: justify;
     }
     .reason-content {
@@ -152,6 +152,7 @@
     &__content {
       .item {
         color: #0064a1;
+        margin-bottom: 2rem;
         .thumb {
           img {
             width: 100%;
@@ -178,5 +179,124 @@
     float: left;
     width: 100%;
     margin: 6rem auto;
+  }
+}
+.guide .info__guide-example .list-blockslt .item {
+  -webkit-transition: top 1s ease, left 1s ease;
+  -moz-transition: top 1s ease, left 1s ease;
+  -o-transition: top 1s ease, left 1s ease;
+  -ms-transition: top 1s ease, left 1s ease;
+}
+@media (max-width: 991px) {
+  .bg-cloud {
+    background-size: cover;
+  }
+  .info__derma-things__img img {
+    float: left;
+    max-width: 90%;
+  }
+  .info__derma-things__content .item span {
+      bottom: -3rem;
+      left: 1.7rem;
+      font-size: 5rem;
+  }
+  .info__derma-expression__content .text.right {
+    padding: 0rem 0rem 0rem 2rem;
+    font-size: 1.4rem;
+  }
+  .info__derma-expression__content .text {
+    font-size: 1.4rem;
+
+  }
+  .info__derma-expression__content .text.left {
+    padding: 0rem 2rem 0rem 0rem;
+  }
+  .info__derma-things__content .item p, 
+  .info__derma-reason__content, 
+  .info__derma-reason .reason-content .text,
+  .info__derma-option__content .item .ders {
+    font-size: 1.4rem;
+  }
+  .info__derma-option__content .item .title {
+    font-size: 1.8rem;
+  }
+  .info__title {
+    font-size: 2rem;
+  }
+  .info .text-doc-foo {
+    font-size: 1.4rem;
+  }
+  .dermatitis .info__title-underline {
+    font-size: 2rem;
+  }
+  .info__derma-reason .reason-content--after .left {
+    padding-right: 2rem;
+  }
+  .info__derma-option .info__title {
+    width: 100%;
+  }
+  .info__derma-option__content .item .title {
+    margin: 1rem 0rem;
+  }
+}
+@media (max-width: 768px) {
+  .info__derma-things__content .item span {
+    left: 1rem;
+  }
+  .dermatitis .info__title-underline {
+    margin-bottom: 2rem;
+  }
+  .info__derma-reason__img img {
+    max-width: 60%;
+  }
+  .info__derma-expression__content .thumb {
+    margin-bottom: 2rem;
+
+  }
+  .info__derma-expression__content .text {
+    margin-bottom: 1rem !important;
+  }
+}
+@media(max-width: 767px) {
+  .info__derma-things__content .item {
+    background: none;
+    border: solid 1px #0064a1;
+    padding-left: 5rem;
+    span {
+      top: 50%;
+      bottom: auto;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    }
+  }
+  .info__derma-expression__content .thumb {
+    margin-top: 2rem;
+  }
+  .info__title {
+    font-size: 1.8rem;
+  }
+  .info__derma-things__img {
+    width: 100%;
+  }
+  .info__derma-things__content {
+    width: 100%;
+    padding-top: 2rem;
+    .item {
+      margin-bottom: 2rem;
+    }
+  }
+  .info__derma-things__img img {
+    float: none;
+    margin: 0 auto;
+  }
+  .bg-cloud {
+    background-size: cover;
+  }
+  .dermatitis .info__title {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .guide .info__guide-example .list-blockslt .item {
   }
 }
