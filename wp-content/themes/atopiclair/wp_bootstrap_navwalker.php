@@ -77,7 +77,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
         $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
         $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
         $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-        if ($current_url == $cleanUrl && $depth > 0) {
+        if ($current_url == $cleanUrl && ($depth > 0 || $depth == 0)) {
             $attributes .= ' class="active"';
         }
         $subMn ='';

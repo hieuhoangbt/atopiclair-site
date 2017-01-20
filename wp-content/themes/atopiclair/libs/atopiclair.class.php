@@ -18,6 +18,13 @@ class Atopiclair_theme{
             wp_register_script('start', ATOPICLAIR_THEME_URL . '/js/start.min.js');
             wp_enqueue_script('start');
         });
+        add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+    }
+    function special_nav_class ($classes, $item) {
+        if (in_array('current-page-ancestor', $classes) || in_array('current-menu-item', $classes) ){
+            $classes[] = 'active ';
+        }
+        return $classes;
     }
     public static function atopiclair_logo() {
         printf('<h1 class="header__top__logo"><a href="%s"><img src="%s" alt="%s"/></a></h1>', get_home_url('/'), ATOPICLAIR_THEME_URL . '/images/main_logo.png', get_bloginfo('name'));
