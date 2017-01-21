@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta property="fb:app_id" content="332282227165487" />
-    <title><?php get_bloginfo('name'); ?></title>
+    <title><?php wp_title('&raquo;', true, 'right'); ?></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo ATOPICLAIR_THEME_URL; ?>/favicon.ico" />
     <?php wp_head(); ?>
 </head>
 <div id="fb-root"></div>

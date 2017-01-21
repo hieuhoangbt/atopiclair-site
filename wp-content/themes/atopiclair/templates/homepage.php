@@ -8,7 +8,7 @@ get_header(); ?>
             <div class="blog blog--intro">
                 <div class="container-fluid">
                     <div class="blog__ders">
-                        <h2 class="title-info title-info--big blog__ders__title">với atopiclai rtm <br> bé hết ngứa - Mẹ hết
+                        <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết
                             lo</h2>
                         <div class="list-inline inline-link">
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
@@ -100,7 +100,7 @@ get_header(); ?>
                 <div class="container-fluid">
                     <div class="blog__ders">
                         <div class="quote-info blog__ders__quote">
-                            <h2 class="title-info title-info--big blog__ders__title">Về Atopiclairtm</h2>
+                            <h2 class="title-info title-info--big blog__ders__title">Về Atopiclair<sup>TM</sup></h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="Về Atopiclair">
