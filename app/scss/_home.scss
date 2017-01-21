@@ -396,30 +396,7 @@ sup {
   }
 }
 @media (max-width: 991px) {
-  .header__menu {
-    .list-inline {
-      //text-align: left;
-      .item {
-        margin: 0rem;
-        padding: 0rem;
-        a {
-          font-size: 1.2rem;
-          padding: 1rem 0.5rem;
-        }
-      }
-    }
-  }
-  .header__top {
-    &__logo {
-      margin-bottom: 1rem;
-      img {
-        width: 300px;
-      }
-    }
-    &__face {
-      bottom: 1rem;
-    }
-  }
+  
   .blog.blog--nguyennhan .blog__thumb {
     width: 50%;
   }

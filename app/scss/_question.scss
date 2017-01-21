@@ -186,25 +186,7 @@
   }
 }
 
-.header__menu  {
-  .list-inline {
-    .item {
-      position: relative;
-      position: relative;
-      width: 16.66%;
-      float: left;
-      padding: 0rem 0rem 0rem 0rem;
-      &:hover {
-        .drop-menu {
-          display: block;
-        }
-      }
-    }
-  }
 
-
-
-}
 @media(max-width: 1024px) {
   .scroll-box {
     overflow-y: auto;
