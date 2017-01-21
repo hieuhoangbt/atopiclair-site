@@ -1,5 +1,6 @@
 <?php
 wp_nonce_field($post->ID, 'vuonxa_security');
+
 ?>
 <div id="qhshop-content-general" class="qhshop-option">
     <input type="hidden" id="hidden_domain" value="<?php echo site_url(); ?>">
