@@ -1,7 +1,6 @@
 <?php
 $post_id = get_the_ID();
 $data = get_post_meta($post_id, 'doctor')[0];
-//var_dump($data);die;
 get_header();
 ?>
 <div class="content">
