@@ -50,6 +50,8 @@ class SiteManagerPosttype {
         add_filter('manage_doctor_posts_columns', array($instance, 'register_columns_doctor'));
         add_filter('manage_doctorpost_posts_columns', array($instance, 'register_columns_doctorpost'));
         add_filter('manage_video_posts_columns', array($instance, 'register_columns_video'));
+        
+        add_filter("upload_mimes", array($instance, 'add_more_mimes'), 1,1);
 
         //Display list product
         add_action('manage_story_posts_custom_column', array($instance, 'list_story'), 10, 2);
@@ -299,6 +301,13 @@ class SiteManagerPosttype {
         flush_rewrite_rules();
         return $instance;
     }
+    
+    public static function add_more_mimes($mime_types){
+        //var_dump( wp_get_mime_types() );die;
+       $instance=self::get_instance();
+       $mime_types['ogv']="application/ogg";
+       return $mime_types;
+    }
 
     public static function register_meta_box() {
         $instance = self::get_instance();
@@ -476,6 +485,11 @@ class SiteManagerPosttype {
             case "medicaladvice":
                 $data = $_POST['medicaladvice'];
                 update_post_meta($post_id, 'medicaladvice', $data);
+                break;
+            case "doctor":
+                $data = $_POST['doctor'];
+                //var_dump($data);die;
+                update_post_meta($post_id, 'doctor', $data);
                 break;
         }
     }

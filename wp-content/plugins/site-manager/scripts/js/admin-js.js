@@ -2,7 +2,10 @@ var qhObject = {
     qhAttrCount: 0
 };
 jQuery(document).ready(function () {
-
+    if (jQuery('.cstm_asdfg').length) {
+        var count = jQuery('.cstm_asdfg').length;
+        qhObject.qhAttrCount = count;
+    }
     jQuery('.qhshop-box-menu a').click(function (event) {
         event.preventDefault();
         var nameContent = jQuery(this).attr('href');
@@ -20,18 +23,33 @@ jQuery(document).ready(function () {
         jQuery('#qhshop-content-attribute-form-group').append(content);
         qhObject.qhAttrCount++;
     });
+    jQuery('#addPost').click(function (event) {
+        event.preventDefault();
+        var content = '<div class="qhshop-content-form-group display-table">';
+        content += "<label>Title Post : </label>";
+        content += ' <input type="text" name="doctor[title_post][' + qhObject.qhAttrCount + ']" value="" class="small-text" placeholder="Title">';
+        content += '</div>';
+        content += '<div class="qhshop-content-form-group display-table">';
+        content += "<label>Content Post : </label>";
+        content += ' <textarea name="doctor[content_post][' + qhObject.qhAttrCount + ']" value="" class="small-text" rows="8" placeholder="Content"></textarea>';
+        content += '</div>';
+        jQuery('#qhshop-content-attribute-form-group').append(content);
+        qhObject.qhAttrCount++;
+    });
 
     jQuery('.qhDeleteIcon').click(function (event) {
         event.preventDefault();
         jQuery(this).parent().remove();
     });
 
-    jQuery("#media-choosan").click(function (e) {
+    jQuery(".cstm-btn-select").click(function (e) {
         e.preventDefault();
+        var $this = jQuery(this);
+        var format = $this.data('format');
         var uploader = wp.media({
-            title: "Chọn hình",
+            title: "Select video",
             button: {
-                text: 'Chọn hình'
+                text: 'Select video'
             },
             multiple: false
 
@@ -39,11 +57,12 @@ jQuery(document).ready(function () {
             var selection = uploader.state().get('selection');
             var attachment = selection.first().toJSON();
             var URL_HOME = jQuery("#hidden_domain").val();
-            jQuery("input#slideitem").val(attachment.url.replace(URL_HOME, ""));
-            jQuery(".description-upload img").attr("src", attachment.url);
+            $this.parents(".qhshop-content-form-group").find("input.cstm_videourl-"+format).val(attachment.url.replace(URL_HOME, ""));
+            $this.parents(".qhshop-content-form-group").find(".filename_video-"+format).text(attachment.filename);
+            //jQuery(".description-upload img").attr("src", attachment.url);
         }).open();
     });
 
-    
+
 
 });

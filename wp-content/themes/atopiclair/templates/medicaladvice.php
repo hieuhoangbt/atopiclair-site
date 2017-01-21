@@ -35,7 +35,7 @@ get_header();?>
                                     ?>
                                 <li class="item">
                                     <div class="list-doctor__thumb">
-                                        <a href="<?php  ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>"></a>
+                                        <a href="<?php the_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>"></a>
                                     </div>
                                     <div class="list-doctor__name"><?php the_title(); ?></div>
                                     <div class="list-doctor__ders">

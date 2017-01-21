@@ -14,7 +14,7 @@ if (get_query_var('doctor')) {
     $data_doctor = new WP_Query($params_filter);
 }
 $params_filter = array(
-    'post_type' => 'video',
+    'post_type' => 'doctor',
     'post_status' => 'publish',
     'orderby' => 'post_date',
     'order' => 'DESC',

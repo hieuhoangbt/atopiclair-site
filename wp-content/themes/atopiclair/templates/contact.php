@@ -23,9 +23,9 @@ if (isset($_POST) && !empty($_POST)) {
                 </tr>
 				  <tr>
 						<td> ' . $_POST['fullname'] . '</td>
-						<td><div align="center">' . $_POST['email'] . '</div></td>
-						<td><div align="center">' . $_POST['phone'] . '</div></td>
-						<td><div align="right">' . $_POST['content'] . '</div></td>
+						<td><div align="center">' . $_POST['c_email'] . '</div></td>
+						<td><div align="center">' . $_POST['c_phone'] . '</div></td>
+						<td><div align="right">' . $_POST['c_ders'] . '</div></td>
 				  </tr>
 
                 </tbody></table>';
@@ -51,35 +51,38 @@ get_header(); ?>
                                 <p>Yêu cầu về phân phối, xin liên hệ: 1800555558</p>
                             </div>
                             <div class="info__lienhe__right">
-                                <form method="post" action="<?php the_permalink(); ?>" class="form-horizontal form-contact">
+                                <form method="post" action="<?php the_permalink(); ?>" class="form-horizontal contact_form">
                                     <?php if ($done == 1) { ?>
                                         <label class="label label-success">Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi phản hồi cho bạn ngay sau khi kiểm tra hòm thư.</label>
                                     <?php } ?>
                                     <div class="group-form">
                                         <label for="">Họ và tên</label>
-                                        <input type="text" name="fullname" id="contact-fullname" placeholder="Họ và tên" />
+                                        <input type="text" name="c_name" placeholder="Họ và tên" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Địa chỉ</label>
-                                        <input type="text" name="address" id="contact-address" placeholder="Địa chỉ" />
+                                        <input type="text" name="c_adress" placeholder="Địa chỉ" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Email</label>
-                                        <input type="text" name="email" id="contact-email" placeholder="Email" />
+                                        <input type="text" name="c_email" placeholder="Email" required/>
                                     </div>
                                     <div class="group-form">
                                         <label for="">Số điện thoại</label>
-                                        <input type="text" name="phone" id="contact-phone" placeholder="Số điện thoại" />
+                                        <input type="text" name="c_phone" placeholder="Số điện thoại" required/>
                                     </div>
                                     <div class="group-form">
                                         <label class="label-info" for="">Nội dung</label>
-                                        <textarea name="content" id="contact-content" placeholder="Nội dung"></textarea>
+                                        <textarea name="c_ders" placeholder="Nội dung" required></textarea>
                                     </div>
                                     <div class="group-form">
                                         <button class="btn-send">Gửi</button>
                                         <?php wp_nonce_field('submit_contact'); ?>
                                     </div>
                                 </form>
+                            </div>
+                        <div class="img-lienhe">
+                                <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/gau_lienhe.png" alt="liên hệ">
                             </div>
                         </div>
                     </div>
