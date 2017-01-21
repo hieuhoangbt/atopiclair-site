@@ -195,7 +195,7 @@
   }
 }
 .term-info p.lv1 {
-  margin: 2rem 0rem 1rem 0px;
+  margin: 3rem 0rem 3rem 0px;
   font-size: 1.8rem;
 }
 .term-info p {
@@ -208,6 +208,11 @@
   img {
     display: block;
     margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 80%;
   }
 }
 
