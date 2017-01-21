@@ -1,3 +1,6 @@
+sup {
+  font-size: 65%;
+}
 .blog {
   &__ders {
     width: 100%;
@@ -287,6 +290,9 @@
       background: #e0e0e0;
     }
   }
+  li span {
+        background-color: rgba(255,255,255,0.4);
+  }
   img {
     display: inline-block;
     vertical-align: middle;
@@ -302,7 +308,7 @@
   }
   .list-inline {
     .item {
-      width: 33%;
+      width: 31%;
       margin: 0rem 0rem 0rem 0rem;
       vertical-align: top;
       .list-children__name {
@@ -516,6 +522,23 @@
     .item {
       margin-bottom: 3rem;
     }
+  }
+  /* chiase */
+  .share .blog--share .list-inline .item {
+    width: 100%;
+  }
+  .share .blog--share .list-inline .item .list-children__name {
+    width: 237px;
+    margin: 1rem auto;
+  }
+  .share .blog--share .list-inline .item .list-children__ders {
+    width: 100%;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  .pagi-list.right li a {
+    padding: 1rem 1rem;
+    height: auto;
   }
 
 }

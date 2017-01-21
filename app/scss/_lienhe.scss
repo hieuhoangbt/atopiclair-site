@@ -104,3 +104,55 @@ label.error {
   width: 80% !important;
   clear: both;
 }
+@media(max-width: 991px) {
+  .img-lienhe {
+    width: 50%;
+    bottom: -10rem;
+    img {
+      display: block;
+      margin: auto;
+      width: 30rem;
+    }
+  }
+  .info__lienhe {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .info__lienhe__right .group-form label, .info__lienhe__left p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .info__lienhe__left, .info__lienhe__right {
+    width: 100%;
+  }
+  .info__lienhe__right {
+    padding: 2rem 0rem;
+  }
+  .img-lienhe {
+    position: static;
+    margin-bottom: -10rem;
+  }
+  .info__lienhe {
+    padding-bottom: 0rem;
+    padding-top: 2rem;
+  }
+  .img-lienhe {
+    width: 100%;
+  }
+  .lienhe__bg {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 360px) {
+  .info__lienhe__right .group-form label {
+    width: 100%;
+    max-width: none;
+  }
+  .info__lienhe__right .group-form input, 
+  .info__lienhe__right .group-form textarea {
+    width: 100%;
+  }
+}
+

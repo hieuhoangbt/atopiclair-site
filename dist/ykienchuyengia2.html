@@ -63,20 +63,21 @@
                         <div class="livestream-video">
                             <h5 class="title-livestream">livestream về viêm da cơ địa</h5>
                             <div class="video-comment">
-                                <div class="video">
+                                <div class="video item">
                                     <!-- 4:3 aspect ratio -->
-                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                    <div class="embed-responsive embed-responsive-16by9">
                                     <video id="video_doctor1" controls>
                                         <source src="images/big_buck_bunny.mp4" type="video/mp4">
                                         <source src="images/big_buck_bunny.ogg" type="video/ogg">
                                     </video>
-                                    <!--</div>-->
+                                    </div>
 
                                 </div>
-                                <div class="comment">
+                                <div class="comment item">
                                     <a href="#" class="btnFB"></a>
                                     <div class="box-cmt">
-                                        <img src="images/pluginFB.jpg" alt="">
+                                        <!-- <img src="images/pluginFB.jpg" alt=""> -->
+                                        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="1"></div>
                                     </div>
                                 </div>
                             </div>
@@ -84,19 +85,20 @@
                         <div class="livestream-video">
                             <h5 class="title-livestream">livestream về cách điều trị</h5>
                             <div class="video-comment">
-                                <div class="video">
+                                <div class="video item">
                                     <!-- 4:3 aspect ratio -->
-                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                    <div class="embed-responsive embed-responsive-16by9">
                                     <video id="video_doctor2" controls>
                                         <source src="images/big_buck_bunny.mp4" type="video/mp4">
                                         <source src="images/big_buck_bunny.ogg" type="video/ogg">
                                     </video>
-                                    <!--</div>-->
+                                    </div>
                                 </div>
-                                <div class="comment">
+                                <div class="comment item">
                                     <a href="#" class="btnFB"></a>
                                     <div class="box-cmt">
-                                        <img src="images/pluginFB.jpg" alt="">
+                                        <!-- <img src="images/pluginFB.jpg" alt=""> -->
+                                        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="1"></div>
                                     </div>
                                 </div>
                             </div>
@@ -236,6 +238,14 @@
     </div>
 </div>
 <script src="js/start.min.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>

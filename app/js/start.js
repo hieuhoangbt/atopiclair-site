@@ -1,20 +1,28 @@
 window.onload = function () {
-    $('.list-angency-content .scroll-pane').jScrollPane({
-        showArrows: true,
-        width: '100%',
-        height: 227
-    });
+    if(!isMobile.any()) {
+        $('.list-angency-content .scroll-pane').jScrollPane({
+            showArrows: true,
+            width: '100%',
+            height: 227
+        });
+    }
+    
     var settings = {
         showArrows: true,
         'max-width': '100%',
         'max-height': 227
     };
-    var pane = $('.left-question .scroll-pane');
-    pane.jScrollPane(settings);
-    var api = pane.data('jsp');
+    
+    var pane = $('.left-question .scroll-pane'), api = {};
+    if(!isMobile.any()) {
+        pane.jScrollPane(settings);
+        api = pane.data('jsp');    
+    }
+    
 
 
     $('.thumnail-reason .item').matchHeight({property: 'height', byRow: true});
+    $('.video-comment .item').matchHeight({property: 'height', byRow: true});
     $(window).on("orientationchange", function () {
         $.fn.matchHeight._update();
 
@@ -117,8 +125,11 @@ window.onload = function () {
     if ($('.list-text-qs li').length > 0) {
         $('.list-text-qs li .qs-title').on('click', function (e) {
             $(e.target).parent('li.item').toggleClass('open');
-            api.reinitialise();
-            api.scrollToElement(e.target, 10, 200);
+            if(!isMobile.any()) {
+                api.reinitialise();
+                api.scrollToElement(e.target, 10, 200);    
+            }
+            
         })
         $('.list-text-qs li').each(function (idx, item) {
 

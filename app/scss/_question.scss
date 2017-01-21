@@ -190,6 +190,10 @@
   .list-inline {
     .item {
       position: relative;
+      position: relative;
+      width: 16.66%;
+      float: left;
+      padding: 0rem 0rem 0rem 0rem;
       &:hover {
         .drop-menu {
           display: block;
@@ -199,4 +203,35 @@
   }
 
 
+
+}
+@media(max-width: 1024px) {
+  .scroll-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+@media(max-width: 767px) {
+  .left-question, .right-form-question {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .left-question {
+    padding: 2rem 0rem 2rem 0rem;
+  }
+  .list-text-qs {
+    padding: 0rem 3rem;
+  }
+  .list-text-qs .item .qs-title {
+    font-size: 1.4rem;
+  }
+  .list-text-qs .item .qs-ders {
+    font-size: 1.4rem;
+  }
+  .right-form-question .form-qs label {
+    font-size: 1.4rem;
+  }
+  .right-form-question .form-qs textarea {
+    margin: 1rem 0rem;
+  }
 }

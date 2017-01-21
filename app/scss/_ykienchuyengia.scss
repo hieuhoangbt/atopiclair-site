@@ -15,6 +15,7 @@
           img {
             display: block;
             margin: 0 auto;
+            width: 100%;
           }
         }
         .list-doctor__name {
@@ -42,26 +43,30 @@
         .video {
           width: 40%;
           float: left;
+          overflow: hidden;
           video {
             //width: 100%;
-            height: 36.3rem;
+            // height: 36.3rem;
             display: block;
           }
         }
         .comment {
           width: 40%;
           float: right;
-
+          overflow: hidden;
           .btnFB {
-            width: 178px;
-            height: 51px;
-            background: url("../images/btnFB.png");
-            margin: 2rem auto;
+            width: 158px;
+            height: 31px;
+            background: url("../images/btnFB.png") no-repeat center ;
+            background-size: contain;
+            margin: 1rem auto;
             display: block;
           }
           .box-cmt {
-            max-height: 34.3rem;
-            overflow: auto;
+            /* max-height: 34.3rem;
+            overflow: auto; */
+            height: 80%;
+            overflow-y: auto;
           }
         }
       }
@@ -135,3 +140,32 @@
 .shorten_expand .shorten-detail {
   display: inline;
 }
+@media (max-width: 991px) {
+  .blog.blog--ykien .blog__ders .list-inline .item .list-doctor__thumb {
+    width: 100%;
+    height: auto;
+  }
+  .blog.blog--ykien .blog__ders .list-inline .item .list-doctor__ders {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .blog.blog--ykien .blog__ders .list-inline .item .list-doctor__name {
+    margin-top: 1rem;
+  }
+}
+@media(max-width: 767px) {
+  .blog.blog--ykien .blog__ders .livestream-video .video-comment .video {
+    width: 100%;
+  }
+  .blog.blog--ykien .blog__ders .livestream-video .video-comment .comment {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .share .blog--share .list-inline .item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
