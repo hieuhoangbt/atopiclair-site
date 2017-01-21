@@ -144,6 +144,9 @@
     &__info {
       width: 85%;
       float: left;
+      a {
+        cursor: pointer;
+      }
       p {
         margin-bottom: 0.5rem;
       }
@@ -176,6 +179,38 @@
 
 
 }
+/* MODAL */
+.term-info p.lv1 {
+  margin: 0px 0px 20px 0px;
+  font-size: 20px;
+}
+.term-info{
+  font-family: 'UTMAvo';
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 1.4rem;
+  padding: 0rem 3rem 3rem 3rem;
+  br {
+    display: none !important;
+  }
+}
+.term-info p.lv1 {
+  margin: 2rem 0rem 1rem 0px;
+  font-size: 1.8rem;
+}
+.term-info p {
+    clear: both;
+    line-height: 1.4em;
+    margin: 1rem 0rem;
+}
+.logo-popup {
+  width: 100%;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 @media(max-width: 1366px) {
   .container-fluid {
     max-width: 1260px;
