@@ -41,7 +41,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
             }
         }
         if (in_array($item->ID, $parents)) {
-            $caret = ' <span class="caret"></span>';
+            $caret = ' <span class="caret">&nbsp;</span>';
             $collapse = ' ';
         } else {
             $caret = '';
