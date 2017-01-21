@@ -143,6 +143,12 @@ window.onload = function () {
         });
     }
 
+    /*menu-mobile*/
+    if(isMobile.any()) {
+        $('.button-bar').on('click', function(e) {
+            $('.header__menu').toggleClass('mobile');
+        })
+    }
 
 
 }
