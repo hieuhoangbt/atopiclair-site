@@ -122,8 +122,12 @@ sup {
   .list-children {
     margin: 0rem;
     width: 100%;
+    font-size: 0rem;
     .item {
-      margin: 0rem 1rem;
+      margin: 0rem 0rem;
+      width: 33.3%;
+      padding: 0rem 1rem;
+      vertical-align: top;
       .list-children__thumb {
         width: 20rem;
         height: 20rem;
@@ -133,16 +137,16 @@ sup {
         margin: 0 auto;
       }
       .list-children__name {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
         text-transform: uppercase;
         color: #ffffff;
-        //width: 23.7rem;
         height: 10.43rem;
-        line-height: 10.43rem;
-        background: url("../images/home_bg-cloud.png") no-repeat center;
+        /* line-height: 10.43rem; */
+        background: url(../images/home_bg-cloud.png) no-repeat center;
         background-size: 100% 100%;
         margin-top: 1rem;
+        padding: 2.5rem 0rem 0rem 0rem;
       }
       .list-children__ders {
         width: 20rem;
@@ -360,7 +364,7 @@ sup {
   .header__menu {
     .list-inline {
       .item a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -393,6 +397,10 @@ sup {
   }
   .blog.blog--nguyennhan .blog__thumb {
     width: 55%;
+  }
+  .blog .quote-info .box .quote-icon.quote-icon--left {
+      left: 0rem;
+      top: -2rem;
   }
 }
 @media (max-width: 991px) {
@@ -498,6 +506,11 @@ sup {
     text-align: center;
     .item {
       margin-bottom: 3rem;
+      width: 50%;
+      .list-children__name {
+        width: 100%;
+        margin: 1rem auto;
+      }
     }
   }
   /* chiase */
@@ -530,6 +543,17 @@ sup {
       float: none;
       margin: auto;
       width: 120px;
+    }
+  }
+  .blog .list-children {
+    text-align: center;
+    .item {
+      margin-bottom: 3rem;
+      width: 100%;
+      .list-children__name {
+        width: 30rem;
+        margin: 1rem auto;
+      }
     }
   }
 }
