@@ -363,6 +363,11 @@ sup {
     width: 50%;
   }
 }
+@media(min-width: 1900px) {
+  .blog.blog--intro .blog__thumb {
+    width: 34%;
+  }
+}
 @media (max-width: 1199px) {
   .header__menu {
     .list-inline {
