@@ -38,10 +38,13 @@ get_header();
                                         <div class="list-children__thumb">
                                             <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
                                         </div>
-                                        <div class="list-children__name"><?php the_title(); ?></div>
+                                        <div class="list-children__name">
+                                            <span>Bé</span>
+                                            <span><?php the_title(); ?></span>
+                                        </div>
                                         <div class="list-children__ders">
                                             <p>
-        <?php the_content(); ?>
+                                                <?php the_content(); ?>
                                             </p>
                                         </div>
                                     </li>

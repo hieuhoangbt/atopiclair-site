@@ -13,7 +13,7 @@ get_header(); ?>
                         <div class="list-inline inline-link">
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng Dẫn Điều Trị</a>
-                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair<sup>tm</sup></a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair</a>
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
                         </div>
                     </div>
@@ -162,7 +162,10 @@ get_header(); ?>
                                         ?>
                                         <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="<?php the_title(); ?>">
                                     </div>
-                                    <div class="list-children__name"><?php the_title(); ?></div>
+                                    <div class="list-children__name">
+                                        <span>Bé</span>
+                                        <span><?php the_title(); ?></span>
+                                    </div>
                                 </li>
                                     <?php }  }
                                 $count++;
