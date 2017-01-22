@@ -79,7 +79,7 @@
         width: 100%;
         float: left;
         color: #0064a1;
-        text-align: justify;
+        text-align: left;
         h3 {
           font-size: 2rem;
           font-family: $font-utmavo_bold;
@@ -139,6 +139,14 @@
 
 .shorten_expand .shorten-detail {
   display: inline;
+}
+.form-qs {
+  position: relative;
+  label.error {
+    float: left;
+    bottom: -2.5rem;
+    left: 0rem;
+  }
 }
 @media (max-width: 991px) {
   .blog.blog--ykien .blog__ders .list-inline .item .list-doctor__thumb {

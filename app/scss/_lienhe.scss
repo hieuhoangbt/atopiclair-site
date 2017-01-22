@@ -155,4 +155,12 @@ label.error {
     width: 100%;
   }
 }
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  .info__lienhe {
+      padding-bottom: 13rem;
+  }
+}
 

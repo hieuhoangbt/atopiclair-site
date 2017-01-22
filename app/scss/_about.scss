@@ -80,6 +80,7 @@
   display: table;
   text-align: center;
   width: 100%;
+  font-size: 0rem;
   .item {
     display: inline-table;
     vertical-align: top;
@@ -144,7 +145,7 @@
   .thumb-block__title .small {
     width: 100%;
     font-size: 1.2rem;
-    text-align: justify;
+    // text-align: justify;
   }
   .thumb-block__img img {
     width: 60%;

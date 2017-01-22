@@ -1,4 +1,9 @@
+/*$(document).ready(function() {
+    $('img').imgPreload();
+})*/
 window.onload = function () {
+    /*load img*/
+    
     if(!isMobile.any()) {
         $('.list-angency-content .scroll-pane').jScrollPane({
             showArrows: true,
@@ -39,8 +44,9 @@ window.onload = function () {
         if(winWidth <= 480) {
             col = 1
         }
-        $('.list-blockslt').width(winWidth);
+        
         if(isMobile.any()) {
+            $('.list-blockslt').width(winWidth);
             $('.list-blockslt').BlocksIt({
                 numOfCol: col,
                 offsetX: 15,
@@ -65,7 +71,7 @@ window.onload = function () {
             });
 
         }else {
-            $('.list-blockslt').width(winWidth);
+            // $('.list-blockslt').width(winWidth);
             $('.list-blockslt').BlocksIt({
                 numOfCol: col,
                 offsetX: 15,
@@ -120,6 +126,28 @@ window.onload = function () {
             }
         });
     }
+    if($('.form-qs').length) {
+        $.validator.addMethod("nameRegex", function(value, element) {
+            return this.optional(element) || /^[a-zA-Z0-9()._\-\s]+$/.test(value);
+        }, "Username must contain only letters, numbers, or dashes.");
+
+        $('.form-qs').validate({
+            rules: {
+                "c_drs": {
+                    required: true,
+                    nameRegex: true
+                }
+            },
+            messages: {
+                "c_drs": {
+                    required: "Bạn chưa nhập nội dung ",
+                    nameRegex: "Contain only letters, numbers."    
+                }
+                
+                
+            }
+        });
+    }
 
     /*list-question*/
     if ($('.list-text-qs li').length > 0) {
@@ -148,11 +176,27 @@ window.onload = function () {
         $('.button-bar').on('click', function(e) {
             $('.header__menu').toggleClass('mobile');
         })
+        $('.list-menu .item').on('click', function(e) {
+            var _this = $(this);
+            if($(_this).find('.drop-menu').length > 0) {
+                $(_this).toggleClass('has_sub');
+                // return false;
+            }
+        })
     }
 
+    /*load images default*/
+    loadDefaultImg('.list-blockslt .item_img');
 
 }
+function loadDefaultImg(img_input) {
+    if(!$(img_input).length > 0) return;
+    $(img_input).each(function(idx, item) {
+        var im = $(item).find('.item_img img');
+        console.log($(im).attr('src'));
+    })
 
+}
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
