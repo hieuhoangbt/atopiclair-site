@@ -147,6 +147,9 @@ sup {
         background-size: 100% 100%;
         margin-top: 1rem;
         padding: 2.5rem 0rem 0rem 0rem;
+        span {
+          display: block;
+        }
       }
       .list-children__ders {
         width: 20rem;
@@ -360,6 +363,11 @@ sup {
     width: 50%;
   }
 }
+@media(min-width: 1900px) {
+  .blog.blog--intro .blog__thumb {
+    width: 34%;
+  }
+}
 @media (max-width: 1199px) {
   .header__menu {
     .list-inline {
@@ -508,7 +516,7 @@ sup {
       margin-bottom: 3rem;
       width: 50%;
       .list-children__name {
-        width: 100%;
+        width: 80%;
         margin: 1rem auto;
       }
     }
@@ -551,8 +559,10 @@ sup {
       margin-bottom: 3rem;
       width: 100%;
       .list-children__name {
-        width: 30rem;
-        margin: 1rem auto;
+            /* width: 30rem; */
+          margin: 1rem auto;
+          font-size: 1.4rem;
+          padding-top: 3rem;
       }
     }
   }
