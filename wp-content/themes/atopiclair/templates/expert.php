@@ -75,7 +75,7 @@ get_header(); ?>
                                         <div class="post-item">
                                             <h3><?php the_title(); ?></h3>
 
-                                            <p><?php the_content(); ?></p>
+                                            <p><?php echo n2lbr(get_the_content()); ?></p>
                                         </div>
                                     <?php
                                     }

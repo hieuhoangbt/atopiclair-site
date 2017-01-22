@@ -13,7 +13,7 @@ get_header();
                         lo</h2>
                     <div class="list-inline inline-link">
                         <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
-                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng Dẫn Điều Trị</a>
+                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng dẫn điều trị</a>
                         <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair</a>
                         <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
                     </div>

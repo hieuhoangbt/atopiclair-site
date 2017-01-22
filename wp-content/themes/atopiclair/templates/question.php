@@ -2,6 +2,7 @@
 /*
  Template Name: Câu hỏi thường gặp
  */
+$post= $_POST['question'];
 $params_filter = array(
     'post_type' => 'expert',
     'post_status' => 'publish',
@@ -52,24 +53,17 @@ $question = new WP_Query($params_filter);
                 </div>
                 <div class="right-form-question">
                     <form action="" method="post" class="form-horizontal form-qs">
-                        <div class="hidden success">
-                        <label class="label label-success">Cảm ơn bạn đã gửi câu hỏi!</label>
-                        </div>
                         <label class="control-label">
                             Chia sẻ những thắc mắc của bạn để nhận được sự tư vấn của các chuyên gia Atopiclair<sup>TM</sup>
                             nhé!
                         </label>
                         <textarea name="question" class="form-control" placeholder="Thắc mắc của bạn" required></textarea>
-                        <button type="submit" class="btn send-question">Gửi</button>
+                        <button type="submit" class="btn" id="send-question">Gửi</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $('.send-question').click(function(){
-        $('.success').removeClass('hidden');
-    });
-</script>
-<?php get_footer(); ?>
+<?php
+ get_footer(); ?>

@@ -3,7 +3,8 @@ class Atopiclair_theme{
 
     public static function run() {
         add_action('after_setup_theme', function(){
-
+           add_theme_support('post-thumbnails');
+           add_image_size('share_thumbnail', 180, 180, array('center', 'center'));
         });
         //Register menu
         add_action('init', function() {

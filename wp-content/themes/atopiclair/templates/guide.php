@@ -72,14 +72,13 @@ get_header(); ?>
                             tuổi.
                         </p>
                         <p>
-                            <span class="style-ord"></span>Da bị tổn thương do chà xát và cào gãi không kiểm soát vì ngứa, dẫn đến dễ xâm nhập các dị
-                            ứng nguyên và vi khuẩn, gây nhiễm trùng da. Vị trí da tổn thương có thể thay đổi theo độ
-                            tuổi.
+                            <span class="style-ord"></span>Chất dưỡng ẩm có tác dụng làm mềm da, giảm khô da từ đó giảm ngứa; phục hồi hàng rào bảo vệ da
+                            ;ngăn cản sự bám dính của vi khuẩn, ngăn cản sự xâm nhập của các tác nhân gây kích thích. 
                         </p>
                         <p>
-                            <span class="style-ord"></span>Da bị tổn thương do chà xát và cào gãi không kiểm soát vì ngứa, dẫn đến dễ xâm nhập các dị
-                            ứng nguyên và vi khuẩn, gây nhiễm trùng da. Vị trí da tổn thương có thể thay đổi theo độ
-                            tuổi.
+                            <span class="style-ord"></span>Một số ít chất dưỡng ẩm còn có thêm tác dụng chống viêm ngoài tác dụng dưỡng ẩm
+                            (nhờ thành phần có chứa glycyrrhetinic acid, telmesteine, vitis vinifera, palmitoylethanolamine...), giúp tăng
+                            hiệu quả điều trị, giảm thời gian và tần suất sử dụng corticosteroid và an toàn cho trẻ sơ sinh.
                         </p>
                         <p>
                             <span class="style-ord"></span>Chất dưỡng ẩm còn có vai trò duy trì và phòng ngừa tái phát bệnh.
@@ -114,6 +113,10 @@ get_header(); ?>
                                         thiết
                                         và trong thời gian ngắn (1-2 tuần), chỉ bôi một lớp mỏng len vùng da bệnh theo
                                         đúng dưỡng dẫn của bác sĩ.
+                                    </p>
+                                    <p>
+                                        Chỉ nên sử dụng thuốc corticosteroid mà bác sĩ kê toa cho chính mình, 
+                                        không nên tự mua hoặc mượn một thuốc bôi không phù hợp của người khác.
                                     </p>
                                     <p class="bold text-uppercase">
                                         Chất dưỡng ẩm

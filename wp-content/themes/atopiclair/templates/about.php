@@ -70,7 +70,7 @@
                         <h2 class="info__title">vì sao nên sử dụng atopiclair<sup>TM</sup>?</h2>
                         <div class="item">
                             <p class="text-drs bold">
-                                Atopiclair<sup>TM</sup> hỗ trợ điều trị VDCĐ không chứa corticoid được FDA Hoa Kỳ chứng nhân
+                                Atopiclair<sup>TM</sup> hỗ trợ điều trị VDCĐ không chứa corticoid được FDA Hoa Kỳ chứng nhận
                             </p>
                         </div>
                         <div class="item">
@@ -79,7 +79,7 @@
                                 giảm ngứa được Hội Da Liễu và Hội Nhi Khoa Việt Nam khuyến cáo ưu tiên lựa chọn
                             </p>
                             <p class="text-drs">
-                                <span>Giảm ngứa nhanh troCng vòng < 3 phút</span>
+                                <span>Giảm ngứa nhanh trong vòng < 3 phút</span>
                                 <span>Hơn 90% bệnh nhân giảm liều lượng và thời gian sử dụng cortitoid trong kiểm soát VDCĐ</span>
                             </p>
                         </div>
