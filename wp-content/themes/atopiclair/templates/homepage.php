@@ -137,10 +137,8 @@ get_header(); ?>
                             <ul class="list-inline list-children">
                             <?php
                             $post_params = array(
-                                'posts_per_page'=>3,
                                 'post_type' => 'story',
                                 'post_status' => 'publish',
-                                'highlight' =>1,
                                 'orderby' => 'date',
                                 'order' => 'DESC',
                             );
@@ -148,8 +146,9 @@ get_header(); ?>
                             if ($liststory->have_posts()) {
                                 while ($liststory->have_posts()) {
                                     $liststory->the_post();
+                                    $data = get_post_meta(get_the_ID(), 'story')[0];
                                     $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
-                                    ?>
+                                    if($data['highlight']==1){ ?>
                                 <li class="item">
                                     <div class="list-children__thumb">
                                         <?php
@@ -163,7 +162,7 @@ get_header(); ?>
                                     </div>
                                     <div class="list-children__name"><?php the_title(); ?></div>
                                 </li>
-                            <?php }
+                                <?php }  }
                                 wp_reset_query();
                             } ?>
 

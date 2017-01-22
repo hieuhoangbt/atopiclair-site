@@ -1,14 +1,19 @@
-<?php get_header(); ?>
+<?php
+/*
+ Template Name: Trang Chủ
+ */
+get_header(); ?>
     <div class="content">
         <div class="home">
             <div class="blog blog--intro">
                 <div class="container-fluid">
                     <div class="blog__ders">
-                        <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết lo</h2>
+                        <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết
+                            lo</h2>
                         <div class="list-inline inline-link">
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
-                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">hướng dẫn điều trị</a>
-                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng Dẫn Điều Trị</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair<sup>tm</sup></a>
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
                         </div>
                     </div>
@@ -58,7 +63,7 @@
                 <div class="container-fluid">
                     <div class="blog__ders">
                         <div class="quote-info blog__ders__quote">
-                            <h2 class="title-info title-info--big blog__ders__title">hướng dẫn điều trị</h2>
+                            <h2 class="title-info title-info--big blog__ders__title">Hướng dẫn điều trị</h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="Atopiclair hướng dẫn điều trị">
@@ -130,37 +135,40 @@
                         <a href="<?php echo get_page_link(66); ?>" class="btn-link">chia sẻ</a>
                         <div class="quote-info blog__ders__quote">
                             <ul class="list-inline list-children">
-                                <?php
-                                $post_params = array(
-                                    'posts_per_page'=>3,
-                                    'post_type' => 'story',
-                                    'post_status' => 'publish',
-                                    'highlight' =>1,
-                                    'orderby' => 'date',
-                                    'order' => 'DESC',
-                                );
-                                $liststory = new WP_Query($post_params);
-                                if ($liststory->have_posts()) {
-                                    while ($liststory->have_posts()) {
-                                        $liststory->the_post();
-                                        $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
+                            <?php
+                            $post_params = array(
+                                'post_type' => 'story',
+                                'post_status' => 'publish',
+                                'orderby' => 'date',
+                                'order' => 'DESC',
+                            );
+                            $count=0;
+                            $liststory = new WP_Query($post_params);
+                            if ($liststory->have_posts()) {
+                                while ($liststory->have_posts()) {
+                                    $liststory->the_post();
+                                    $data = get_post_meta(get_the_ID(), 'story')[0];
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
+                                    if($data['highlight']==1){ 
+                                        if($count<3){ ?>
+                                <li class="item">
+                                    <div class="list-children__thumb">
+                                        <?php
+                                        if ($image) {?>
+                                            <img src="<?php echo $image[0]; ?>"/>
+                                        <?php } else {
+                                            printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
+                                        }
                                         ?>
-                                        <li class="item">
-                                            <div class="list-children__thumb">
-                                                <?php
-                                                if ($image) {?>
-                                                    <img src="<?php echo $image[0]; ?>"/>
-                                                <?php } else {
-                                                    printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
-                                                }
-                                                ?>
-                                                <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="<?php the_title(); ?>">
-                                            </div>
-                                            <div class="list-children__name"><?php the_title(); ?></div>
-                                        </li>
-                                    <?php }
-                                    wp_reset_query();
-                                } ?>
+                                        <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="<?php the_title(); ?>">
+                                    </div>
+                                    <div class="list-children__name"><?php the_title(); ?></div>
+                                </li>
+                                    <?php }  }
+                                $count++;
+                                        }
+                                wp_reset_query();
+                            } ?>
 
 
                             </ul>

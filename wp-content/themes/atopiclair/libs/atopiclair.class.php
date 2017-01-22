@@ -30,7 +30,7 @@ class Atopiclair_theme{
         printf('<h1 class="header__top__logo"><a href="%s"><img src="%s" alt="%s"/></a></h1>', get_home_url('/'), ATOPICLAIR_THEME_URL . '/images/main_logo.png', get_bloginfo('name'));
     }
     public static function facebook_logo() {
-        printf('<div class="header__top__face"><a href="%s"><img src="%s" alt="%s"/></a></div>', get_home_url('/'), ATOPICLAIR_THEME_URL . '/images/main_face.png', get_bloginfo('name'));
+        printf('<div class="header__top__face"><a target="_blank" href="%s"><img src="%s" alt="%s"/></a></div>', "https://www.facebook.com/atopiclairvn/", ATOPICLAIR_THEME_URL . '/images/main_face.png', get_bloginfo('name'));
     }
     public static function footer_left_logo() {
         printf('<div class="footer__left__logo"><a href="%s"><img src="%s" alt="%s"/></a></div>', get_home_url('/'), ATOPICLAIR_THEME_URL . '/images/main_traidat.png', get_bloginfo('name'));

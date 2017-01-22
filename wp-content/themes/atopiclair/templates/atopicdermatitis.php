@@ -141,39 +141,39 @@ get_header(); ?>
                                 <div class="col-xs-12 col-sm-7 col-md-8 right ">
                                     <div class="row thumnail-reason">
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason1.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason1.png" alt="No Photo"/></div>
                                             <p class="text-title">Xà phòng, chất tẩy</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason2.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason2.png" alt="No Photo"/></div>
                                             <p class="text-title">Thú nuôi</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason3.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason3.png" alt="No Photo"/></div>
                                             <p class="text-title">Thay đổi khí hậu</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason4.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason4.png" alt="No Photo"/></div>
                                             <p class="text-title">Mồ hôi</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason5.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason5.png" alt="No Photo"/></div>
                                             <p class="text-title">Nhiệt độ thay đổi</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason6.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason6.png" alt="No Photo"/></div>
                                             <p class="text-title">Quần áo len, nilon, vải</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason7.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason7.png" alt="No Photo"/></div>
                                             <p class="text-title">Mỹ phẩm</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason8.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason8.png" alt="No Photo"/></div>
                                             <p class="text-title">Bụi bẩn</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
-                                            <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason9.png" alt="No Photo"/>
+                                            <div class="img"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason9.png" alt="No Photo"/></div>
                                             <p class="text-title">Thuốc lá</p>
                                         </div>
 
