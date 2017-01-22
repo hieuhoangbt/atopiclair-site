@@ -26,7 +26,9 @@ get_header(); ?>
                                     ĐIỀU TRỊ BỆNH VIÊM DA CƠ ĐỊA NHƯ THẾ NÀO?
                                 </h4>
                                 <div class="item">
-                                    <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_num_one.png" alt="No Photo"/>
+                                    <div class="thumb">
+                                        <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/guide_num_one.png" alt="No Photo"/>
+                                    </div>
                                     <p class="text">
                                         Bệnh khởi phát từ sự suy yếu hàng rào bảo vệ da, dẫn đến da khô, ngứa và sự xâm
                                         nhập của các dị nguyên và vi khuẩn, gây nhiễm trùng da. Do vậy, điều trị viêm da
@@ -108,7 +110,7 @@ get_header(); ?>
                                     <p class="bold text-uppercase">Corticosteroid bôi tại chỗ</p>
                                     <p>
                                         <span class="bold">Trường hợp nhẹ và bệnh có thể kiểm soát được thì chỉ cần chất dưỡng ẩm, không
-                                        nên dung corticosteroid.</span> Corticosteroid chỉ được dùng để điều trị khi cần
+                                        nên dùng corticosteroid.</span> Corticosteroid chỉ được dùng để điều trị khi cần
                                         thiết
                                         và trong thời gian ngắn (1-2 tuần), chỉ bôi một lớp mỏng len vùng da bệnh theo
                                         đúng dưỡng dẫn của bác sĩ.
@@ -261,7 +263,7 @@ get_header(); ?>
                 <div class="bold text-doc-foo">
                     <div class="container-fluid">
                         <p>
-                            Tài liệu tham khảo: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
+                            Nguồn: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
                             NXB Y Học 2016
                         </p>
                     </div>

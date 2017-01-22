@@ -12,8 +12,8 @@ get_header(); ?>
                             lo</h2>
                         <div class="list-inline inline-link">
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
-                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">hướng dẫn điều trị</a>
-                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng Dẫn Điều Trị</a>
+                            <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair<sup>tm</sup></a>
                             <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ get_header(); ?>
                 <div class="container-fluid">
                     <div class="blog__ders">
                         <div class="quote-info blog__ders__quote">
-                            <h2 class="title-info title-info--big blog__ders__title">hướng dẫn điều trị</h2>
+                            <h2 class="title-info title-info--big blog__ders__title">Hướng dẫn điều trị</h2>
                             <div class="box">
                                 <span class="quote-icon quote-icon--left">
                                     <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/home_quote-left.png" alt="Atopiclair hướng dẫn điều trị">

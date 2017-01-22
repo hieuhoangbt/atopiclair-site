@@ -166,7 +166,7 @@ get_header(); ?>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
                                             <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason7.png" alt="No Photo"/>
-                                            <p class="text-title">Mĩ phẩm</p>
+                                            <p class="text-title">Mỹ phẩm</p>
                                         </div>
                                         <div class="col-xs-6 col-sm-4 col-md-4 item">
                                             <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/viemda_reason8.png" alt="No Photo"/>
@@ -241,7 +241,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <p class="bold text-doc-foo">
-                        Tài liệu tham khảo: Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
+                        Hội Da Liễu & Hội Nhi Khoa Việt Nam, Những điều cần biết về Viêm da cơ địa –
                         NXB Y Học 2016
                     </p>
                 </div>

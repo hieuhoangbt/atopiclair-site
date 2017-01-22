@@ -28,7 +28,7 @@ get_header();
                                     <a href="javascript:;" class="btnFB" onclick="login()"></a>
 
                                     <div class="box-cmt">
-                                        <div class="fb-comments" data-href="<?php the_permalink(); ?>"
+                                        <div class="fb-comments" data-href="<?php echo site_url().$data['video_viemdacodia']; ?>"
                                              data-numposts="20"
                                              width="100%" data-colorscheme="light" data-version="v2.3"></div>
                                     </div>
@@ -53,7 +53,7 @@ get_header();
                                     <a href="javascript:;" class="btnFB" onclick="login()"></a>
 
                                     <div class="box-cmt">
-                                        <div class="fb-comments" data-href="<?php the_permalink(); ?>"
+                                        <div class="fb-comments" data-href="<?php echo site_url().$data['video_cachdieutri']; ?>"
                                              data-numposts="20"
                                              width="100%" data-colorscheme="light" data-version="v2.3"></div>
                                     </div>

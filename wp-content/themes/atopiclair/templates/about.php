@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="info">
                     <h2 class="info__title">
-                        atopiclai rtm <br> dưỡng ẩm, chống viêm, giảm ngứa
+                        atopiclair<sup>tm</sup> <br> dưỡng ẩm, chống viêm, giảm ngứa
                     </h2>
                     <div class="info__title info__title--small">
                         Đáp ứng tiêu chuẩn lựa chọn chất dưỡng ẩm điều trị vdcđ của Hội Da Liễu & Hội Nhi Khoa Việt Nam
@@ -17,7 +17,7 @@
                         <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/about_img.png" alt="No Photo"/>
                     </div>
                     <div class="line-white info__product-guide">
-                        <h3 class="info__title line-white__title">cách sử dụng</h3>
+                        <h3 class="info__title line-white__title">cách sử dụng Atopiclair<sup>tm</sup></h3>
                         <div class="line-white__content">
                             <div class="item">
                                 <p>
@@ -45,7 +45,7 @@
                     <div class="thumb-block info__product-thumb">
                         <div class="item">
                             <div class="thumb-block__title">
-                                <h4 class="big">ATOPICLAIRTM Cream: </h4>
+                                <h4 class="big">ATOPICLAIR<sup>TM</sup> Cream: </h4>
                                 <p class="small">
                                     DÙNG ĐIỀU TRỊ TRIỆU CHỨNG, CÁC VÙNG TỔN THƯƠNG KHU TRÚ
                                 </p>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="item">
                             <div class="thumb-block__title">
-                                <h4 class="big">ATOPICLAIRTM Lotion: </h4>
+                                <h4 class="big">ATOPICLAI<sup>TM</sup> Lotion: </h4>
                                 <p class="small">
                                     DÙNG ĐIỀU TRỊ, DUY TRÌ, CÁC VÙNG TỔN THƯƠNG CÓ DIỆN TÍCH RỘNG, VÙNG CÓ LÔNG, TÓC
                                 </p>
@@ -67,15 +67,15 @@
                         </div>
                     </div>
                     <div class="info__product-choose-us">
-                        <h2 class="info__title">vì sao nên sử dụng atopiclairtm?</h2>
+                        <h2 class="info__title">vì sao nên sử dụng atopiclair<sup>TM</sup>?</h2>
                         <div class="item">
                             <p class="text-drs bold">
-                                Atopiclairtm hỗ trợ điều trị VDCĐ không chứa corticoid được FDA Hoa Kỳ chứng nhân
+                                Atopiclair<sup>TM</sup> hỗ trợ điều trị VDCĐ không chứa corticoid được FDA Hoa Kỳ chứng nhân
                             </p>
                         </div>
                         <div class="item">
                             <p class="text-drs">
-                                Atopiclairtm hơn hẳn các chất dưỡng ẩm thông thường vì có thêm hoạt tính chống viêm,
+                                Atopiclair<sup>TM</sup> hơn hẳn các chất dưỡng ẩm thông thường vì có thêm hoạt tính chống viêm,
                                 giảm ngứa được Hội Da Liễu và Hội Nhi Khoa Việt Nam khuyến cáo ưu tiên lựa chọn
                             </p>
                             <p class="text-drs">
@@ -84,11 +84,11 @@
                             </p>
                         </div>
                         <div class="item">
-                            <p class="text-drs">AtopiclairTM – An toàn cho trẻ em và trẻ nhũ nhi</p>
+                            <p class="text-drs">Atopiclair<sup>TM</sup> – An toàn cho trẻ em và trẻ nhũ nhi</p>
                         </div>
                         <div class="item">
                             <p class="text-drs">
-                                Nên sử dụng AtopiclairTM duy trì hàng ngày cho bệnh nhân VDCĐ, dù không còn tổn thương
+                                Nên sử dụng Atopiclair<sup>TM</sup> duy trì hàng ngày cho bệnh nhân VDCĐ, dù không còn tổn thương
                                 nhằm
                                 dự phòng tái phát.
                             </p>
