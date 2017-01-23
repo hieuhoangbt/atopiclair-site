@@ -75,7 +75,7 @@ get_header();
                                     <h3><?php echo $data['title_post'][$i]; ?></h3>
 
                                     <div class="ders-more">
-                                        <?php echo nl2br($data['content_post'][$i]); ?>
+                                        <?php echo nl2br(trim($data['content_post'][$i])); ?>
                                     </div>
                                 </div>
                                 <?php
