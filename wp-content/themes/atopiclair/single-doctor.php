@@ -14,9 +14,9 @@ get_header();
                         <?php if (!empty($data['video_viemdacodia'])) { ?>
                             <h5 class="title-livestream">livestream về viêm da cơ địa</h5>
                             <div class="video-comment">
-                                <div class="video">
+                                <div class="video item">
                                     <!-- 4:3 aspect ratio -->
-                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                    <div class="embed-responsive embed-responsive-16by9">
                                     <video id="video_doctor1" controls>
                                         <source src="<?php echo $data['video_viemdacodia']; ?>" type="video/mp4">
                                         <source src="<?php echo $data['video_viemdacodia_ogg']; ?>" type="video/ogg">
@@ -24,7 +24,7 @@ get_header();
                                     <!--</div>-->
 
                                 </div>
-                                <div class="comment">
+                                <div class="comment item">
                                     <a href="javascript:;" class="btnFB" onclick="login()"></a>
 
                                     <div class="box-cmt">
@@ -41,7 +41,7 @@ get_header();
                             <div class="video-comment">
                                 <div class="video">
                                     <!-- 4:3 aspect ratio -->
-                                    <!--<div class="embed-responsive embed-responsive-4by3">-->
+                                    <div class="embed-responsive embed-responsive-16by9">
                                     <video id="video_doctor2" controls>
                                         <source src="<?php echo $data['video_cachdieutri']; ?>" type="video/mp4">
                                         <source src="<?php echo $data['video_cachdieutri_ogg']; ?>" type="video/ogg">
