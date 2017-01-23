@@ -53,4 +53,27 @@ class Atopiclair_theme{
             'echo' => false,
         ));
     }
+    public static function custom_pagination($max_num) {
+        $big = 999999999; // need an unlikely integer
+        $pages = paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $max_num,
+            'prev_next' => false,
+            'type'  => 'array',
+            'prev_next'   => TRUE,
+            'prev_text'    => __('<img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt="">'),
+            'next_text'    => __('<img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_right.png" alt="">'),
+        ) );
+        if( is_array( $pages ) ) {
+            $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+            echo '<ul class="pagination">';
+            foreach ( $pages as $page ) {
+                echo "<li>$page</li>";
+            }
+            echo '</ul>';
+        }
+    }
+
 }
