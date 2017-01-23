@@ -32,7 +32,7 @@ get_header();
                             if ($doctor->have_posts()) {
                                 while ($doctor->have_posts()) {
                                     $doctor->the_post();
-                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "doctor_thumbnail");
                                     ?>
                                     <li class="item">
                                         <div class="list-doctor__thumb">
@@ -63,12 +63,20 @@ get_header();
                                     if ($paged > 1) {
                                         echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt=""></a></li>';
                                     }
-
                                     for ($i = 1; $i <= $total; $i++) {
                                         if ($i == $paged) {
                                             echo '<li><a class="active">' . $i . '</a></li>';
                                         } else {
-                                            echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                            if ($total > 5) {
+                                                if ($i < 4 || $i==$total) {
+                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                                }
+                                                if($i==4){
+                                                    echo "<li><a href='#'>...</a></li>";
+                                                }
+                                            } else {
+                                                echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                            }
                                         }
                                     }
                                     if ($paged < $total) {

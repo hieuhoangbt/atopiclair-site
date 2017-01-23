@@ -149,7 +149,7 @@ get_header();
                                 while ($liststory->have_posts()) {
                                     $liststory->the_post();
                                     $data = get_post_meta(get_the_ID(), 'story')[0];
-                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "post_thumbnail");
+                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "share_thumbnail");
                                     if ($data['highlight'] == 1 && $count < 3) {
                                             ?>
                                             <li class="item">
@@ -161,7 +161,6 @@ get_header();
                                                         printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
                                                     }
                                                     ?>
-                                                    <img src="<?php ATOPICLAIR_THEME_URL ?>/images/home_be-anh.png" alt="<?php the_title(); ?>">
                                                 </div>
                                                 <div class="list-children__name">
                                                     <span>Bé</span>
