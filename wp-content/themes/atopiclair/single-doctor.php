@@ -40,7 +40,7 @@ get_header();
                             <?php if (!empty($data['video_cachdieutri'])) { ?>
                             <h5 class="title-livestream">livestream về cách điều trị</h5>
                             <div class="video-comment">
-                                <div class="video">
+                                <div class="video item">
                                     <!-- 4:3 aspect ratio -->
                                     <div class="embed-responsive embed-responsive-16by9">
                                     <video id="video_doctor2" controls>
@@ -51,7 +51,7 @@ get_header();
                                     <!--</div>-->
 
                                 </div>
-                                <div class="comment">
+                                <div class="comment item">
                                     <a href="javascript:;" class="btnFB" onclick="login()"></a>
 
                                     <div class="box-cmt">
