@@ -4,6 +4,7 @@
     width: 100%;
     .list-inline {
       text-align: center;
+      font-size: 0rem;
       .item {
         //margin: 0 4rem;
         .list-doctor__thumb {
@@ -83,7 +84,7 @@
         h3 {
           font-size: 2rem;
           font-family: $font-utmavo_bold;
-          text-transform: capitalize;
+          text-transform: none;
           margin: 0rem 0rem 1.4rem 0rem;
         }
         p {
@@ -168,6 +169,10 @@
   .blog.blog--ykien .blog__ders .livestream-video .video-comment .comment {
     width: 100%;
     margin-top: 2rem;
+  }
+  .share .blog--ykien .list-inline .item {
+        width: 29%;
+    margin: 1%;
   }
 }
 @media (max-width: 400px) {

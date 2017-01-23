@@ -1,7 +1,12 @@
-/*$(document).ready(function() {
-    $('img').imgPreload();
-})*/
+$(document).ready(function() {
+    /*var str = "         lots of spaces before and after         ";
+    var str_out = $.trim(str);
+    console.log('alo:'+str_out);*/
+})
 window.onload = function () {
+    var $ = jQuery;
+    
+
     //    blocksit block
     if($('.list-blockslt').length > 0) {
         var col = 3;
@@ -154,11 +159,18 @@ window.onload = function () {
         })
     }
     if($('.ders-more').length > 0) {
-        $('.ders-more').shorten({
-            more: 'XEM THÊM',
-            less: 'Rút gọn',
-            chars: 600,
-        });
+        $('.ders-more').each(function(index, item) {
+            $(item).text(jQuery.trim($(item).text()));
+            if(index == $('.ders-more').length - 1) {
+                $('.ders-more').shorten({
+                    more: 'XEM THÊM',
+                    less: 'Rút gọn',
+                    chars: 600,
+                });
+            }
+
+        })
+        
     }
 
     /*menu-mobile*/
@@ -185,14 +197,7 @@ window.onload = function () {
 
     
     
-    /*select*/
-    if($('.select-province').length  > 0 && $('.select-township').length > 0) {
-        $('.select-province, .select-township').selectBox({
-            mobile: true,
-            menuTransition: 'default',
-            hideOnWindowScroll: true
-        });
-    }
+    
     
     /*first active before*/
     if($('.drop-menu li:first-child a').hasClass('active') == true) {
