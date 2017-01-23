@@ -2,12 +2,20 @@
 /*
   Template Name: Bác sĩ tư vấn
  */
+if (get_query_var('paged')) {
+    $paged = get_query_var('paged');
+} else if (get_query_var('page')) {
+    $paged = get_query_var('page');
+} else {
+    $paged = 1;
+}
 $params_filter = array(
     'posts_per_page' => 3,
     'post_type' => 'doctor',
     'post_status' => 'publish',
     'orderby' => 'post_date',
     'order' => 'DESC',
+    'paged' => $paged
 );
 $doctor = new WP_Query($params_filter);
 get_header();
@@ -46,12 +54,39 @@ get_header();
                                 ?>
 
                             </ul>
-                            <?php if ($doctor->max_num_pages > 1) { ?>
-                                <nav class="pagi-list right" aria-label="Page navigation">
-                                    <?php echo Atopiclair_theme::custom_pagination($doctor->max_num_pages); ?>
-                                </nav>
+                            <nav class="pagi-list right" aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <?php
+                                    $total = $doctor->max_num_pages;
+                                    if ($total > 1) {
+                                        $next = $paged + 1;
+                                        $pre = $paged - 1;
 
-                            <?php } ?>
+                                        if ($paged > 1) {
+                                            echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt=""></a></li>';
+                                        }
+                                        for ($i = $paged; $i <= $total; $i++) {
+                                            if ($i == $paged) {
+                                                echo '<li><a class="active">' . $i . '</a></li>';
+                                            }else{
+                                                if($i<$paged+3 && ($i<$total)){
+                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                                }
+                                                if($i==$page+3){
+                                                    echo "<li><a href='#'>...</a></li>";
+                                                }
+                                                if($i==$total){
+                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                                }
+                                            }
+                                        }
+                                        if ($paged < $total) {
+                                            echo '<li><a href="' . get_permalink() . '?page=' . $next . '" aria-label="Next"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_right.png" alt=""></a></li>';
+                                        }
+                                    }
+                                    ?>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
