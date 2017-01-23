@@ -21,6 +21,7 @@ get_header();
                                         <source src="<?php echo $data['video_viemdacodia']; ?>" type="video/mp4">
                                         <source src="<?php echo $data['video_viemdacodia_ogg']; ?>" type="video/ogg">
                                     </video>
+									</div>
                                     <!--</div>-->
 
                                 </div>
@@ -46,6 +47,7 @@ get_header();
                                         <source src="<?php echo $data['video_cachdieutri']; ?>" type="video/mp4">
                                         <source src="<?php echo $data['video_cachdieutri_ogg']; ?>" type="video/ogg">
                                     </video>
+									</div>
                                     <!--</div>-->
 
                                 </div>
