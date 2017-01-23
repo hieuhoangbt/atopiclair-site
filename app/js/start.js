@@ -2,37 +2,6 @@
     $('img').imgPreload();
 })*/
 window.onload = function () {
-    /*load img*/
-    
-    if(!isMobile.any()) {
-        $('.list-angency-content .scroll-pane').jScrollPane({
-            showArrows: true,
-            width: '100%',
-            height: 227
-        });
-    }
-    
-    var settings = {
-        showArrows: true,
-        'max-width': '100%',
-        'max-height': 227
-    };
-    
-    var pane = $('.left-question .scroll-pane'), api = {};
-    if(!isMobile.any()) {
-        pane.jScrollPane(settings);
-        api = pane.data('jsp');    
-    }
-    
-
-
-    $('.thumnail-reason .item').matchHeight({property: 'height', byRow: true});
-    $('.video-comment .item').matchHeight({property: 'height', byRow: true});
-    $(window).on("orientationchange", function () {
-        $.fn.matchHeight._update();
-
-    });
-
     //    blocksit block
     if($('.list-blockslt').length > 0) {
         var col = 3;
@@ -71,7 +40,6 @@ window.onload = function () {
             });
 
         }else {
-            // $('.list-blockslt').width(winWidth);
             $('.list-blockslt').BlocksIt({
                 numOfCol: col,
                 offsetX: 15,
@@ -81,16 +49,19 @@ window.onload = function () {
         }
         
     }
-    
-    /*select*/
-    $('.select-province, .select-township').selectBox({
-        mobile: true,
-        menuTransition: 'default',
-        hideOnWindowScroll: true
-    });
-
+    /*load img*/
+    var settings = {
+        showArrows: true,
+        'max-width': '100%',
+        'max-height': 227
+    };
+    var pane = $('.left-question .scroll-pane'), api = {};
+    if(!isMobile.any()) {
+        pane.jScrollPane(settings);
+        api = pane.data('jsp');    
+    }
     /*validate form contact*/
-    if ($(".contact_form").length) {
+    if ($(".contact_form").length > 0) {
         $(".contact_form").validate({
             rules: {
 
@@ -126,7 +97,7 @@ window.onload = function () {
             }
         });
     }
-    if($('.form-qs').length) {
+    if($('.form-qs').length > 0) {
         $.validator.addMethod("nameRegex", function(value, element) {
             return this.optional(element) || /^[a-zA-Z0-9()._\-\s]+$/.test(value);
         }, "Username must contain only letters, numbers, or dashes.");
@@ -172,31 +143,41 @@ window.onload = function () {
     }
 
     /*menu-mobile*/
-    if(isMobile.any()) {
-        $('.button-bar').on('click', function(e) {
-            $('.header__menu').toggleClass('mobile');
-        })
-        $('.list-menu .item').on('click', function(e) {
-            var _this = $(this);
-            if($(_this).find('.drop-menu').length > 0) {
-                $(_this).toggleClass('has_sub');
-                // return false;
-            }
-        })
+    $('.button-bar').on('touchstart', function(e) {
+        $('.header__menu').toggleClass('mobile');
+    });
+    $('.list-menu .item').on('touchstart', function(e) {
+        var _this = $(this);
+        if($(_this).find('.drop-menu').length > 0) {
+            $(_this).toggleClass('has_sub');
+            // return false;
+        }
+    });
+
+    $('.thumnail-reason .item').matchHeight({property: 'height', byRow: true});
+    $('.video-comment .item').matchHeight({property: 'height', byRow: true});
+    $(window).on("orientationchange", function () {
+        $.fn.matchHeight._update();
+
+    });
+
+    
+    
+    /*select*/
+    if($('.select-province').length  > 0 && $('.select-township').length > 0) {
+        $('.select-province, .select-township').selectBox({
+            mobile: true,
+            menuTransition: 'default',
+            hideOnWindowScroll: true
+        });
     }
+    
 
-    /*load images default*/
-    loadDefaultImg('.list-blockslt .item_img');
+    
 
+   
 }
-function loadDefaultImg(img_input) {
-    if(!$(img_input).length > 0) return;
-    $(img_input).each(function(idx, item) {
-        var im = $(item).find('.item_img img');
-        console.log($(im).attr('src'));
-    })
 
-}
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);

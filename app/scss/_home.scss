@@ -368,6 +368,14 @@ sup {
     width: 34%;
   }
 }
+@media (max-width: 1280px) {
+  .blog .quote-info .box .quote-icon {
+      width: 2rem;
+  }
+  .blog .quote-info .box .quote-icon.quote-icon--left {
+      left: -2rem;
+  }
+}
 @media (max-width: 1199px) {
   .header__menu {
     .list-inline {
