@@ -67,18 +67,17 @@ get_header();
                                         if ($paged > 1) {
                                             echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt=""></a></li>';
                                         }
-                                        for ($i = 1; $i <= $total; $i++) {
+                                        for ($i = $paged; $i <= $total; $i++) {
                                             if ($i == $paged) {
                                                 echo '<li><a class="active">' . $i . '</a></li>';
-                                            } else {
-                                                if ($total > 5) {
-                                                    if ($i < 4 || $i==$total) {
-                                                        echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
-                                                    }
-                                                    if($i==4){
-                                                        echo "<li><a href='#'>...</a></li>";
-                                                    }
-                                                } else {
+                                            }else{
+                                                if($i<$paged+3 && ($i<$total)){
+                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                                                }
+                                                if($i==$page+3){
+                                                    echo "<li><a href='#'>...</a></li>";
+                                                }
+                                                if($i==$total){
                                                     echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
                                                 }
                                             }
