@@ -475,7 +475,7 @@ class SiteManagerPosttype {
         }
         switch ($_POST['post_type']) {
             case "expert":
-                $data = nl2br($_POST['expert']);
+                $data = $_POST['expert'];
                 update_post_meta($post_id, 'expert', $data);
                 break;
             case "story":

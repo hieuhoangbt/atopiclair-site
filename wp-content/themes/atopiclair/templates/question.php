@@ -56,11 +56,11 @@ get_header(); ?>
                                             <p class="caret"></p>
 
                                             <p class="qs-title">
-                                                <?php echo $data_question['question']; ?>
+                                                <?php echo nl2br($data_question['question']); ?>
                                             </p>
 
                                             <p class="qs-ders">
-                                                <?php echo $data_question['answer']; ?>
+                                                <?php echo nl2br($data_question['answer']); ?>
                                             </p>
                                         </li>
                                     <?php
