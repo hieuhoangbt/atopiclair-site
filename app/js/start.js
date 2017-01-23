@@ -62,6 +62,15 @@ window.onload = function () {
     }
     /*validate form contact*/
     if ($(".contact_form").length > 0) {
+        $.validator.addMethod("spaceRegex", function(value, element) {
+            if($.trim( value ) == '') {
+                $(element).val("");
+                return false;
+            }
+            return true;
+            
+        },"ký tự không hợp lệ!");
+
         $(".contact_form").validate({
             rules: {
 
@@ -72,6 +81,9 @@ window.onload = function () {
                 },
                 c_email: {
                     email: true
+                },
+                c_ders: {
+                    spaceRegex: true
                 }
 
             },
@@ -90,6 +102,7 @@ window.onload = function () {
                 },
                 c_ders: {
                     required: "Bạn vui lòng nhập số thông tin liên hệ ",
+                    spaceRegex: "Nội dung không hợp lệ"   
 
                 }
 
@@ -98,21 +111,27 @@ window.onload = function () {
         });
     }
     if($('.form-qs').length > 0) {
-        $.validator.addMethod("nameRegex", function(value, element) {
-            return this.optional(element) || /^[a-zA-Z0-9()._\-\s]+$/.test(value);
-        }, "Username must contain only letters, numbers, or dashes.");
+        $.validator.addMethod("spaceRegex", function(value, element) {
+            if($.trim( value ) == '') {
+                $(element).val("");
+                return false;
+            }
+            return true;
+            
+        },"ký tự không hợp lệ!");
 
         $('.form-qs').validate({
             rules: {
                 "c_drs": {
                     required: true,
-                    nameRegex: true
+                    spaceRegex: true
                 }
             },
             messages: {
                 "c_drs": {
                     required: "Bạn chưa nhập nội dung ",
-                    nameRegex: "Contain only letters, numbers."    
+                    spaceRegex: "Nội dung không hợp lệ"    
+                    
                 }
                 
                 
@@ -149,8 +168,11 @@ window.onload = function () {
     $('.list-menu .item').on('touchstart', function(e) {
         var _this = $(this);
         if($(_this).find('.drop-menu').length > 0) {
-            $(_this).toggleClass('has_sub');
-            // return false;
+            if(!$(e.target).is('.drop-menu, .drop-menu *')) {
+                $(_this).toggleClass('has_sub');
+                return false;
+            }
+            
         }
     });
 
@@ -172,6 +194,10 @@ window.onload = function () {
         });
     }
     
+    /*first active before*/
+    if($('.drop-menu li:first-child a').hasClass('active') == true) {
+        $('.drop-menu').toggleClass('first-active');
+    }
 
     
 

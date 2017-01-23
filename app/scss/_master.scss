@@ -1,3 +1,25 @@
+/* input[placeholder], [placeholder], *[placeholder] { 
+  color: #999 !important; 
+  font-family: 'UTMAvo';
+} */
+::-webkit-input-placeholder { 
+  color: #999 !important; 
+  font-family: 'UTMAvo';
+}
+:-moz-placeholder { /* Firefox 18- */
+color: #999 !important; 
+font-family: 'UTMAvo';
+}
+::-moz-placeholder { 
+ /* Firefox 19+ */
+color: #999 !important; 
+font-family: 'UTMAvo';
+}
+:-ms-input-placeholder { 
+  color: #999 !important; 
+  font-family: 'UTMAvo';
+}
+
 .header {
   //border: solid red 1px;
   float: left;
@@ -75,11 +97,16 @@
             position: absolute;
             top: 0.2rem;
             right: 1rem;
-            color: #fff;
+            color: #0d659f;
             border-bottom: 8px dashed;
             border-bottom: 8px solid\9;
             border-right: 8px solid transparent;
             border-left: 8px solid transparent;
+          }
+          &.first-active {
+            &:before {
+              color: #fff;
+            }
           }
           li {
             border-bottom: solid 1px #448dba;
@@ -339,7 +366,10 @@
     }
   }
   .header__menu .list-inline .item .drop-menu {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
     margin-bottom: 1rem;
     padding-left: 1rem;
     box-shadow: none;

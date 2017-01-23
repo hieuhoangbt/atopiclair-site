@@ -107,6 +107,21 @@
       -ms-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);
       transform: rotate(-90deg);
+      
+      transition: all 0.25s linear;
+      -webkit-transition: all 0.25s linear;
+      -moz-transition: all 0.25s linear;
+      -ms-transition: all 0.25s linear;
+    }
+    &.open {
+      .caret {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+      }
     }
     .qs-title {
       font-size: 2.2rem;

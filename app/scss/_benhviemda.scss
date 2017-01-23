@@ -36,20 +36,42 @@
       width: 65%;
       padding: 5rem 0rem 0rem 0rem;
       .item {
-        background: url("../images/viemda_bg_box.png") no-repeat;
-        background-size: 100% 100%;
+        /* background: url("../images/viemda_bg_box.png") no-repeat;
+        background-size: 100% 100%; */
         color: #0064a1;
-        /*border-width: 1.438px;
+        border-width: 1.438px;
         border-color: rgb(0, 101, 159);
-        border-style: solid;*/
+        border-style: solid;
+        border-bottom: none;
+
         margin: 0rem 0rem 6rem 0rem;
         padding: 1.5rem 2rem 1.5rem 9rem;
         position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 3%;
+          height: 1px;
+          background: rgb(0, 101, 159);
+          display: block;
+          bottom: 0px;
+          left: 0px;
+        }
+        &:after {
+          content: '';
+          width: 92%;
+          height: 1px;
+          position: absolute;
+          background: rgb(0, 101, 159);
+          display: block;
+          bottom: 0px;
+          right: 0px;
+        }
         span {
           display: block;
           position: absolute;
           bottom: -3.2rem;
-          left: 2.2rem;
+          left: 3%;
           font-size: 7rem;
         }
         p {
@@ -197,7 +219,7 @@
   }
   .info__derma-things__content .item span {
       bottom: -3rem;
-      left: 1.7rem;
+      // left: 1.7rem;
       font-size: 5rem;
   }
   .info__derma-expression__content .text.right {
@@ -241,7 +263,7 @@
 }
 @media (max-width: 768px) {
   .info__derma-things__content .item span {
-    left: 1rem;
+    /* left: 1rem; */
   }
   .dermatitis .info__title-underline {
     margin-bottom: 2rem;
@@ -260,13 +282,11 @@
 @media(max-width: 767px) {
   .info__derma-things__content .item {
     background: none;
-    border: solid 1px #0064a1;
     padding-left: 5rem;
     span {
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
+      width: 5%;
+      display: block;
+      text-align: center;
     }
   }
   .info__derma-expression__content .thumb {
@@ -282,7 +302,7 @@
     width: 100%;
     padding-top: 2rem;
     .item {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   }
   .info__derma-things__img img {
@@ -296,7 +316,14 @@
     margin-bottom: 2rem;
   }
 }
-@media (max-width: 480px) {
-  .guide .info__guide-example .list-blockslt .item {
+@media (max-width: 528px) {
+  .info__derma-things__content .item span {
+      font-size: 4rem;
+      bottom: -2.5rem;
+  }
+}
+@media(max-width: 480px) {
+  .info__derma-things__content .item:after {
+    width: 90%;
   }
 }
