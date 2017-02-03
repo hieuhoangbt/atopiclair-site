@@ -61,32 +61,7 @@ get_header();
                                 <ul class="pagination">
                                     <?php
                                     $total = $stories->max_num_pages;
-                                    if ($total > 1) {
-                                        $next = $paged + 1;
-                                        $pre = $paged - 1;
-
-                                        if ($paged > 1) {
-                                            echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt=""></a></li>';
-                                        }
-                                        for ($i = $paged; $i <= $total; $i++) {
-                                            if ($i == $paged) {
-                                                echo '<li><a class="active">' . $i . '</a></li>';
-                                            }else{
-                                                if($i<$paged+3 && ($i<$total)){
-                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
-                                                }
-                                                if($i==$page+3){
-                                                    echo "<li><a href='#'>...</a></li>";
-                                                }
-                                                if($i==$total){
-                                                    echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
-                                                }
-                                            }
-                                        }
-                                        if ($paged < $total) {
-                                            echo '<li><a href="' . get_permalink() . '?page=' . $next . '" aria-label="Next"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_right.png" alt=""></a></li>';
-                                        }
-                                    }
+                                    Atopiclair_theme::pagination($total, $paged);
                                     ?>
                                 </ul>
                             </nav>

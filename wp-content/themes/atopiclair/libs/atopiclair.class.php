@@ -76,4 +76,76 @@ class Atopiclair_theme{
         }
     }
 
+    public static function pagination($total, $paged){
+        if($total > 1){
+            $next = $paged + 1;
+            $pre = $paged - 1;
+            $firstPaged = 1;
+            $lastPaged = $total;
+            $displayLastPage = true;
+            //Pre button
+            if($paged > 1){
+                echo '<li><a href=" ' . get_permalink() . '?page=' . $pre . '" aria-label="Previous"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_left.png" alt=""></a></li>';
+            }
+            /**
+             * Paging
+             */
+            if($total < 5){
+                for($i = 1; $i <= $total; $i++){
+                    if ($i == $paged) {
+                        echo '<li><a class="active">' . $i . '</a></li>';
+                    }else{
+                        echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                    }
+                }
+            }else{
+                if($paged >= 1){
+                    if ($firstPaged == $paged) {
+                        echo '<li><a class="active">' . $firstPaged . '</a></li>';
+                    }else{
+                        echo '<li><a href=" ' . get_permalink() . '?page=' . $firstPaged . '">' . $firstPaged . '</a></li>';
+                    }
+                }
+                if($paged > 2){
+                    $u = $paged - 1;
+                }else{
+                    $u = 2;
+                }
+                $p = $u+2;
+                if($paged >= $total-1){
+                    $p--;
+                    $u = $p - 2;
+                    if($paged == $total){
+                        $displayLastPage = false;
+                    }
+                }
+//                echo $p; exit;
+                if($u > 2){
+                    echo "<li><a>...</a></li>";
+                }
+                for($i = $u; $i <= $p; $i++){
+                    if ($i == $paged) {
+                        echo '<li><a class="active">' . $i . '</a></li>';
+                    }else{
+                        echo '<li><a href=" ' . get_permalink() . '?page=' . $i . '">' . $i . '</a></li>';
+                    }
+                }
+                if($p < $lastPaged -1){
+                    echo "<li><a>...</a></li>";
+                }
+                if($paged <= $lastPaged && $displayLastPage){
+                    if ($lastPaged == $paged) {
+                        echo '<li><a class="active">' . $lastPaged . '</a></li>';
+                    }else {
+                        echo '<li><a href=" ' . get_permalink() . '?page=' . $lastPaged . '">' . $lastPaged . '</a></li>';
+                    }
+                }
+            }
+            //Next button
+            if($paged < $total){
+                echo '<li><a href="' . get_permalink() . '?page=' . $next . '" aria-label="Next"><img src="' . ATOPICLAIR_THEME_URL . '/images/pagi_right.png" alt=""></a></li>';
+            }
+        }
+    }
+
 }
