@@ -146,9 +146,14 @@ sup {
         background: url(../images/home_bg-cloud.png) no-repeat center;
         background-size: 100% 100%;
         margin-top: 1rem;
-        padding: 2.5rem 0rem 0rem 0rem;
+        //padding: 2.5rem 0rem 0rem 0rem;
+        display: table;
+        width: 100%;
+        white-space: nowrap;
         span {
-          display: block;
+
+          display: table-cell;
+          vertical-align: middle;
         }
       }
       .list-children__ders {
@@ -570,7 +575,7 @@ sup {
             /* width: 30rem; */
           margin: 1rem auto;
           font-size: 1.4rem;
-          padding-top: 3rem;
+          padding-top: 0rem;
       }
     }
   }

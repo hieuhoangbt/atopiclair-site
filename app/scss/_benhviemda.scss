@@ -105,7 +105,13 @@
         img {
           margin: 0 auto;
         }
+        &:last-child {
+          .text:first-child {
+            padding-left: 2rem;
+          }
+        }
       }
+
     }
   }
   &__derma-reason {
@@ -203,12 +209,14 @@
     margin: 6rem auto;
   }
 }
+
 .guide .info__guide-example .list-blockslt .item {
   -webkit-transition: top 1s ease, left 1s ease;
   -moz-transition: top 1s ease, left 1s ease;
   -o-transition: top 1s ease, left 1s ease;
   -ms-transition: top 1s ease, left 1s ease;
 }
+
 @media (max-width: 991px) {
   .bg-cloud {
     background-size: cover;
@@ -218,12 +226,12 @@
     max-width: 90%;
   }
   .info__derma-things__content .item span {
-      bottom: -3rem;
-      // left: 1.7rem;
-      font-size: 5rem;
+    bottom: -3rem;
+    // left: 1.7rem;
+    font-size: 5rem;
   }
   .info__derma-expression__content .text.right {
-    padding: 0rem 0rem 0rem 2rem;
+    padding: 0rem 0rem 0rem 0rem;
     font-size: 1.4rem;
   }
   .info__derma-expression__content .text {
@@ -233,8 +241,8 @@
   .info__derma-expression__content .text.left {
     padding: 0rem 2rem 0rem 0rem;
   }
-  .info__derma-things__content .item p, 
-  .info__derma-reason__content, 
+  .info__derma-things__content .item p,
+  .info__derma-reason__content,
   .info__derma-reason .reason-content .text,
   .info__derma-option__content .item .ders {
     font-size: 1.4rem;
@@ -261,6 +269,7 @@
     margin: 1rem 0rem;
   }
 }
+
 @media (max-width: 768px) {
   .info__derma-things__content .item span {
     /* left: 1rem; */
@@ -279,6 +288,7 @@
     margin-bottom: 1rem !important;
   }
 }
+
 @media(max-width: 767px) {
   .info__derma-things__content .item {
     background: none;
@@ -315,13 +325,18 @@
   .dermatitis .info__title {
     margin-bottom: 2rem;
   }
-}
-@media (max-width: 528px) {
-  .info__derma-things__content .item span {
-      font-size: 4rem;
-      bottom: -2.5rem;
+  .info__derma-expression__content .item:last-child .text:first-child {
+    padding-left: 0rem;
   }
 }
+
+@media (max-width: 528px) {
+  .info__derma-things__content .item span {
+    font-size: 4rem;
+    bottom: -2.5rem;
+  }
+}
+
 @media(max-width: 480px) {
   .info__derma-things__content .item:after {
     width: 90%;
