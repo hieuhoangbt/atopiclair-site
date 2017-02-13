@@ -86,6 +86,7 @@ get_header(); ?>
                             </div>
                             <div class="col-xs-12 col-sm-7 col-md-7 info__derma-reason__content">
                                 <div class="reason-content reason-content--before">
+								<div class="style-ord top">
                                     <p>
                                         Yếu tố di truyền: trẻ có nguy cơ cao mắc bệnh viêm da cơ địa khi gia đình có cha
                                         hoặc mẹ
@@ -103,6 +104,7 @@ get_header(); ?>
                                         hen
                                         suyễn, khoảng 75% pht triển viêm mũi dị ứng.
                                     </p>
+									</div>
                                     <p class="style-ord">
                                         Rối loạn miễn dịch
                                     </p>

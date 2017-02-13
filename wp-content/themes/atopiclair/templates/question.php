@@ -30,7 +30,7 @@ $params_filter = array(
     'post_type' => 'expert',
     'post_status' => 'publish',
     'orderby' => 'post_date',
-    'order' => 'DESC',
+    'order' => 'ASC',
 );
 $question = new WP_Query($params_filter);
 get_header(); ?>
