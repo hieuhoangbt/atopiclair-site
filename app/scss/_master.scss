@@ -258,6 +258,11 @@ font-family: 'UTMAvo';
     max-width: 1260px;
     width: 100%;
   }
+  .info__guide-example {
+    .container-fluid {
+      width: auto;
+    }
+  }
 }
 @media (max-width: 1024px) {
   .header__menu .list-inline .item  {

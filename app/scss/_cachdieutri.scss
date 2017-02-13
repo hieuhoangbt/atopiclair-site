@@ -1,3 +1,8 @@
+.info__guide-example {
+  .container-fluid {
+
+  }
+}
 .guide .info {
   color: #0064a1;
   &__guide-text-small {
@@ -91,9 +96,12 @@
     }
     .list-blockslt {
       position: relative;
+      width: 100%;
       .item {
         font-size: 1.6rem;
         margin-bottom: 5rem;
+        // border: solid 1px red;
+        
         .item_img {
           -webkit-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
           -moz-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;

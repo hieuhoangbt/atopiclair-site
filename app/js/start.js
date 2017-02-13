@@ -8,51 +8,52 @@ window.onload = function () {
     
 
     //    blocksit block
-    if($('.list-blockslt').length > 0) {
-        var col = 3;
-        var winWidth = $(window).width();
-        winWidth = $(window).width();
-        if(winWidth <= 767) {
-            col = 2
-        }
-        if(winWidth <= 480) {
-            col = 1
-        }
-        
-        if(isMobile.any()) {
-            $('.list-blockslt').width(winWidth);
-            $('.list-blockslt').BlocksIt({
-                numOfCol: col,
-                offsetX: 15,
-                offsetY: 15,
-                blockElement: '.item'
-            });
-            $(window).on("orientationchange resize", function () {
+    $(window).on("orientationchange resize", function () {
+                
+    });
+    blockItem();
+    function blockItem() {
+        if($('.list-blockslt').length > 0) {
+            var col = 3;
+            var winWidth = $('.list-blockslt').width();
+            winWidth = $(window).width();
+            
+            if(!isMobile || winWidth >= 1280) {
+                winWidth = $('.list-blockslt').width();
+            }else {
                 winWidth = $(window).width();
-                if(winWidth <= 767) {
-                    col = 2
-                }
-                if(winWidth <= 480) {
-                    col = 1
-                }
-                $('.list-blockslt').width(winWidth);
-                $('.list-blockslt').BlocksIt({
+            }
+            if(winWidth <= 767) {
+                col = 2
+            }
+            if(winWidth <= 480) {
+                col = 1
+            }
+            
+            if(isMobile.any()) {
+                // $('.list-blockslt').width(winWidth);
+                $('.list-blockslt').width(winWidth).BlocksIt({
                     numOfCol: col,
                     offsetX: 15,
                     offsetY: 15,
                     blockElement: '.item'
                 });
-            });
+                
 
-        }else {
-            $('.list-blockslt').BlocksIt({
-                numOfCol: col,
-                offsetX: 15,
-                offsetY: 15,
-                blockElement: '.item'
+            }else {
+                // $('.list-blockslt').width(winWidth);
+                $('.list-blockslt').width(winWidth).BlocksIt({
+                    numOfCol: col,
+                    offsetX: 15,
+                    offsetY: 15,
+                    blockElement: '.item'
+                });
+            }
+            $(window).on("orientationchange resize", function () {
+                blockItem();
             });
+            
         }
-        
     }
     /*load img*/
     var settings = {
