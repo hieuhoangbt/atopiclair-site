@@ -94,14 +94,19 @@
     .info__title {
       margin: 6rem 0rem;
     }
+    .content-blockslt {
+      
+
+    }
     .list-blockslt {
       position: relative;
-      width: 100%;
+
       .item {
         font-size: 1.6rem;
-        margin-bottom: 5rem;
-        // border: solid 1px red;
-        
+        // margin-bottom: 5rem;
+        margin: 15px;
+
+
         .item_img {
           -webkit-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
           -moz-box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;

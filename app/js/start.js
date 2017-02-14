@@ -8,21 +8,11 @@ window.onload = function () {
     
 
     //    blocksit block
-    $(window).on("orientationchange resize", function () {
-                
-    });
-    blockItem();
-    function blockItem() {
-        if($('.list-blockslt').length > 0) {
+    if($('.list-blockslt').length > 0) {
+        function blockSlt() {
             var col = 3;
-            var winWidth = $('.list-blockslt').width();
+            var winWidth = $(window).width();
             winWidth = $(window).width();
-            
-            if(!isMobile || winWidth >= 1280) {
-                winWidth = $('.list-blockslt').width();
-            }else {
-                winWidth = $(window).width();
-            }
             if(winWidth <= 767) {
                 col = 2
             }
@@ -31,8 +21,7 @@ window.onload = function () {
             }
             
             if(isMobile.any()) {
-                // $('.list-blockslt').width(winWidth);
-                $('.list-blockslt').width(winWidth).BlocksIt({
+                $('.list-blockslt').BlocksIt({
                     numOfCol: col,
                     offsetX: 15,
                     offsetY: 15,
@@ -41,19 +30,19 @@ window.onload = function () {
                 
 
             }else {
-                // $('.list-blockslt').width(winWidth);
-                $('.list-blockslt').width(winWidth).BlocksIt({
+                $('.list-blockslt').BlocksIt({
                     numOfCol: col,
                     offsetX: 15,
                     offsetY: 15,
                     blockElement: '.item'
                 });
             }
-            $(window).on("orientationchange resize", function () {
-                blockItem();
-            });
-            
         }
+        blockSlt();
+        $(window).on("orientationchange resize", function () {
+                blockSlt();
+        });
+        
     }
     /*load img*/
     var settings = {
