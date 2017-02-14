@@ -41,6 +41,14 @@ jQuery(document).ready(function () {
         event.preventDefault();
         jQuery(this).parent().remove();
     });
+	jQuery('.del_video').click(function (event) {
+		var $this = jQuery(this);
+        var format = $this.parents(".select-video").find(".cstm-btn-select").attr("data-format");
+		$this.parents(".select-video").find(".cstm_videourl-"+format).removeAttr("value");
+		$this.parents(".select-video").find(".filename_video-"+format).text("");
+        jQuery(this).hide();
+    });
+	
 
     jQuery(".cstm-btn-select").click(function (e) {
         e.preventDefault();
