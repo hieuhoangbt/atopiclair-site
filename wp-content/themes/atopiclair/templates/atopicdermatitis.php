@@ -102,7 +102,7 @@ get_header(); ?>
                                         dẻ ra có đến 80% cũng bị bệnh. Ở trẻ bị viêm da cơ địa nặng, > 50% tiến triển
                                         đến
                                         hen
-                                        suyễn, khoảng 75% pht triển viêm mũi dị ứng.
+                                        suyễn, khoảng 75% phát triển viêm mũi dị ứng.
                                     </p>
 									</div>
                                     <p class="style-ord">
