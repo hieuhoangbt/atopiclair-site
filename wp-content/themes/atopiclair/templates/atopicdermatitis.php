@@ -229,9 +229,9 @@ get_header(); ?>
                                 <div class="ders">
                                     <p>
                                         Tổn thương cơ bản ở nấp gấp khuỷu tay hay đầu gối và gáy, diện tích thương tổn
-                                        lan rộng trên cơ thể, thể hiện rõ ở cổ và mặt, gây ảnh hưởng xáu đến da vùng
+                                        lan rộng trên cơ thể, thể hiện rõ ở cổ và mặt, gây ảnh hưởng xấu đến da vùng
                                         quanh mắt. Da khô, tróc vảy và dày. Tổn thương sẽ trở nên dày và sậm màu hơn các
-                                        vùng da còn lại, gây ngứa liênc ục nếu bị viêm da cơ địa trong khoảng vài năm.
+                                        vùng da còn lại, gây ngứa liên tục nếu bị viêm da cơ địa trong khoảng vài năm.
                                         Các biểu hiện khác: khô da, vảy cá, dày da long bàn tay, bàn chân, dày sừng nang
                                         long, long mi thưa, viêm môi bong vảy, mi mắt dưới có thể có hai nếp gấp, tăng
                                         sắc tố quanh mắt, viêm kết mạc tái diễn có thể gây lộn mi, có thể có đục thủy
