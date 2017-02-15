@@ -243,6 +243,9 @@ sup {
     text-decoration: none;
     float: left;
     margin: 2%;
+    span {
+      
+    }
 
     &:hover {
       text-decoration: none;
@@ -250,7 +253,30 @@ sup {
     }
   }
 }
+.home .blog__ders  {
+  .inline-link__btn {
+    position: relative;
+    display: table;
+    float: left;
+    span {
+      display: table-cell;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+      /* position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%); */
+      strong {
 
+      }
+    }
+  }
+}
 .pagi-list {
   color: #0064a1;
   font-size: 1.6rem;

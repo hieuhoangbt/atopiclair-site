@@ -180,7 +180,9 @@ window.onload = function () {
 
     $('.thumnail-reason .item').matchHeight({property: 'height', byRow: true});
     $('.video-comment .item').matchHeight({property: 'height', byRow: true});
-    $(window).on("orientationchange", function () {
+    $('.mh-btn .btn-link span').matchHeight({property: 'height', byRow: false});
+
+    $(window).on("orientationchange resize", function () {
         $.fn.matchHeight._update();
 
     });
