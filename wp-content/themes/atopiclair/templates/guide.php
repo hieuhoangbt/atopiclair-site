@@ -195,7 +195,7 @@ get_header(); ?>
                                 <div class="item_ders">
                                     <p class="text-title">vệ sinh cá nhân</p>
                                     <p class="text-ders">
-                                        cắt ngắn móng tay và đeo găng tay vào ban đêm để ngăn ngừa cào gãi trong khi
+                                        Cắt ngắn móng tay và đeo găng tay vào ban đêm để ngăn ngừa cào gãi trong khi
                                         ngủ. Vệ sinh vùng tã lót ở trẻ nhỏ tránh chất tiết gây kích thích.
                                     </p>
                                 </div>
@@ -226,7 +226,7 @@ get_header(); ?>
                                         Nói chung, điều trị viêm da cơ địa tùy thuộc vào lứa tuổi, mức độ bệnh, giai
                                         đoạn bệnh với mục đích là kiểm soát tình trạng viêm, ngứa. Trong quá trình điều
                                         trị, dù viêm da cơ địa đang ở giai đoạn nặng hay lui bệnh, vai trò của chăm sóc
-                                        da đúng cách và sử dụng các sản phẩm dưỡng ẩm, đặc biệt là dưỡng ẩm có them tính
+                                        da đúng cách và sử dụng các sản phẩm dưỡng ẩm, đặc biệt là dưỡng ẩm có thêm tính
                                         kháng viêm (nhưng không phải corticosteroid), là rất quan trọng vừa có tác dụng
                                         hỗ trợ điều trị, vừa giúp duy trì da ở trạng thái tối ưu nhất.
 
@@ -240,7 +240,7 @@ get_header(); ?>
                                 <div class="item_ders">
                                     <p class="text-title">tránh với các yếu tố dị nguyên</p>
                                     <p class="text-ders">
-                                        Không tiếp xúc với long gia súc, gia cầm, giảm stress, tránh tiếp xúc với khói
+                                        Không tiếp xúc với lông gia súc, gia cầm, giảm stress, tránh tiếp xúc với khói
                                         thuốc lá, nước hoa...
 
                                     </p>
