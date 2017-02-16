@@ -11,11 +11,11 @@ get_header();
                 <div class="blog__ders">
                     <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết
                         lo</h2>
-                    <div class="list-inline inline-link">
-                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>">Bệnh Viêm Da Cơ Địa</a>
-                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>">Hướng dẫn điều trị</a>
-                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>">Về Atopiclair<sup>TM</sup></a>
-                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>">Chia sẻ</a>
+                    <div class="list-inline inline-link mh-btn">
+                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(58); ?>"><span>Bệnh Viêm Da Cơ Địa</span></a>
+                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(61); ?>"><span>Hướng dẫn điều trị</span></a>
+                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(9); ?>"><span>Về Atopiclair<sup>TM</sup></span></a>
+                        <a class="btn-link inline-link__btn" href="<?php echo get_page_link(66); ?>"><span>Chia sẻ</span></a>
                     </div>
                 </div>
                 <div class="blog__thumb">
