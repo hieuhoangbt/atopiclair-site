@@ -272,7 +272,10 @@ font-family: 'UTMAvo';
   .header__menu .list-inline .item a {
     font-size: 1.4rem;
   }
-  .dermatitis .info .info__title {
+  
+}
+@media(min-width: 992px) and (max-width: 1300px) {
+  .dermatitis .info__derma-things .info__title {
     font-size: 3.18rem;
   }
 }
