@@ -47,7 +47,7 @@
                             <div class="thumb-block__title">
                                 <h4 class="big">ATOPICLAIR<sup>TM</sup> Cream: </h4>
                                 <p class="small">
-                                    DÙNG ĐIỀU TRỊ TRIỆU CHỨNG, CÁC VÙNG TỔN THƯƠNG KHU TRÚ
+                                    DÙNG ĐIỀU TRỊ TRIỆU CHỨNG, <br/>CÁC VÙNG TỔN THƯƠNG KHU TRÚ
                                 </p>
                             </div>
                             <div class="thumb-block__img">
@@ -56,9 +56,9 @@
                         </div>
                         <div class="item">
                             <div class="thumb-block__title">
-                                <h4 class="big">ATOPICLAI<sup>TM</sup> Lotion: </h4>
+                                <h4 class="big">ATOPICLAIR<sup>TM</sup> Lotion: </h4>
                                 <p class="small">
-                                    DÙNG ĐIỀU TRỊ, DUY TRÌ, CÁC VÙNG TỔN THƯƠNG CÓ DIỆN TÍCH RỘNG, VÙNG CÓ LÔNG, TÓC
+                                    DÙNG ĐIỀU TRỊ, DUY TRÌ, <br/>CÁC VÙNG TỔN THƯƠNG CÓ DIỆN TÍCH RỘNG, VÙNG CÓ LÔNG, TÓC
                                 </p>
                             </div>
                             <div class="thumb-block__img">
