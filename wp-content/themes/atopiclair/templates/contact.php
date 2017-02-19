@@ -47,7 +47,8 @@ get_header(); ?>
                         <div class="info__lienhe">
                             <div class="info__lienhe__left">
                                 <p>ATOPICLAIR&trade; được phân phối tại<br/> các nhà thuốc trên toàn quốc</p>
-                                <p>Để được tư vấn về sản phẩm, xin liên hệ: 1800545474 (trong giờ hành chính)</p>
+                                <p>Để được tư vấn về sản phẩm, xin liên hệ: 1800545474 </p>
+                                <p>(trong giờ hành chính)</p>
                                 <p>Yêu cầu về phân phối, xin liên hệ: 1800555558</p>
                             </div>
                             <div class="info__lienhe__right">

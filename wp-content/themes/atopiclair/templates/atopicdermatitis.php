@@ -112,7 +112,7 @@ get_header(); ?>
                             </div>
                         </div>
                         <div class="reason-content reason-content--after">
-                            <p class="info__title-underline">Những yếu tố khởi động hoặc làm bệnh nặng hơn</p>
+                            <p class="info__title-underline" style="text-decoration: none;">Những yếu tố làm bệnh nặng hơn</p>
                             <div class="row row--after">
                                 <div class="col-xs-12 col-sm-5 col-md-4 left">
                                     <div class="text">
@@ -233,7 +233,7 @@ get_header(); ?>
                                         quanh mắt. Da khô, tróc vảy và dày. Tổn thương sẽ trở nên dày và sậm màu hơn các
                                         vùng da còn lại, gây ngứa liênc ục nếu bị viêm da cơ địa trong khoảng vài năm.
                                         Các biểu hiện khác: khô da, vảy cá, dày da long bàn tay, bàn chân, dày sừng nang
-                                        long, long mi thưa, viêm môi bong vảy, mi mắt dưới có thể có hai nếp gấp, tăng
+                                        lông, lông mi thưa, viêm môi bong vảy, mi mắt dưới có thể có hai nếp gấp, tăng
                                         sắc tố quanh mắt, viêm kết mạc tái diễn có thể gây lộn mi, có thể có đục thủy
                                         tinh thể, chứng da vẽ nổi trắng.
                                     </p>
