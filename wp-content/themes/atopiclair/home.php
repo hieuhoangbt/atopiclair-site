@@ -7,6 +7,19 @@ get_header();
 <div class="content">
     <div class="home">
         <div class="blog blog--intro">
+            <div class="animate-cloud">
+                <div class="pos-relative">
+                    <div class="item item-10 item--1">&nbsp;</div>
+                    <div class="item item-50 item--10">&nbsp;</div>
+                    <div class="item item-20 item--2">&nbsp;</div>
+                    <div class="item item-40 item--7">&nbsp;</div>
+                    <div class="item item-10 item--1">&nbsp;</div>
+                    <div class="item item-30 item--3">&nbsp;</div>
+                    <div class="item item-70 item--5">&nbsp;</div>
+                    <div class="item item-90 item--4">&nbsp;</div>
+                    <div class="item item-25 item--8">&nbsp;</div>
+                </div>
+            </div>
             <div class="container-fluid">
                 <div class="blog__ders">
                     <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết
@@ -151,21 +164,21 @@ get_header();
                                     $data = get_post_meta(get_the_ID(), 'story')[0];
                                     $image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), "share_thumbnail");
                                     if ($data['highlight'] == 1 && $count < 3) {
-                                            ?>
-                                            <li class="item">
-                                                <div class="list-children__thumb">
-                                                    <?php if ($image) { ?>
-                                                        <img src="<?php echo $image[0]; ?>"/>
+                                        ?>
+                                        <li class="item">
+                                            <div class="list-children__thumb">
+                                                <?php if ($image) { ?>
+                                                    <img src="<?php echo $image[0]; ?>"/>
                                                     <?php
-                                                    } else {
-                                                        printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
-                                                    }
-                                                    ?>
-                                                </div>
-                                                <div class="list-children__name">
-                                                    <span><?php the_title(); ?></span>
-                                                </div>
-                                            </li>
+                                                } else {
+                                                    printf('<img src="%s" alt="%s" />', ATOPICLAIR_THEME_URL . '/images/placeholder.png', the_title());
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="list-children__name">
+                                                <span><?php the_title(); ?></span>
+                                            </div>
+                                        </li>
                                         <?php
                                         $count++;
                                     }
