@@ -6,7 +6,22 @@ $animation-duration: 20s;
 	position: absolute;
 	top: 0rem;
 	left: 0rem;
-	z-index: 9;
+	font-size: 0rem;
+
+	&--before {
+		z-index: 9;
+	}
+	&--static {
+		z-index: 7;
+		.item {
+			animation: inherit !important;
+			-webkit-animation: inherit !important;
+
+		}
+	}
+	&--after {
+		z-index: 7;
+	}
 	.pos-relative {
 		position: relative;
 		width:  100%;
@@ -17,6 +32,7 @@ $animation-duration: 20s;
 		left: $left-big;
 		width: 52.8rem; /* 528 */
 		height: 33.2rem; /* 323 */
+		text-align: center;
 		@media (max-width: 1600px) {
 			width: 42.8rem; /* 528 */
 			height: 23.2rem; /* 323 */
@@ -27,99 +43,68 @@ $animation-duration: 20s;
 		
 		animation: animate-cloud 20s linear infinite;
     	-webkit-animation: animate-cloud 20s linear infinite;
-
+		/*position*/
 		&.item-10 {
 			top: 0%;
 		}
 		&.item-20 {
 			top: 20%;
-			// transform: scale(0.8);
-			// -webkit-transform: scale(0.8);
 		}
 		&.item-25 {
 			top: 25%;
-			// transform: scale(0.8);
-			// -webkit-transform: scale(0.8);
 		}
 		&.item-30 {
 			top: 30%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
 		&.item-40 {
 			top: 40%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
 		&.item-50 {
 			top: 50%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
 		&.item-60 {
 			top: 60%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
 		&.item-70 {
 			top: 70%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
 		&.item-90 {
 			top: 90%;
-			// transform: scale(0.5);
-			// -webkit-transform: scale(0.5);
 		}
-		&--1 {
-			/* animation-delay: 2s;
-			-webkit-animation-delay: 2s; */
+		/*delay*/
+		&--60s {
 			animation-duration: 60s;
 			-webkit-animation-duration: 60s;
 		}
 		&--2 {
-			/* animation-delay: 2s;
-			-webkit-animation-delay: 2s; */
 			animation-duration: 30s;
 			-webkit-animation-duration: 30s;
 		}
 		&--3 {
-			/* animation-delay: 3s;
-			-webkit-animation-delay: 3s; */
 			animation-duration: 90s;
 			-webkit-animation-duration: 90s;
 		}
 		&--4 {
-			/* animation-delay: 4s;
-			-webkit-animation-delay: 4s; */
 			animation-duration: 80s;
 			-webkit-animation-duration: 80s;
 		}
 		&--5 {
-			/* animation-delay: 5s;
-			-webkit-animation-delay: 5s; */
 			animation-duration: 50s;
 			-webkit-animation-duration: 50s;
 		}
-		&--6 {
+		&--100s {
 			animation-duration: 100s;
 			-webkit-animation-duration: 100s;
 		}
 		&--7 {
-			/* animation-delay: 7s;
-			-webkit-animation-delay: 7s; */
 			animation-duration: 33s;
 			-webkit-animation-duration: 33s;
 		}
 		&--8 {
-			/* animation-delay: 8s;
-			-webkit-animation-delay: 8s; */
 			animation-duration: 45s;
 			-webkit-animation-duration: 45s;
 		}
 		&--9 {
-			/* animation-delay: 9s;
-			-webkit-animation-delay: 9s; */
 			animation-duration: 90s;
 			-webkit-animation-duration: 90s;
 		}
@@ -127,77 +112,82 @@ $animation-duration: 20s;
 			animation-delay: 40s;
 			-webkit-animation-delay: 40s;
 		}
-		&--17 {
-			/* animation-delay: 17s;
-			-webkit-animation-delay: 17s; */
+		&--37s {
 			animation-duration: 37s;
 			-webkit-animation-duration: 37s;
 		}
-		&--12 {
-			/* animation-delay: 12s;
-			-webkit-animation-delay: 12s; */
+		&--42s {
 			animation-duration: 42s;
 			-webkit-animation-duration: 42s;
 		}
-		&--30 {
-			/* animation-delay: 30s;
-			-webkit-animation-delay: 30s; */
+		&--30s {
 			animation-duration: 30s;
 			-webkit-animation-duration: 30s;
 		}
-		&--25 {
-			/* animation-delay: 25s;
-			-webkit-animation-delay: 25s; */
+		&--21s {
 			animation-duration: 21s;
 			-webkit-animation-duration: 21s;
 		}
-		&--38 {
-			// animation-delay: 38s;
-			// -webkit-animation-delay: 38s;
+		&--38s {
 			animation-duration: 38s;
 			-webkit-animation-duration: 38s;
 		}
-		&--42 {
-			/* animation-delay: 42s;
-			-webkit-animation-delay: 42s; */
+		&--42s {
 			animation-duration: 42s;
 			-webkit-animation-duration: 42s;
 		}
 		&--21 {
-			/* animation-delay: 21s;
-			-webkit-animation-delay: 21s; */
 			animation-duration: 30s;
 			-webkit-animation-duration: 30s;
 		}
-		&--33 {
-			/* animation-delay: 33s;
-			-webkit-animation-delay: 33s; */
+		&--33s {
 			animation-duration: 33s;
 			-webkit-animation-duration: 33s;
 		}
-		&--45 {
-			/* animation-delay: 45s;
-			-webkit-animation-delay: 45s; */
+		&--45s {
 			animation-duration: 45s;
 			-webkit-animation-duration: 45s;
 		}
-		&--25 {
-			/* animation-delay: 25s;
-			-webkit-animation-delay: 25s; */
+		&--50s {
 			animation-duration: 50s;
 			-webkit-animation-duration: 50s;
 		}
-		&--70 {
-					/* animation-delay: 25s;
-					-webkit-animation-delay: 25s; */
+		&--30s {
 					animation-duration: 30s;
 					-webkit-animation-duration: 30s;
 		}
-		&--60 {
-			/* animation-delay: 25s;
-			-webkit-animation-delay: 25s; */
+		&--40s {
+			animation-duration: 40s;
+			-webkit-animation-duration: 40s;
+		}
+		&--80s {
+			animation-duration: 80s;
+			-webkit-animation-duration: 80s;
+		}
+		&--130s {
 			animation-duration: 130s;
 			-webkit-animation-duration: 130s;
+		}
+		/*scale*/
+		&--scale01 {
+			-webkit-transform: scale(0.1);
+			transform: scale(0.1);
+		}
+		&--scale02 {
+			-webkit-transform: scale(0.2);
+			transform: scale(0.2);
+		}
+		&--scale03 {
+			-webkit-transform: scale(0.3);
+			transform: scale(0.3);
+		}
+		&--scale04 {
+			-webkit-transform: scale(0.4);
+			transform: scale(0.4);
+		}
+		&--scale05 {
+			-webkit-transform: scale(0.5);
+			transform: scale(0.5);
 		}
 		&--scale06 {
 			-webkit-transform: scale(0.6);
@@ -227,6 +217,52 @@ $animation-duration: 20s;
 			-webkit-transform: scale(1.3);
 			transform: scale(1.3);
 		}
+		/*opacyti*/
+		&--opc01 {
+			opacity: 0.1;
+
+		}
+		&--opc02 {opacity: 0.2}
+		&--opc03 {opacity: 0.3}
+		&--opc04 {opacity: 0.4}
+		&--opc05 {opacity: 0.5}
+		&--opc06 {opacity: 0.6}
+		&--opc07 {opacity: 0.7}
+		&--opc08 {opacity: 0.8}
+		&--opc09 {opacity: 0.9}
+		/*static*/
+		&--static12 {
+			left: 10%;
+			top: 20%;
+		}
+		&--static44 {
+			left: 40%;
+			top: 40%;
+		}
+		&--static41 {
+			left: 40%;
+			top: 10%;
+		}
+		&--static36 {
+			left: 30%;
+			top: 60%;
+		}
+		&--static46 {
+			left: 40%;
+			top: 60%;
+		}
+		&--static66 {
+			left: 40%;
+			top: 40%;
+		}
+		&--static56 {
+			left: 50%;
+			top: 60%;
+		}
+		&--static78 {
+			left: 70%;
+			top: 80%;
+		}
 
 
 	}
@@ -235,8 +271,6 @@ $animation-duration: 20s;
 @keyframes animate-cloud {
     from {
 		left: $left-big;
-		// -webkit-transform: scale(0.2);
-		// transform: scale(0.2);
     }
     to {
 		left: 130%;
@@ -248,8 +282,6 @@ $animation-duration: 20s;
 @-webkit-keyframes animate-cloud {
     from {
 		left: $left-big;
-		// -webkit-transform: scale(0.2);
-		// transform: scale(0.2);
     }
     to {
 		left: 130%;
