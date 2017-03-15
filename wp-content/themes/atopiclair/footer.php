@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer"><?php echo basename(get_permalink()); ?>
     <div class="container-fluid">
         <div class="footer__left">
             <?php Atopiclair_theme::footer_left_logo(); ?>
@@ -184,6 +184,33 @@
         </div>
     </div>
 </div>
+<div class="modal fade modal-game_show" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img aria-hidden="true" src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/close-modal.png" alt=""/>
+        </button>
+        <div class="backdrop-img">
+            <a href="#" class="img-bg"><img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/modal-backdrop.jpg" alt=""></a>
+            <a href="#" class="animated tada img-btn">
+                <img src="<?php echo ATOPICLAIR_THEME_URL; ?>/images/btn-modal.png" alt="" onclick=window.open('https://www.facebook.com/notes/atopiclair-vi%E1%BB%87t-nam/th%E1%BB%83-l%E1%BB%87-cu%E1%BB%99c-thi-vi%E1%BA%BFt-c%C3%B3-m%E1%BA%B9-%C4%91%C3%A2y-r%E1%BB%93i/749126925256544/','_blank');>
+            </a>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
 <?php wp_footer(); ?>
+<script>
+var page="<?php echo basename(get_permalink()); ?>";
+if(page=='atopiclair' || page=='hello-world'){
+	$('.modal-game_show').modal('show');
+}else{
+	$('.modal-game_show').modal('hide');
+}
+</script>
 </div>
 </body>
