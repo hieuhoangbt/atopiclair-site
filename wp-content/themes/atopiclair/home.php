@@ -7,22 +7,35 @@ get_header();
 <div class="content">
     <div class="home">
         <div class="blog blog--intro">
-            <div class="animate-cloud">
-                <div class="pos-relative">
-                    <div class="item item-10 item--1 item--scale01">&nbsp;</div>
-					<div class="item item-20 item--6 item--scale02">&nbsp;</div>
-					<div class="item item-10 item--45 item--scale03">&nbsp;</div>
-					<div class="item item-60 item--17 item--scale04">&nbsp;</div>
-					<div class="item item-70 item--17 item--scale04">&nbsp;</div>
-					<div class="item item-20 item--17 item--scale06">&nbsp;</div>
-					<div class="item item-10 item--42 item--scale07">&nbsp;</div>
-					<div class="item item-30 item--40 item--scale08">&nbsp;</div>
-					<div class="item item-60 item--25 item--scale09">&nbsp;</div>
-					<div class="item item-10 item--60 item--scale11">&nbsp;</div>
-					<div class="item item-50 item--70 item--scale12">&nbsp;</div>
-					<div class="item item-30 item--8 item--scale13">&nbsp;</div>
-                </div>
-            </div>
+            <div class="animate-cloud animate-cloud--after">
+				<div class="pos-relative">
+					<div class="item item-10 item--60s item--scale05">1</div>
+					<div class="item item-20 item--100s item--scale05">2</div>
+					<div class="item item-10 item--45s item--scale06">3</div>
+					<div class="item item-60 item--37s item--scale07">4</div>
+					<div class="item item-70 item--37s item--scale08">5</div>
+					<div class="item item-10 item--42s item--scale07">7</div>
+					<div class="item item-30 item--40s item--scale08">8</div>
+					<div class="item item-60 item--50s item--scale09">9</div>
+					<div class="item item-10 item--130s item--scale11">10</div>
+					<div class="item item-30 item--30s item--scale13">12</div>
+				</div>
+			</div>
+			<div class="animate-cloud animate-cloud--before">
+				<div class="item item-50 item--30s item--scale03 item--opc09">11</div>
+				<div class="item item-20 item--50s item--scale02 item--opc09">13</div>
+				<div class="item item-20 item--80s item--scale02 item--opc09">14</div>
+				<div class="item item-20 item--130s item--scale04 item--opc04">15</div>
+				<div class="item item-20 item--40s item--scale01 item--opc09">16</div>
+				<div class="item item-20 item--42s item--scale04 item--opc04">17</div>
+
+			</div>
+			<div class="animate-cloud animate-cloud--static">
+				<div class="item item--scale07 item--static12">18</div>
+				<div class="item item--scale08 item--static41">19</div>
+				<div class="item item--static46">20</div>
+				<div class="item item--static78">21</div>
+			</div>
             <div class="container-fluid">
                 <div class="blog__ders">
                     <h2 class="title-info title-info--big blog__ders__title">với Atopiclair<sup>TM</sup> <br> bé hết ngứa - Mẹ hết
