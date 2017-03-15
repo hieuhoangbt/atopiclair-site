@@ -188,13 +188,15 @@ window.onload = function () {
     });
 
     
-    
-    
-    
     /*first active before*/
     if($('.drop-menu li:first-child a').hasClass('active') == true) {
         $('.drop-menu').toggleClass('first-active');
     }
+
+    /*modal*/
+    $('.modal-game_show').modal({
+      keyboard: true
+    })
 
     
 

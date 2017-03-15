@@ -1,3 +1,39 @@
+.modal-game_show {
+  .img-bg , .img-btn {
+    display: block;
+    width: 100%;
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .img-btn {
+    position: absolute;
+    bottom: 1.7rem;
+    
+  }
+  button.close {
+    opacity: 1;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9;
+    display: block;
+    float: none;
+    position: absolute;
+  }
+  .modal-dialog {
+    max-width: 36rem;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0rem 1rem;
+
+  }
+  .modal-body {
+      padding: 0rem;
+  }
+}
+
 sup {
   font-size: 65%;
 }
