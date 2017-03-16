@@ -1,4 +1,4 @@
-<div class="footer"><?php echo basename(get_permalink()); ?>
+<div class="footer">
     <div class="container-fluid">
         <div class="footer__left">
             <?php Atopiclair_theme::footer_left_logo(); ?>
@@ -184,6 +184,7 @@
         </div>
     </div>
 </div>
+<?php if(is_home() || is_page_template( 'templates/about.php' )){ ?>
 <div class="modal fade modal-game_show" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -203,14 +204,12 @@
     </div>
   </div>
 </div>
-<?php wp_footer(); ?>
+<?php } ?>
 <script>
-var page="<?php echo basename(get_permalink()); ?>";
-if(page=='atopiclair' || page=='hello-world'){
-	$('.modal-game_show').modal('show');
-}else{
-	$('.modal-game_show').modal('hide');
-}
+	if($('.modal-game_show').length>0){
+		$('.modal-game_show').modal('show');
+	}
 </script>
+<?php wp_footer(); ?>
 </div>
 </body>
