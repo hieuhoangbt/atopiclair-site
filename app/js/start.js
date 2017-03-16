@@ -192,10 +192,16 @@ window.onload = function () {
     if($('.drop-menu li:first-child a').hasClass('active') == true) {
         $('.drop-menu').toggleClass('first-active');
     }
+    $('.drop-menu li:first-child a').on('mouseover mouseleave', function(e) {
+        if(!$('.drop-menu li:first-child a').hasClass('active')) {
+            $('.drop-menu').toggleClass('first-active');
+        }
+    });
 
     /*modal*/
     /*$('.modal-game_show').modal({
-      keyboard: false
+      keyboard: false,
+      backdrop: 'static'
     })*/
 
     
