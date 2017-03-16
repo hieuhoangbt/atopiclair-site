@@ -498,7 +498,7 @@ sup {
 }
 @media (max-width: 767px) {
   .blog__thumb {
-    position: static;
+    position: relative;
     width: 100% !important;
     float: left;
     clear: both;

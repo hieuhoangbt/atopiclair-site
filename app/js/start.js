@@ -194,7 +194,9 @@ window.onload = function () {
     }
 
     /*modal*/
-    
+    /*$('.modal-game_show').modal({
+      keyboard: false
+    })*/
 
     
 

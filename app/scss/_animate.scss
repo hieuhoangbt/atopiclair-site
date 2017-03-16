@@ -1,4 +1,4 @@
-$left-big: -30%;
+$left-big: -52.8rem;
 $animation-duration: 20s;
 .animate-cloud {
 	width: 100%;
@@ -36,6 +36,23 @@ $animation-duration: 20s;
 		@media (max-width: 1600px) {
 			width: 42.8rem; /* 528 */
 			height: 23.2rem; /* 323 */
+			left: -42.8rem;
+		}
+		@media (max-width: 991px) {
+			width: 32.8rem; /* 528 */
+			height: 13.2rem; /* 323 */
+			left: -32.8rem;
+		}
+		
+		@media (max-width: 767px) {
+			width: 32.8rem; /* 528 */
+			height: 13.2rem; /* 323 */
+			left: -32.8rem;
+		}
+		@media (max-width: 480px) {
+			width: 32.8rem; /* 528 */
+			height: 13.2rem; /* 323 */
+			left: -32.8rem;
 		}
 		background-image: url(../images/cloud1.png);
 		background-repeat: no-repeat;
@@ -161,6 +178,10 @@ $animation-duration: 20s;
 			-webkit-animation-duration: 40s;
 		}
 		&--80s {
+			animation-duration: 90s;
+			-webkit-animation-duration: 90s;
+		}
+		&--90s {
 			animation-duration: 80s;
 			-webkit-animation-duration: 80s;
 		}
