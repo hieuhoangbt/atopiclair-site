@@ -19,6 +19,8 @@ class Atopiclair_theme{
             //Insert script
             wp_register_script('start', ATOPICLAIR_THEME_URL . '/js/start.min.js');
             wp_enqueue_script('start');
+            wp_register_script('start.h', ATOPICLAIR_THEME_URL . '/js/start.h.js');
+            wp_enqueue_script('start.h');
         });
         add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
     }

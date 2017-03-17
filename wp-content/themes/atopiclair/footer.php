@@ -205,11 +205,6 @@
   </div>
 </div>
 <?php } ?>
-<script>
-	if($('.modal-game_show').length>0){
-		$('.modal-game_show').modal('show');
-	}
-</script>
 <?php wp_footer(); ?>
 </div>
 </body>
