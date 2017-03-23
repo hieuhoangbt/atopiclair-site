@@ -5,9 +5,7 @@ $(document).ready(function() {
 })
 window.onload = function () {
     var $ = jQuery;
-    
-
-    //    blocksit block
+   
     if($('.list-blockslt').length > 0) {
         function blockSlt() {
             var col = 3;
