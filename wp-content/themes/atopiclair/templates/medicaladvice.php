@@ -42,7 +42,7 @@ get_header();
                                             </div>
                                             <div class="list-doctor__name"><?php the_title(); ?></div>
                                             <div class="list-doctor__ders">
-                                                <p>
+                                                <p id="bvs">
                                                     <?php the_content(); ?>
                                                 </p>
                                             </div>

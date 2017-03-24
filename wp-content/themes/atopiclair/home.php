@@ -9,38 +9,39 @@ get_header();
         <div class="blog blog--intro">
             <div class="animate-cloud animate-cloud--after">
                     <div class="pos-relative">
-                        <div class="item item-10 item--60s item--scale08">1</div>
-                        <div class="item item-10 item--80s item--scale010">3</div>
-                        <div class="item item-10 item--130s item--scale11">10</div>
-                        <div class="item item-10 item--42s item--scale010">6</div>
-                        <div class="item item-20 item--100s item--scale09">2</div>
-                        <!--<div class="item item-30 item--40s item--scale010">8</div>
-                        <div class="item item-40 item--60s item--scale010">7</div>-->
-                        <div class="item item-50 item--80s item--scale010">22</div>
-                        <div class="item item-60 item--38s item--scale010">4</div>
-                        <div class="item item-60 item--50s item--scale010">9</div>
-                        <!--<div class="item item-60 item--100s item--scale010">23</div>
-                        <div class="item item-70 item--80s item--scale08">5</div>-->
-                        <div class="item item-70 item--100s item--scale010">23</div>
-                        <div class="item item-80 item--45s item--scale010">23</div>
-                        <div class="item item-80 item--30s item--scale010">23</div>
-                        <!--<div class="item item-80 item--70s item--scale010">23</div>-->
+                        <div class="item item--style1 item-10 item--40s item--scale04">1</div>
+                        <div class="item item--style2 item-10 item--80s item--scale05">3</div>
+                        <div class="item item--style3 item-10 item--90s item--scale11">10</div>
+                        <div class="item item--style1 item-10 item--42s item--scale010">6</div>
+                        <div class="item item--style1 item-20 item--120s item--scale09">2</div>
+                        <!-- <div class="item item-30 item--40s item--scale010">8</div> -->
+                        <!-- <div class="item item-40 item--60s item--scale010">7</div> -->
+                        <div class="item item--style1 item-50 item--80s item--scale010">22</div>
+                        <div class="item item--style2 item-60 item--60s item--scale07">4</div>
+                        <div class="item item--style3 item-60 item--50s item--scale010">9</div>
+                        <!-- <div class="item item-60 item--100s item--scale010">23</div> -->
+                        <!-- <div class="item item-70 item--80s item--scale08">5</div> -->
+                        <!-- <div class="item item--style4 item-70 item--100s item--scale08">23</div> -->
+                        <!-- <div class="item item--style1 item-80 item--45s item--scale010">23</div> -->
+                        <div class="item item--style2 item-80 item--30s item--scale04">23</div>
+                        <!-- <div class="item item-80 item--70s item--scale010">23</div> -->
                         <div class="item item-30 item--30s item--scale13">12</div>
                     </div>
                 </div>
                 <div class="animate-cloud animate-cloud--before">
-                    <div class="item item-50 item--30s item--scale03 item--opc08">11</div>
-                    <div class="item item-20 item--100s item--scale02 item--opc08">13</div>
-                    <!--<div class="item item-20 item--80s item--scale02 item--opc08">14</div>-->
-                    <div class="item item-20 item--130s item--scale04 item--opc08">15</div>
-                    <!--<div class="item item-20 item--30s item--scale01 item--opc08">16</div>-->
-                    <div class="item item-20 item--42s item--scale04 item--opc09">17</div>
+                    <div class="item item--style1 item-50 item--30s item--scale03 item--opc08">11</div>
+                    <div class="item item--style3 item-20 item--100s item--scale04 item--opc08">13</div>
+                    <!-- <div class="item item-20 item--80s item--scale02 item--opc08">14</div> -->
+                    <!-- <div class="item item--style4 item-20 item--130s item--scale05 item--opc08">15</div> -->
+                    <!-- <div class="item item-20 item--30s item--scale01 item--opc08">16</div> -->
+                    <div class="item item--style1 item-20 item--42s item--scale02 item--opc09">17</div>
+
                 </div>
-			<div class="animate-cloud animate-cloud--static">
-                    <!--<div class="item item--scale07 item--static12">18</div>
-                    <div class="item item--scale08 item--static41">19</div>-->
-                    <div class="item item--static46">20</div>
-                    <div class="item item--static78">21</div>
+                <div class="animate-cloud animate-cloud--static">
+                    <div class="item item--style1 item--scale4 item--static12">18</div>
+                    <!-- <div class="item item--style3 item--scale5 item--static41">19</div> -->
+                    <div class="item item--style2 item--scale5 item--static46">20</div>
+                    <div class="item item--style4 item--scale3 item--static78">21</div>
                 </div>
             <div class="container-fluid">
                 <div class="blog__ders">
