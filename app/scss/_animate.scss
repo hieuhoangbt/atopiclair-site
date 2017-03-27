@@ -115,19 +115,19 @@ $animation-duration: 20s;
       animation-duration: 60s;
       -webkit-animation-duration: 60s;
     }
-    &--2 {
+    &--30s {
       animation-duration: 30s;
       -webkit-animation-duration: 30s;
     }
-    &--3 {
+    &--90s {
       animation-duration: 90s;
       -webkit-animation-duration: 90s;
     }
-    &--4 {
+    &--80s {
       animation-duration: 80s;
       -webkit-animation-duration: 80s;
     }
-    &--5 {
+    &--50s {
       animation-duration: 50s;
       -webkit-animation-duration: 50s;
     }
@@ -135,19 +135,19 @@ $animation-duration: 20s;
       animation-duration: 100s;
       -webkit-animation-duration: 100s;
     }
-    &--7 {
+    &--33s {
       animation-duration: 33s;
       -webkit-animation-duration: 33s;
     }
-    &--8 {
+    &--45s {
       animation-duration: 45s;
       -webkit-animation-duration: 45s;
     }
-    &--9 {
+    &--90s {
       animation-duration: 90s;
       -webkit-animation-duration: 90s;
     }
-    &--10 {
+    &--40s {
       animation-delay: 40s;
       -webkit-animation-delay: 40s;
     }
@@ -206,6 +206,10 @@ $animation-duration: 20s;
     &--90s {
       animation-duration: 80s;
       -webkit-animation-duration: 80s;
+    }
+    &--120s {
+      animation-duration: 120s;
+      -webkit-animation-duration: 120s;
     }
     &--130s {
       animation-duration: 130s;
